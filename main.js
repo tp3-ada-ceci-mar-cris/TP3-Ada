@@ -1,24 +1,24 @@
-let data = {
+var data = {
     employees: ["Cristina", "Marina", "Cecilia", "Brillantina"],
   
     sales: [
-      { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", item: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
-      { saleDate: new Date(2019, 0, 1), employeeName: "Marina", item: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
-      { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", item: ["Monitor ASC 543", "Motherboard MZI"] },
-      { saleDate: new Date(2019, 0, 10), employeeName: "Marina", item: ["Monitor ASC 543", "Motherboard ASUS 1200"] },
-      { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", item: ["Monitor GPRS 3000", "Motherboard ASUS 1200"] }
+      { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
+      { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
+      { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "Motherboard MZI"] },
+      { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Monitor ASC 543", "Motherboard ASUS 1200"] },
+      { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1200"] }
     ],
   
-    precios: [
-      { item: "Monitor GPRS 3000", price: 200 },
-      { item: "Motherboard ASUS 1500", price: 120 },
-      { item: "Monitor ASC 543", price: 250 },
-      { item: "Motherboard ASUS 1200", price: 100 },
-      { item: "Motherboard MZI", price: 30 },
-      { item: "HDD Toyiva", price: 90 },
-      { item: "HDD Wezter Dishital", price: 75 },
-      { item: "RAM Quinston", price: 110 },
-      { item: "RAM Quinston Fury", price: 230 }
+    prices: [
+      { id:0001,type:"monitor", item: "Monitor GPRS 3000", price: 200 },
+      { id:0002,type:"mother", item: "Motherboard ASUS 1500", price: 120 },
+      { id:0003,type:"monitor", item: "Monitor ASC 543", price: 250 },
+      { id:0004,type:"mother", item: "Motherboard ASUS 1200", price: 100 },
+      { id:0005,type:"mother", item: "Motherboard MZI", price: 30 },
+      { id:0006,type:"HDD", item: "HDD Toyiva", price: 90 },
+      { id:0007,type:"HDD", item: "HDD Wezter Dishital", price: 75 },
+      { id:0008,type:"RAM", item: "RAM Quinston", price: 110 },
+      { id:0009,type:"RAM", item: "RAM Quinston Fury", price: 230 }
     ]
   };
 
@@ -26,10 +26,38 @@ let data = {
 //recibe un array de componentes y devuelve el precio de la máquina que se puede armar con esos componentes, 
 //que es la suma de los precios de cada componente incluido.
 
+//recorre el Array, para cada elemento lo busca data.prices, te da el precio y lo acumula en una variable
+let maquina = ["Motherboard ASUS 1500", "Motherboard ASUS 1500", "HDD Toyiva","RAM Quinston Fury" ]
+
+let precioMaquina = (e=>{
+    let precioFinal = 0
+    maquina.map (e => { 
+        let componente = data.prices.find(({item})=>e===item)
+        precioFinal = precioFinal+componente.price
+    })
+console.log(precioFinal)
+})
+
 //2.cantidadVentasComponente(componente): 
 //recibe un componente y devuelve la cantidad de veces que fue vendido, 
 //o sea que formó parte de una máquina que se vendió. La lista de ventas no se pasa por parámetro, 
 //se asume que está identificada por la variable ventas.
+
+
+let acumulado =[]
+data.sales.map(e=>{
+    acumulado.push(e.itemSold)
+})
+console.log(acumulado)
+
+// var a = data.sales.filter(({itemSold})=>"Motherboard ASUS 1500"===itemSold)
+// console.log(a)
+
+
+// const plateTypes =allTypes.filter((e,i)=> allTypes.indexOf(e) === i)
+
+
+
 
 //3.vendedoraDelMes(mes, anio), se le pasa dos parámetros numéricos, (mes, anio) y
 // devuelve el nombre de la vendedora que más vendió en plata en el mes. O sea no cantidad de ventas, 
