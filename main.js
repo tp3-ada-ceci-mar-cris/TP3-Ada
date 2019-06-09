@@ -49,7 +49,7 @@ let cantidadVentasComponente = () => {
     acumulado.push(e.itemSold)
   })
   acumulado.forEach(e => {
-    
+
   })
   console.log(`La cantidad de ventas del componente seleccionado es ${acumulado}`)
 }
@@ -99,18 +99,19 @@ cantidadVentasComponente()
 
 let renderPorMes = () => {
   let january = []
+  let february = []
   data.sales.map(e => {
     let month = e.saleDate.getMonth()
     if (month == 0) {
       january.push(e)
+    } else {
+      february.push(e)
     }
   })
 
   let retrievePrices = data.prices.map(e => {
 
   })
-
-  let february = 'total2'
 
   console.log(`Ventas por mes
   Total de enero 2019: ${january}
