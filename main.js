@@ -77,6 +77,14 @@ cantidadVentasComponente()
 //7. huboVentas(mes, anio): que indica si hubo ventas en un mes determinado. El mes es un número entero que va desde el 1 (enero) 
 //hasta el 12 (diciembre).
 
+let huboVentas = ((x, y) =>{
+    salesMonth = data.sales.map(({itemSold})=> itemSold)
+    if(salesMonth === 0)
+    
+    
+console.log(huboVentas(1, 2019)) 
+
+
 //8. agregar a cada venta (son objetos adentro de un array, adentro del objeto principal) la sucursal en la que se hizo
 
 //9. agregar un array con las sucursales al objeto principal
