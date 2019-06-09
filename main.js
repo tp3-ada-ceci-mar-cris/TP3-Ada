@@ -27,15 +27,15 @@ var data = {
 //que es la suma de los precios de cada componente incluido.
 
 //recorre el Array, para cada elemento lo busca data.prices, te da el precio y lo acumula en una variable
-let maquina = ["Motherboard ASUS 1500", "Motherboard ASUS 1500", "HDD Toyiva","RAM Quinston Fury" ]
+let maquina = ["Motherboard ASUS 1500", "Motherboard ASUS 1500", "HDD Toyiva", "RAM Quinston Fury"]
 
-let precioMaquina = () =>{
-    let precioFinal = 0
-    maquina.map (e => { 
-        let componente = data.prices.find(({item})=>e===item)
-        precioFinal = precioFinal+componente.price
-    })
-console.log(precioFinal)
+let precioMaquina = () => {
+  let precioFinal = 0
+  maquina.map(e => {
+    let componente = data.prices.find(({item}) => e === item)
+    precioFinal = precioFinal + componente.price
+  })
+  console.log(`El precio final es $${precioFinal}`)
 }
 
 //2.cantidadVentasComponente(componente): 
@@ -45,10 +45,13 @@ console.log(precioFinal)
 
 let cantidadVentasComponente = () => {
   let acumulado = []
-  data.sales.map(e=>{
+  data.sales.forEach(e => {
     acumulado.push(e.itemSold)
-})
-console.log(acumulado)
+  })
+  acumulado.forEach(e => {
+
+  })
+  console.log(`La cantidad de ventas del componente seleccionado es ${acumulado}`)
 }
 
 cantidadVentasComponente()
@@ -101,6 +104,30 @@ console.log(huboVentas(1, 2019))
 
 //13. Un reporte que diga las ventas por sucursal y por mes, para eso:
 //13.a. renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
+
+let renderPorMes = () => {
+  let january = []
+  let february = []
+  data.sales.map(e => {
+    let month = e.saleDate.getMonth()
+    if (month == 0) {
+      january.push(e)
+    } else {
+      february.push(e)
+    }
+  })
+
+  let retrievePrices = data.prices.map(e => {
+
+  })
+
+  console.log(`Ventas por mes
+  Total de enero 2019: ${january}
+  Total de febrero 2019: ${february}`)
+}
+
+renderPorMes()
+
 //13.b. renderPorSucursal(): Muestra una lista del importe total vendido por cada sucursal
 //13.c. render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido 
 //y la vendedora que más ingresos generó
