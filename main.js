@@ -29,26 +29,29 @@ var data = {
 //recorre el Array, para cada elemento lo busca data.prices, te da el precio y lo acumula en una variable
 let maquina = ["Motherboard ASUS 1500", "Motherboard ASUS 1500", "HDD Toyiva","RAM Quinston Fury" ]
 
-let precioMaquina = (e=>{
+let precioMaquina = () =>{
     let precioFinal = 0
     maquina.map (e => { 
         let componente = data.prices.find(({item})=>e===item)
         precioFinal = precioFinal+componente.price
     })
 console.log(precioFinal)
-})
+}
 
 //2.cantidadVentasComponente(componente): 
 //recibe un componente y devuelve la cantidad de veces que fue vendido, 
 //o sea que formó parte de una máquina que se vendió. La lista de ventas no se pasa por parámetro, 
 //se asume que está identificada por la variable ventas.
 
-
-let acumulado =[]
-data.sales.map(e=>{
+let cantidadVentasComponente = () => {
+  let acumulado = []
+  data.sales.map(e=>{
     acumulado.push(e.itemSold)
 })
 console.log(acumulado)
+}
+
+cantidadVentasComponente()
 
 // var a = data.sales.filter(({itemSold})=>"Motherboard ASUS 1500"===itemSold)
 // console.log(a)
