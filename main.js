@@ -27,37 +27,30 @@ var data = {
 //que es la suma de los precios de cada componente incluido.
 
 //recorre el Array, para cada elemento lo busca data.prices, te da el precio y lo acumula en una variable
-let maquina = ["Motherboard ASUS 1500", "Motherboard ASUS 1500", "HDD Toyiva","RAM Quinston Fury" ]
+let maquina = ["Motherboard ASUS 1500", "Motherboard ASUS 1500", "HDD Toyiva", "RAM Quinston Fury"]
 
-let precioMaquina = (e=>{
-    let precioFinal = 0
-    maquina.map (e => { 
-        let componente = data.prices.find(({item})=>e===item)
-        precioFinal = precioFinal+componente.price
-    })
-console.log(precioFinal)
-})
+let precioMaquina = () => {
+  let precioFinal = 0
+  maquina.map(e => {
+    let componente = data.prices.find(({item}) => e === item)
+    precioFinal = precioFinal + componente.price
+  })
+  console.log(`El precio final del equipo (conformado por ${maquina}) es $${precioFinal}`)
+}
 
 //2.cantidadVentasComponente(componente): 
 //recibe un componente y devuelve la cantidad de veces que fue vendido, 
 //o sea que formó parte de una máquina que se vendió. La lista de ventas no se pasa por parámetro, 
 //se asume que está identificada por la variable ventas.
 
+let cosa="Monitor GPRS 3000"
 
-let acumulado =[]
-data.sales.map(e=>{
-    acumulado.push(e.itemSold)
-})
-console.log(acumulado)
-
-// var a = data.sales.filter(({itemSold})=>"Motherboard ASUS 1500"===itemSold)
-// console.log(a)
-
-
-// const plateTypes =allTypes.filter((e,i)=> allTypes.indexOf(e) === i)
-
-
-
+let cantidadVentasComponente = () => {
+    let acumulado = []
+    data.sales.forEach(({itemSold}) => itemSold.map(e =>acumulado.push(e)))
+    let totalComponente =acumulado.filter(e=>e===cosa).length
+    console.log(`El componente ${cosa} se vendió ${totalComponente} veces`)
+}
 
 //3.vendedoraDelMes(mes, anio), se le pasa dos parámetros numéricos, (mes, anio) y
 // devuelve el nombre de la vendedora que más vendió en plata en el mes. O sea no cantidad de ventas, 
@@ -90,6 +83,30 @@ console.log(acumulado)
 
 //13. Un reporte que diga las ventas por sucursal y por mes, para eso:
 //13.a. renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
+
+// let renderPorMes = () => {
+//   let january = []
+//   let february = []
+//   data.sales.map(e => {
+//     let month = e.saleDate.getMonth()
+//     if (month == 0) {
+//       january.push(e)
+//     } else {
+//       february.push(e)
+//     }
+//   })
+
+//   let retrievePrices = data.prices.map(e => {
+
+//   })
+
+//   console.log(`Ventas por mes
+//   Total de enero 2019: ${january}
+//   Total de febrero 2019: ${february}`)
+// }
+
+// renderPorMes()
+
 //13.b. renderPorSucursal(): Muestra una lista del importe total vendido por cada sucursal
 //13.c. render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido 
 //y la vendedora que más ingresos generó
