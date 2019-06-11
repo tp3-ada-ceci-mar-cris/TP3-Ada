@@ -27,15 +27,13 @@ var data = {
 //que es la suma de los precios de cada componente incluido.
 
 //recorre el Array, para cada elemento lo busca data.prices, te da el precio y lo acumula en una variable
-let maquina = ["Motherboard ASUS 1500", "Motherboard ASUS 1500", "HDD Toyiva", "RAM Quinston Fury"]
-
-let precioMaquina = () => {
-  let precioFinal = 0
-  maquina.map(e => {
+let precioMaquina = (maquina) => {
+  var precioFinal = 0
+  maquina.forEach(e => {
     let componente = data.prices.find(({item}) => e === item)
     precioFinal = precioFinal + componente.price
   })
-  console.log(`El precio final del equipo (conformado por ${maquina}) es $${precioFinal}`)
+  console.log(`Acá te paso el total: $${precioFinal}`)
 }
 
 //2.cantidadVentasComponente(componente): 
@@ -43,26 +41,94 @@ let precioMaquina = () => {
 //o sea que formó parte de una máquina que se vendió. La lista de ventas no se pasa por parámetro, 
 //se asume que está identificada por la variable ventas.
 
-let cosa="Monitor GPRS 3000"
+// let cosa="Monitor GPRS 3000"
 
-let cantidadVentasComponente = () => {
+let cantidadVentasComponente = (cosa) => {
     let acumulado = []
-    data.sales.forEach(({itemSold}) => itemSold.map(e =>acumulado.push(e)))
+    data.sales.forEach(({itemSold}) => itemSold.forEach(e =>acumulado.push(e)))
     let totalComponente =acumulado.filter(e=>e===cosa).length
     console.log(`El componente ${cosa} se vendió ${totalComponente} veces`)
 }
+
+cantidadVentasComponente("Monitor GPRS 3000")
 
 //3.vendedoraDelMes(mes, anio), se le pasa dos parámetros numéricos, (mes, anio) y
 // devuelve el nombre de la vendedora que más vendió en plata en el mes. O sea no cantidad de ventas, 
 //sino importe total de las ventas. El importe de una venta es el que indica la función precioMaquina. 
 //El mes es un número entero que va desde el 1 (enero) hasta el 12 (diciembre).
 
+
+
+
 //4.ventasVendedora(nombre): Obtener las ventas totales realizadas por una vendedora sin límite de fecha.
+//quiero que en todas las ventas busque el nombre que le di, traiga el item sold y me acumule el precio
+
+let ventasVendedora = (nombrePiba)=>{
+  let lasVentasDeLaPiba = data.sales.filter(({employeeName})=>employeeName===nombrePiba)
+  let acaLoGuardo = []
+  lasVentasDeLaPiba.forEach(({itemSold})=>itemSold.forEach(e=>acaLoGuardo.push(e)))
+  console.log(acaLoGuardo)
+  precioMaquina(acaLoGuardo)
+}
+
+ventasVendedora("Cecilia")
+
 
 //5.ventasMes(mes, anio): Obtener las ventas de un mes. El mes es un número entero que va desde el 1 (enero) hasta el 12 (diciembre).
 
+// así le pido año y mes
+const year = data.sales[0].saleDate.getFullYear()
+const month =data.sales[0].saleDate.getMonth()
+console.log(year, month)
+
+// esta condición sobre año y mes funciona
+const anio =2019
+const mes = 1
+if (data.sales[0].saleDate.getFullYear() === anio && data.sales[0].saleDate.getMonth()===mes){console.log('felicidad')}
+
+//esto me trae lo que vendí si es el objeto tiene ese día y mes
+if (data.sales[0].saleDate.getFullYear() === anio && data.sales[0].saleDate.getMonth()===mes){
+  let venta=data.sales[0].itemSold
+  console.log(venta)
+}
+
+//ahora quiero que me diga cuánto es esa venta
+if (data.sales[0].saleDate.getFullYear() === anio && data.sales[0].saleDate.getMonth()===mes){
+  let venta=data.sales[0].itemSold
+  let precioFinal = 0
+  venta.forEach(e => {
+    let componente = data.prices.find(({item}) => e === item)
+    precioFinal = precioFinal + componente.price
+  })
+  console.log(precioFinal)
+}
+
+//ahora pruebo recorrer todo el array y que me devuelva solo los que son de ese año y mes
+let ventasMes = ()=>{  
+  let todasLasVentas=0
+  data.sales.map(({saleDate,itemSold})=>{
+      if (saleDate.getFullYear()===anio && saleDate.getMonth()===mes) {
+      const venta=[...itemSold]
+      let precioFinal = 0
+      venta.forEach(e => {
+        const componente = data.prices.find(({item}) => e === item)
+        precioFinal = precioFinal + componente.price
+      })
+      todasLasVentas=todasLasVentas+precioFinal
+      }
+  })
+  console.log(`Este es el resultado de todasLasVentas: ${todasLasVentas} para el mes ${mes}/${anio}`)
+}
+
+/// queda resolver cómo me pasan el mes. Tal vez sea lo que me pasan +1? y usar la función precioMaquina que en la primera vuelta no andaba bien pero croe que se solucionó
+
 //6.componenteMasVendido(): Devuelve el nombre del componente que más ventas tuvo historicamente. El dato de la cantidad de ventas es 
 //el que indica la función cantidadVentasComponente
+
+//¿cuántos componentes hay que no se repitan? podria recorrer todo y generar tantas "variables de acumulación "
+
+
+// hasta acá Ceci-----
 
 //7. huboVentas(mes, anio): que indica si hubo ventas en un mes determinado. El mes es un número entero que va desde el 1 (enero) 
 //hasta el 12 (diciembre).
@@ -80,6 +146,8 @@ let cantidadVentasComponente = () => {
 //sucursal que más vendió en plata en el mes. No cantidad de ventas, sino importe total de las ventas. El importe de una venta es el 
 //que indica la función precioMaquina. El mes es un número entero que va desde el 1 (enero) hasta el 12 (diciembre).  
 //(ver si no se parece a vendedora del mes)
+
+// -----hasta acá Cris
 
 //13. Un reporte que diga las ventas por sucursal y por mes, para eso:
 //13.a. renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
