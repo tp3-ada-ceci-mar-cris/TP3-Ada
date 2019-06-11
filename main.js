@@ -67,19 +67,15 @@ let cantidadVentasComponente = () => {
 //7. huboVentas(mes, anio): que indica si hubo ventas en un mes determinado. El mes es un número entero que va desde el 1 (enero) 
 //hasta el 12 (diciembre).
 
-let huboVentas = (year, month) =>{  
-  salesMonth = data.sales.map(({itemSold})=> itemSold)
-  datesSales = data.sales.map(({saleDate})=> saleDate)
-  year = datesSales.Date.getDate(year)
-  month = datesSales.Date.prototype.getMonth(month)
-  salesMonth !== 0 ? console.log("Este mes SI hubo ventas") : console.log("Este mes no hubo ventas") 
-}
 
-huboVentas(3, 2019)
    
     
     
- 
+//PUNTO 2
+//2.a En las ventas ya existentes, tenemos que agregar la propiedad sucursal con el valor Centro (ya que es la sucursal original). 
+let sucursal = "Centro"
+data.prices.sucursal
+console.log(data)
 
 
 //8. agregar a cada venta (son objetos adentro de un array, adentro del objeto principal) la sucursal en la que se hizo
