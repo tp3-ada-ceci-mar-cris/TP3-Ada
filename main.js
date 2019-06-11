@@ -35,7 +35,7 @@ let precioMaquina = () => {
     let componente = data.prices.find(({item}) => e === item)
     precioFinal = precioFinal + componente.price
   })
-  console.log(`El precio final es $${precioFinal}`)
+  console.log(`El precio final del equipo (conformado por ${maquina}) es $${precioFinal}`)
 }
 
 //2.cantidadVentasComponente(componente): 
@@ -43,27 +43,14 @@ let precioMaquina = () => {
 //o sea que formó parte de una máquina que se vendió. La lista de ventas no se pasa por parámetro, 
 //se asume que está identificada por la variable ventas.
 
+let cosa="Monitor GPRS 3000"
+
 let cantidadVentasComponente = () => {
-  let acumulado = []
-  data.sales.forEach(e => {
-    acumulado.push(e.itemSold)
-  })
-  acumulado.forEach(e => {
-
-  })
-  console.log(`La cantidad de ventas del componente seleccionado es ${acumulado}`)
+    let acumulado = []
+    data.sales.forEach(({itemSold}) => itemSold.map(e =>acumulado.push(e)))
+    let totalComponente =acumulado.filter(e=>e===cosa).length
+    console.log(`El componente ${cosa} se vendió ${totalComponente} veces`)
 }
-
-cantidadVentasComponente()
-
-// var a = data.sales.filter(({itemSold})=>"Motherboard ASUS 1500"===itemSold)
-// console.log(a)
-
-
-// const plateTypes =allTypes.filter((e,i)=> allTypes.indexOf(e) === i)
-
-
-
 
 //3.vendedoraDelMes(mes, anio), se le pasa dos parámetros numéricos, (mes, anio) y
 // devuelve el nombre de la vendedora que más vendió en plata en el mes. O sea no cantidad de ventas, 
@@ -83,7 +70,7 @@ cantidadVentasComponente()
 let huboVentas = (year, month) =>{  
   salesMonth = data.sales.map(({itemSold})=> itemSold)
   datesSales = data.sales.map(({saleDate})=> saleDate)
-  year = datesSales.Date..getDate(year)
+  year = datesSales.Date.getDate(year)
   month = datesSales.Date.prototype.getMonth(month)
   salesMonth !== 0 ? console.log("Este mes SI hubo ventas") : console.log("Este mes no hubo ventas") 
 }
@@ -112,28 +99,28 @@ huboVentas(3, 2019)
 //13. Un reporte que diga las ventas por sucursal y por mes, para eso:
 //13.a. renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
 
-let renderPorMes = () => {
-  let january = []
-  let february = []
-  data.sales.map(e => {
-    let month = e.saleDate.getMonth()
-    if (month == 0) {
-      january.push(e)
-    } else {
-      february.push(e)
-    }
-  })
+// let renderPorMes = () => {
+//   let january = []
+//   let february = []
+//   data.sales.map(e => {
+//     let month = e.saleDate.getMonth()
+//     if (month == 0) {
+//       january.push(e)
+//     } else {
+//       february.push(e)
+//     }
+//   })
 
-  let retrievePrices = data.prices.map(e => {
+//   let retrievePrices = data.prices.map(e => {
 
-  })
+//   })
 
-  console.log(`Ventas por mes
-  Total de enero 2019: ${january}
-  Total de febrero 2019: ${february}`)
-}
+//   console.log(`Ventas por mes
+//   Total de enero 2019: ${january}
+//   Total de febrero 2019: ${february}`)
+// }
 
-renderPorMes()
+// renderPorMes()
 
 //13.b. renderPorSucursal(): Muestra una lista del importe total vendido por cada sucursal
 //13.c. render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido 
