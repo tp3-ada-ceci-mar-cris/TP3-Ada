@@ -73,9 +73,12 @@ let cantidadVentasComponente = () => {
     
 //PUNTO 2
 //2.a En las ventas ya existentes, tenemos que agregar la propiedad sucursal con el valor Centro (ya que es la sucursal original). 
-let sucursal = "Centro"
-data.prices.sucursal
-console.log(data)
+//let sucursal = "Centro"
+data.sales.forEach(e =>{
+  e.sucursal = "Centro"
+}) 
+ 
+console.log(data.sales)
 
 
 //8. agregar a cada venta (son objetos adentro de un array, adentro del objeto principal) la sucursal en la que se hizo
