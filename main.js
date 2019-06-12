@@ -1,134 +1,123 @@
-var data = {
-    employees: ["Cristina", "Marina", "Cecilia", "Brillantina"],
-  
-    sales: [
-      { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
-      { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
-      { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "Motherboard MZI"] },
-      { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Monitor ASC 543", "Motherboard ASUS 1200"] },
-      { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1200"] }
-    ],
-  
-    prices: [
-      { id:0001,type:"monitor", item: "Monitor GPRS 3000", price: 200 },
-      { id:0002,type:"mother", item: "Motherboard ASUS 1500", price: 120 },
-      { id:0003,type:"monitor", item: "Monitor ASC 543", price: 250 },
-      { id:0004,type:"mother", item: "Motherboard ASUS 1200", price: 100 },
-      { id:0005,type:"mother", item: "Motherboard MZI", price: 30 },
-      { id:0006,type:"HDD", item: "HDD Toyiva", price: 90 },
-      { id:0007,type:"HDD", item: "HDD Wezter Dishital", price: 75 },
-      { id:0008,type:"RAM", item: "RAM Quinston", price: 110 },
-      { id:0009,type:"RAM", item: "RAM Quinston Fury", price: 230 }
-    ]
-  };
+let data = {
+  employees: ["Cristina", "Marina", "Cecilia", "Brillantina"],
+
+  sales: [
+    { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
+    { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
+    { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "Motherboard MZI"] },
+    { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Monitor ASC 543", "Motherboard ASUS 1200"] },
+    { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1200"] }
+  ],
+
+  prices: [
+    { id:0001,type:"monitor", item: "Monitor GPRS 3000", price: 200 },
+    { id:0002,type:"mother", item: "Motherboard ASUS 1500", price: 120 },
+    { id:0003,type:"monitor", item: "Monitor ASC 543", price: 250 },
+    { id:0004,type:"mother", item: "Motherboard ASUS 1200", price: 100 },
+    { id:0005,type:"mother", item: "Motherboard MZI", price: 30 },
+    { id:0006,type:"HDD", item: "HDD Toyiva", price: 90 },
+    { id:0007,type:"HDD", item: "HDD Wezter Dishital", price: 75 },
+    { id:0008,type:"RAM", item: "RAM Quinston", price: 110 },
+    { id:0009,type:"RAM", item: "RAM Quinston Fury", price: 230 }
+  ]
+}
 
 //1. precioMaquina(componentes): 
-//recibe un array de componentes y devuelve el precio de la máquina que se puede armar con esos componentes, 
-//que es la suma de los precios de cada componente incluido.
-
-//recorre el Array, para cada elemento lo busca data.prices, te da el precio y lo acumula en una variable
-let precioMaquina = (maquina) => {
-  var precioFinal = 0
-  maquina.forEach(e => {
-    let componente = data.prices.find(({item}) => e === item)
-    precioFinal = precioFinal + componente.price
+let salePrice = sale => {
+  let salePrice = 0
+  sale.forEach(e => {
+      const component = data.prices.find(({item}) => e === item)
+      salePrice = salePrice + component.price
   })
-  console.log(`Acá te paso el total: $${precioFinal}`)
+  return salePrice
 }
 
-//2.cantidadVentasComponente(componente): 
-//recibe un componente y devuelve la cantidad de veces que fue vendido, 
-//o sea que formó parte de una máquina que se vendió. La lista de ventas no se pasa por parámetro, 
-//se asume que está identificada por la variable ventas.
+//esta parte es para probar
+const maquina = ["Motherboard ASUS 1500", "Motherboard ASUS 1500", "HDD Toyiva", "RAM Quinston Fury"]
+console.log(`(punto 1) La venta de ${maquina} tiene un valor total de ARS ${salePrice(maquina)}`)
 
-// let cosa="Monitor GPRS 3000"
-
-let cantidadVentasComponente = (cosa) => {
-    let acumulado = []
-    data.sales.forEach(({itemSold}) => itemSold.forEach(e =>acumulado.push(e)))
-    let totalComponente =acumulado.filter(e=>e===cosa).length
-    console.log(`El componente ${cosa} se vendió ${totalComponente} veces`)
+//2. cantidadVentasComponente(componente): 
+let timesItWasSold = component => {
+  let totalSales = []
+  data.sales.forEach(({itemSold}) => itemSold.forEach(e =>totalSales.push(e)))
+  const totalComponent =totalSales.filter(e=>e===component).length
+  return totalComponent
 }
+  
+// esta parte es para probar
+const cosa="Monitor GPRS 3000"
+console.log(`(punto 2) El ítem "${cosa}" fue vendido históricamente ${timesItWasSold(cosa)} veces`)
 
-cantidadVentasComponente("Monitor GPRS 3000")
-
-//3.vendedoraDelMes(mes, anio), se le pasa dos parámetros numéricos, (mes, anio) y
+//3. vendedoraDelMes(mes, anio), se le pasa dos parámetros numéricos, (mes, anio) y
 // devuelve el nombre de la vendedora que más vendió en plata en el mes. O sea no cantidad de ventas, 
 //sino importe total de las ventas. El importe de una venta es el que indica la función precioMaquina. 
 //El mes es un número entero que va desde el 1 (enero) hasta el 12 (diciembre).
 
+//recorro la lista de vendedoras - en cada iteración me da las ventas del mes de una vendedora
 
 
-
-//4.ventasVendedora(nombre): Obtener las ventas totales realizadas por una vendedora sin límite de fecha.
-//quiero que en todas las ventas busque el nombre que le di, traiga el item sold y me acumule el precio
-
-let ventasVendedora = (nombrePiba)=>{
-  let lasVentasDeLaPiba = data.sales.filter(({employeeName})=>employeeName===nombrePiba)
-  let acaLoGuardo = []
-  lasVentasDeLaPiba.forEach(({itemSold})=>itemSold.forEach(e=>acaLoGuardo.push(e)))
-  console.log(acaLoGuardo)
-  precioMaquina(acaLoGuardo)
-}
-
-ventasVendedora("Cecilia")
-
-
-//5.ventasMes(mes, anio): Obtener las ventas de un mes. El mes es un número entero que va desde el 1 (enero) hasta el 12 (diciembre).
-
-// así le pido año y mes
-const year = data.sales[0].saleDate.getFullYear()
-const month =data.sales[0].saleDate.getMonth()
-console.log(year, month)
-
-// esta condición sobre año y mes funciona
-const anio =2019
-const mes = 1
-if (data.sales[0].saleDate.getFullYear() === anio && data.sales[0].saleDate.getMonth()===mes){console.log('felicidad')}
-
-//esto me trae lo que vendí si es el objeto tiene ese día y mes
-if (data.sales[0].saleDate.getFullYear() === anio && data.sales[0].saleDate.getMonth()===mes){
-  let venta=data.sales[0].itemSold
-  console.log(venta)
-}
-
-//ahora quiero que me diga cuánto es esa venta
-if (data.sales[0].saleDate.getFullYear() === anio && data.sales[0].saleDate.getMonth()===mes){
-  let venta=data.sales[0].itemSold
-  let precioFinal = 0
-  venta.forEach(e => {
-    let componente = data.prices.find(({item}) => e === item)
-    precioFinal = precioFinal + componente.price
+let employeMonthlySale = data.employees.map (name=> {
+  let arrangeSales = []
+  data.sales.forEach(({saleDate, employeeName, itemSold})=> {
+      if (saleDate.getFullYear()===2019 && saleDate.getMonth()===1 && employeeName===name) {
+          itemSold.forEach(e=>arrangeSales.push(e))}
+      return arrangeSales
   })
-  console.log(precioFinal)
+  console.log( salePrice(arrangeSales)      )
+})
+// console.log (employeeMonthlySale)
+
+// const bestEmployeeSale = Math.max(...employeeMonth)
+
+console.log(`(punto 3) No sé ni por dónde empezar`)
+
+//4. ventasVendedora(nombre): Obtener las ventas totales realizadas por una vendedora sin límite de fecha.
+let salesByEmployee = name => {
+  const selectSalesEmployee = data.sales.filter(({employeeName})=>employeeName===name)
+  let arrangeSalesEmployee = []
+  selectSalesEmployee.forEach(({itemSold})=> itemSold.forEach(e=>arrangeSalesEmployee.push(e)))
+  const employeeRevenue = salePrice (arrangeSalesEmployee)
+  return employeeRevenue
 }
 
-//ahora pruebo recorrer todo el array y que me devuelva solo los que son de ese año y mes
-let ventasMes = ()=>{  
-  let todasLasVentas=0
-  data.sales.map(({saleDate,itemSold})=>{
-      if (saleDate.getFullYear()===anio && saleDate.getMonth()===mes) {
-      const venta=[...itemSold]
-      let precioFinal = 0
-      venta.forEach(e => {
-        const componente = data.prices.find(({item}) => e === item)
-        precioFinal = precioFinal + componente.price
-      })
-      todasLasVentas=todasLasVentas+precioFinal
+//esta parte para probar
+const nombre = "Cristina"
+console.log(`(punto 4) Las ventas históricas de ${nombre} ascienden a ARS ${salesByEmployee(nombre)}`)
+
+//5. ventasMes(mes, anio)
+let monthlySales = (year, realMonth) => {
+  const month=realMonth-1
+  let eachSale=[]
+  data.sales.forEach(({saleDate,itemSold})=>{
+      if (saleDate.getFullYear()===year && saleDate.getMonth()===month) {
+          itemSold.forEach (e=> eachSale.push(e))
       }
   })
-  console.log(`Este es el resultado de todasLasVentas: ${todasLasVentas} para el mes ${mes}/${anio}`)
+  const monthRevenue = salePrice(eachSale)
+  return monthRevenue
 }
 
-/// queda resolver cómo me pasan el mes. Tal vez sea lo que me pasan +1? y usar la función precioMaquina que en la primera vuelta no andaba bien pero croe que se solucionó
+//esta parte es para probar
+const mes= 2
+const anio=2019
+console.log(`(punto 5) Las ventas del mes ${mes} de ${anio} ascienden a ARS ${monthlySales(anio,mes)}`)
 
-//6.componenteMasVendido(): Devuelve el nombre del componente que más ventas tuvo historicamente. El dato de la cantidad de ventas es 
-//el que indica la función cantidadVentasComponente
+//6. componenteMasVendido()
+let bestSeller = salesList => {
+  const salesByComponent = salesList.map(({item})=>timesItWasSold(item))
+  const bestNumber = Math.max(...salesByComponent)
+  
+  let bestSellerList =[]
+  data.prices.map(({item})=> timesItWasSold(item)>= bestNumber ? bestSellerList.push(item) :null)
+  return bestSellerList
+}
 
-//¿cuántos componentes hay que no se repitan? podria recorrer todo y generar tantas "variables de acumulación "
+//esta parte es para probar
+bestSeller(data.prices).length < 2 ? 
+  console.log (`(punto 6) El componente históricamente más vendido es ${bestSeller(data.prices)}`) 
+  : console.log (`(punto 6) Los componentes históricamente más vendidos son ${bestSeller(data.prices)}`)
 
-
-// hasta acá Ceci-----
+//hasta acá Ceci-----
 
 //7. huboVentas(mes, anio): que indica si hubo ventas en un mes determinado. El mes es un número entero que va desde el 1 (enero) 
 //hasta el 12 (diciembre).
