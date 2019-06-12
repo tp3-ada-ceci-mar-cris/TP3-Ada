@@ -140,18 +140,25 @@ let ventasMes = ()=>{
 //PUNTO 2
 //2.a En las ventas ya existentes, tenemos que agregar la propiedad sucursal con el valor Centro (ya que es la sucursal original). 
 //let sucursal = "Centro"
-data.sales.forEach(e =>{
-  e.sucursal = "Centro"
-}) 
- 
-console.log(data.sales)
-
-
 //8. agregar a cada venta (son objetos adentro de un array, adentro del objeto principal) la sucursal en la que se hizo
+
+data.sales.forEach(e =>{
+  e.branchOffice = "Downtown"
+}) 
+console.log(data.sales)
 
 //9. agregar un array con las sucursales al objeto principal
 
+data.branchOffice = ['Downtown', 'Little Horse']
+console.log(data)
+
+
 //10. cargar nuevas ventas en el array correspondiente, en el objeto principal
+
+data.sales.forEach(e =>{
+  console.log(data.sales)
+})
+
 
 //11.Crear la función ventasSucursal(sucursal), que obtiene las ventas totales realizadas por una sucursal sin límite de fecha.
 //Adaptar la función de total de ventas por vendedora para que también sirva para total de ventas por sucursal
