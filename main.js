@@ -110,7 +110,7 @@ let renderPorMes = () => {
   })
 
   let retrievePrices = data.prices.map(e => {
-
+    let componente = data.prices.find(({item}) => e === item)
   })
 
   console.log(`Ventas por mes
