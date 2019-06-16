@@ -48,28 +48,43 @@ let timesItWasSold = component => {
 const cosa="Monitor GPRS 3000"
 console.log(`(punto 2) El ítem "${cosa}" fue vendido históricamente ${timesItWasSold(cosa)} veces`)
 
-//3. vendedoraDelMes(mes, anio), se le pasa dos parámetros numéricos, (mes, anio) y
-// devuelve el nombre de la vendedora que más vendió en plata en el mes. O sea no cantidad de ventas, 
-//sino importe total de las ventas. El importe de una venta es el que indica la función precioMaquina. 
-//El mes es un número entero que va desde el 1 (enero) hasta el 12 (diciembre).
-
-//recorro la lista de vendedoras - en cada iteración me da las ventas del mes de una vendedora
-
-
-let employeMonthlySale = data.employees.map (name=> {
-  let arrangeSales = []
-  data.sales.forEach(({saleDate, employeeName, itemSold})=> {
-      if (saleDate.getFullYear()===2019 && saleDate.getMonth()===1 && employeeName===name) {
-          itemSold.forEach(e=>arrangeSales.push(e))}
-      return arrangeSales
+//3. vendedoraDelMes(mes, anio)
+let employeeOfTheMonth = (year, realMonth) => {
+  let month = realMonth-1
+  let monthSalesByEmployee = []
+  let employeMonthlySale = data.employees.forEach(name=> {
+      let arrangeSales = []
+      data.sales.forEach(({saleDate, employeeName, itemSold})=> {
+          if (saleDate.getFullYear()===year && saleDate.getMonth()===month && employeeName===name) {
+              itemSold.forEach(e=>arrangeSales.push(e))}
+          return arrangeSales
+      })
+      monthSalesByEmployee.push (salePrice(arrangeSales))
+      return monthSalesByEmployee
   })
-  console.log( salePrice(arrangeSales)      )
-})
-// console.log (employeeMonthlySale)
+  const bestNumber = Math.max(...monthSalesByEmployee)
 
-// const bestEmployeeSale = Math.max(...employeeMonth)
+  let bestSellerList =[]
 
-console.log(`(punto 3) No sé ni por dónde empezar`)
+  let funcionCasiRepetida = data.employees.forEach(name=> {
+      let arrangeSales = []
+      data.sales.forEach(({saleDate, employeeName, itemSold})=> {
+          if (saleDate.getFullYear()===year && saleDate.getMonth()===month && employeeName===name) {
+              itemSold.forEach(e=>arrangeSales.push(e))}
+          return arrangeSales
+      })
+      if (salePrice(arrangeSales)>=bestNumber) {
+      bestSellerList.push(name)
+      }
+      return bestSellerList
+  })
+  return bestSellerList
+}
+
+//esta parte es para probar
+const anio2=2019
+const mes2=1
+console.log (`(punto 3) La mejor vendedora del mes ${mes2} de ${anio2} es ${employeeOfTheMonth(anio2,mes2)}`) 
 
 //4. ventasVendedora(nombre): Obtener las ventas totales realizadas por una vendedora sin límite de fecha.
 let salesByEmployee = name => {
