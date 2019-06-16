@@ -198,6 +198,7 @@ console.log(data.sales)
 //13. Un reporte que diga las ventas por sucursal y por mes, para eso:
 //13.a. renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
 
+<<<<<<< HEAD
 // let renderPorMes = () => {
 //   let january = []
 //   let february = []
@@ -220,6 +221,48 @@ console.log(data.sales)
 // }
 
 // renderPorMes()
+=======
+let monthlyRender = () => {
+  let january = []
+  let february = []
+  data.sales.forEach(e => {
+    let month = e.saleDate.getMonth()
+    switch (month) { // AGREGAR CASOS PARA TODOS LOS MESES
+      case 0:
+        january.push(e.itemSold);
+        break;
+      case 1:
+        february.push(e.itemSold);
+    }
+  })
+
+  console.log(january)
+
+  let januaryTotalSales = () => {
+    let januarySales = 0
+    january.forEach(e => {
+      let item = data.prices.filter(({item}) => e === item) // NaN ?????
+      januarySales += e.price
+    })
+    return januarySales
+  }
+
+  januaryTotalSales()
+
+  let februarySales = 0
+  february.forEach(e => {
+    let item = data.prices.filter(({item}) => e === item)
+    let februaryTotal = februarySales + item.price
+    return februaryTotal
+  })
+
+  console.log(`Ventas por mes
+  Total de enero 2019: ${januarySales}
+  Total de febrero 2019: ${februaryTotal}`)
+}
+
+monthlyRender()
+>>>>>>> b349c2ee034ce7a292bd27cdd7e6c0ecb4e0694d
 
 //13.b. renderPorSucursal(): Muestra una lista del importe total vendido por cada sucursal
 //13.c. render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido 
