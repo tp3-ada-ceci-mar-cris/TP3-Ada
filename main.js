@@ -2,11 +2,26 @@ let data = {
   employees: ["Cristina", "Marina", "Cecilia", "Brillantina"],
 
   sales: [
-    { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
-    { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
-    { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "Motherboard MZI"] },
-    { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Monitor ASC 543", "Motherboard ASUS 1200"] },
-    { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1200"] }
+    { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"]},
+    { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"]},
+    { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "Motherboard MZI"]},
+    { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Monitor ASC 543", "Motherboard ASUS 1200"]},
+    { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1200"]},
+    { saleDate: new Date(2019, 2, 12), employeeName: "Hedy", itemSold: ["Monitor GPRS 3000", "HDD Toyiva"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 24), employeeName: "Sheryl", itemSold: ["HDD Wezter Dishital", "Motherboard ASUS 1500"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Ada", itemSold: ["Motherboard MZI", "RAM Quinston Fury"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 11), employeeName: "Grace", itemSold: ["Monitor ASC 543", "RAM Quinston"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 15), employeeName: "Ada", itemSold: ["Motherboard ASUS 1200", "RAM Quinston Fury"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 12), employeeName: "Hedy", itemSold: ["Motherboard ASUS 1500", "HDD Toyiva"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 21), employeeName: "Grace", itemSold: ["Motherboard MZI", "RAM Quinston"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 08), employeeName: "Sheryl", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 16), employeeName: "Sheryl", itemSold: ["Monitor GPRS 3000", "RAM Quinston Fury"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 27), employeeName: "Hedy", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 22), employeeName: "Grace", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 05), employeeName: "Ada", itemSold: ["Motherboard ASUS 1500", "RAM Quinston"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Grace", itemSold: ["Motherboard MZI, HDD Wezter Dishital"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 07), employeeName: "Sheryl", itemSold: ["Monitor GPRS 3000", "RAM Quinston"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 14), employeeName: "Ada", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Downtown"}
   ],
 
   prices: [
@@ -144,46 +159,18 @@ bestSeller(data.prices).length < 2 ?
 //PUNTO 2
 //2.a En las ventas ya existentes, tenemos que agregar la propiedad sucursal con el valor Centro (ya que es la sucursal original). 
 //let sucursal = "Centro"
-//8. agregar a cada venta (son objetos adentro de un array, adentro del objeto principal) la sucursal en la que se hizo
+//YA ESTA
 
-data.sales.forEach(e =>{
-  e.branchOffice = "Downtown"
-}) 
-console.log(data.sales)
+//8. agregar a cada venta (son objetos adentro de un array, adentro del objeto principal) la sucursal en la que se hizo
+//YA ESTA
 
 //9. agregar un array con las sucursales al objeto principal
 
 data.branchOffice = ['Downtown', 'Caballito']
 console.log(data)
 
-
 //10. cargar nuevas ventas en el array correspondiente, en el objeto principal
-let newSales = [
-  { saleDate: new Date(2019, 2, 12), employeeName: "Hedy", itemSold: ["Monitor GPRS 3000", "HDD Toyiva"], branchOffice : "Downtown"},
-  { saleDate: new Date(2019, 2, 24), employeeName: "Sheryl", itemSold: ["HDD Wezter Dishital", "Motherboard ASUS 1500"], branchOffice : "Caballito"},
-  { saleDate: new Date(2019, 2, 01), employeeName: "Ada", itemSold: ["Motherboard MZI", "RAM Quinston Fury"], branchOffice : "Downtown"},
-  { saleDate: new Date(2019, 2, 11), employeeName: "Grace", itemSold: ["Monitor ASC 543", "RAM Quinston"], branchOffice : "Caballito"},
-  { saleDate: new Date(2019, 2, 15), employeeName: "Ada", itemSold: ["Motherboard ASUS 1200", "RAM Quinston Fury"], branchOffice : "Downtown"},
-  { saleDate: new Date(2019, 2, 12), employeeName: "Hedy", itemSold: ["Motherboard ASUS 1500", "HDD Toyiva"], branchOffice : "Caballito"},
-  { saleDate: new Date(2019, 2, 21), employeeName: "Grace", itemSold: ["Motherboard MZI", "RAM Quinston"], branchOffice : "Downtown"},
-  { saleDate: new Date(2019, 2, 08), employeeName: "Sheryl", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Downtown"},
-  { saleDate: new Date(2019, 2, 16), employeeName: "Sheryl", itemSold: ["Monitor GPRS 3000", "RAM Quinston Fury"], branchOffice : "Downtown"},
-  { saleDate: new Date(2019, 2, 27), employeeName: "Hedy", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Caballito"},
-  { saleDate: new Date(2019, 2, 22), employeeName: "Grace", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Downtown"},
-  { saleDate: new Date(2019, 2, 05), employeeName: "Ada", itemSold: ["Motherboard ASUS 1500", "RAM Quinston"], branchOffice : "Downtown"},
-  { saleDate: new Date(2019, 2, 01), employeeName: "Grace", itemSold: ["Motherboard MZI, HDD Wezter Dishital"], branchOffice : "Downtown"},
-  { saleDate: new Date(2019, 2, 07), employeeName: "Sheryl", itemSold: ["Monitor GPRS 3000", "RAM Quinston"], branchOffice : "Caballito"},
-  { saleDate: new Date(2019, 2, 14), employeeName: "Ada", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Downtown"}
-]
-let newSale = {
-  saleDate: new Date,
-  employeeName: 
-  
-}
-newSales.push(newSale)
-
-console.log(data.sales)
-
+//YA ESTA CARGADO A MANO
 
 //11.Crear la función ventasSucursal(sucursal), que obtiene las ventas totales realizadas por una sucursal sin límite de fecha.
 //Adaptar la función de total de ventas por vendedora para que también sirva para total de ventas por sucursal
@@ -193,35 +180,50 @@ console.log(data.sales)
 //que indica la función precioMaquina. El mes es un número entero que va desde el 1 (enero) hasta el 12 (diciembre).  
 //(ver si no se parece a vendedora del mes)
 
+
+
+let branchOfficeOfTheMonth = (year, realMonth) => {
+  let month = realMonth-1
+  let monthSalesByBranchOffice = []
+  let branchOfficeMonthlySale = data.branchOffice.forEach(name=> {
+      let arrangeSales = []
+      data.sales.forEach(({saleDate, branchOfficeName, itemSold})=> {
+          if (saleDate.getFullYear()===year && saleDate.getMonth()===month && branchOfficeName===name) {
+              itemSold.forEach(e=>arrangeSales.push(e))}
+          return arrangeSales
+      })
+      monthSalesByBranchOffice.push (salePrice(arrangeSales))
+      return monthSalesByBranchOffice
+  })
+  const bestNumber = Math.max(...monthSalesByBranchOffice)
+
+  let bestSellerList =[]
+
+  let funcionCasiRepetida = data.branchOffice.forEach(name=> {
+      let arrangeSales = []
+      data.sales.forEach(({saleDate, branchOfficeName, itemSold})=> {
+          if (saleDate.getFullYear()===year && saleDate.getMonth()===month && branchOfficeName===name) {
+              itemSold.forEach(e=>arrangeSales.push(e))}
+          return arrangeSales
+      })
+      if (salePrice(arrangeSales)>=bestNumber) {
+      bestSellerList.push(name)
+      }
+      return bestSellerList
+  })
+  return bestSellerList
+}
+
+//esta parte es para probar
+const anioCris=2019
+const mesCris=1
+console.log (`(punto 3) La sucursal con mejores ventas del mes ${mesCris} de ${anioCris} es ${branchOfficeOfTheMonth(anio2,mes2)}`) 
+
 // -----hasta acá Cris
 
 //13. Un reporte que diga las ventas por sucursal y por mes, para eso:
 //13.a. renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
 
-<<<<<<< HEAD
-// let renderPorMes = () => {
-//   let january = []
-//   let february = []
-//   data.sales.map(e => {
-//     let month = e.saleDate.getMonth()
-//     if (month == 0) {
-//       january.push(e)
-//     } else {
-//       february.push(e)
-//     }
-//   })
-
-//   let retrievePrices = data.prices.map(e => {
-
-//   })
-
-//   console.log(`Ventas por mes
-//   Total de enero 2019: ${january}
-//   Total de febrero 2019: ${february}`)
-// }
-
-// renderPorMes()
-=======
 let monthlyRender = () => {
   let january = []
   let february = []
@@ -262,7 +264,6 @@ let monthlyRender = () => {
 }
 
 monthlyRender()
->>>>>>> b349c2ee034ce7a292bd27cdd7e6c0ecb4e0694d
 
 //13.b. renderPorSucursal(): Muestra una lista del importe total vendido por cada sucursal
 //13.c. render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido 
