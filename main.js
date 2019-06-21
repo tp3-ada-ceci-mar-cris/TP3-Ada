@@ -25,107 +25,59 @@ let data = {
   ],
 
   prices: [
-    { id:0001,type:"monitor", item: "Monitor GPRS 3000", price: 200 },
-    { id:0002,type:"mother", item: "Motherboard ASUS 1500", price: 120 },
-    { id:0003,type:"monitor", item: "Monitor ASC 543", price: 250 },
-    { id:0004,type:"mother", item: "Motherboard ASUS 1200", price: 100 },
-    { id:0005,type:"mother", item: "Motherboard MZI", price: 30 },
-    { id:0006,type:"HDD", item: "HDD Toyiva", price: 90 },
-    { id:0007,type:"HDD", item: "HDD Wezter Dishital", price: 75 },
-    { id:0008,type:"RAM", item: "RAM Quinston", price: 110 },
-    { id:0009,type:"RAM", item: "RAM Quinston Fury", price: 230 }
+    { id:"0001",type:"monitor", item: "Monitor GPRS 3000", price: 200 },
+    { id:"0002",type:"mother", item: "Motherboard ASUS 1500", price: 120 },
+    { id:"0003",type:"monitor", item: "Monitor ASC 543", price: 250 },
+    { id:"0004",type:"mother", item: "Motherboard ASUS 1200", price: 100 },
+    { id:"0005",type:"mother", item: "Motherboard MZI", price: 30 },
+    { id:"0006",type:"HDD", item: "HDD Toyiva", price: 90 },
+    { id:"0007",type:"HDD", item: "HDD Wezter Dishital", price: 75 },
+    { id:"0008",type:"RAM", item: "RAM Quinston", price: 110 },
+    { id:"0009",type:"RAM", item: "RAM Quinston Fury", price: 230 }
   ]
 }
 
 //1. precioMaquina(componentes): 
-let salePrice = sale => {
-  let salePrice = 0
-  sale.forEach(e => {
-      const component = data.prices.find(({item}) => e === item)
-      salePrice = salePrice + component.price
-  })
-  return salePrice
-}
+let salePrice = sale => sale.length>0?sale.map(e => data.prices.find(({item}) => e === item).price).reduce((a,b)=>a+b):0
 
 //esta parte es para probar
-const maquina = ["Motherboard ASUS 1500", "Motherboard ASUS 1500", "HDD Toyiva", "RAM Quinston Fury"]
+const maquina = ["Motherboard ASUS 1200", "Motherboard ASUS 1500", "HDD Toyiva", "RAM Quinston Fury"]
 console.log(`(punto 1) La venta de ${maquina} tiene un valor total de ARS ${salePrice(maquina)}`)
 
 //2. cantidadVentasComponente(componente): 
-let timesItWasSold = component => {
-  let totalSales = []
-  data.sales.forEach(({itemSold}) => itemSold.forEach(e =>totalSales.push(e)))
-  const totalComponent =totalSales.filter(e=>e===component).length
-  return totalComponent
-}
+let timesItWasSold = comp => data.sales.map(({itemSold}) => itemSold).flat().filter(e=>e==comp).length
   
 // esta parte es para probar
 const cosa="Monitor GPRS 3000"
 console.log(`(punto 2) El ítem "${cosa}" fue vendido históricamente ${timesItWasSold(cosa)} veces`)
 
 //3. vendedoraDelMes(mes, anio)
-let employeeOfTheMonth = (year, realMonth) => {
-  let month = realMonth-1
-  let monthSalesByEmployee = []
-  let employeMonthlySale = data.employees.forEach(name=> {
-      let arrangeSales = []
-      data.sales.forEach(({saleDate, employeeName, itemSold})=> {
-          if (saleDate.getFullYear()===year && saleDate.getMonth()===month && employeeName===name) {
-              itemSold.forEach(e=>arrangeSales.push(e))}
-          return arrangeSales
-      })
-      monthSalesByEmployee.push (salePrice(arrangeSales))
-      return monthSalesByEmployee
+let employeeOfTheMonth = (year, month) => {
+  const monthlySales = data.sales.filter(({saleDate})=>saleDate.getFullYear()===year && saleDate.getMonth()===month-1)
+  const employeeMonthlySales =data.employees.map(name =>{
+    return { name:name, sales:salePrice(monthlySales.filter(({employeeName})=>employeeName===name).map(({itemSold})=>itemSold).flat())}
   })
-  const bestNumber = Math.max(...monthSalesByEmployee)
-
-  let bestSellerList =[]
-
-  let funcionCasiRepetida = data.employees.forEach(name=> {
-      let arrangeSales = []
-      data.sales.forEach(({saleDate, employeeName, itemSold})=> {
-          if (saleDate.getFullYear()===year && saleDate.getMonth()===month && employeeName===name) {
-              itemSold.forEach(e=>arrangeSales.push(e))}
-          return arrangeSales
-      })
-      if (salePrice(arrangeSales)>=bestNumber) {
-      bestSellerList.push(name)
-      }
-      return bestSellerList
-  })
-  return bestSellerList
-}
+  const bestSale = Math.max(...employeeMonthlySales.map(({sales})=>sales).flat())
+  const bestEmployeeList = employeeMonthlySales.filter(({sales})=> sales>= bestSale).map(({name})=>name).flat()
+  return bestEmployeeList
+  }
 
 //esta parte es para probar
 const anio2=2019
-const mes2=1
+const mes2=2
 console.log (`(punto 3) La mejor vendedora del mes ${mes2} de ${anio2} es ${employeeOfTheMonth(anio2,mes2)}`) 
 
-//4. ventasVendedora(nombre): Obtener las ventas totales realizadas por una vendedora sin límite de fecha.
-let salesByEmployee = name => {
-  const selectSalesEmployee = data.sales.filter(({employeeName})=>employeeName===name)
-  let arrangeSalesEmployee = []
-  selectSalesEmployee.forEach(({itemSold})=> itemSold.forEach(e=>arrangeSalesEmployee.push(e)))
-  const employeeRevenue = salePrice (arrangeSalesEmployee)
-  return employeeRevenue
-}
+//4. ventasVendedora(nombre)
+let salesByEmployee = name => 
+  salePrice(data.sales.filter(({employeeName})=>employeeName===name).map(({itemSold})=> itemSold).flat())
 
 //esta parte para probar
-const nombre = "Cristina"
+const nombre = "Cecilia"
 console.log(`(punto 4) Las ventas históricas de ${nombre} ascienden a ARS ${salesByEmployee(nombre)}`)
 
 //5. ventasMes(mes, anio)
-let monthlySales = (year, realMonth) => {
-  const month=realMonth-1
-  let eachSale=[]
-  data.sales.forEach(({saleDate,itemSold})=>{
-      if (saleDate.getFullYear()===year && saleDate.getMonth()===month) {
-          itemSold.forEach (e=> eachSale.push(e))
-      }
-  })
-  const monthRevenue = salePrice(eachSale)
-  return monthRevenue
-}
+let monthlySales = (year, month) => 
+  salePrice(data.sales.filter(({saleDate})=>saleDate.getFullYear()===year && saleDate.getMonth()===month-1).map(({itemSold})=>itemSold).flat())
 
 //esta parte es para probar
 const mes= 2
@@ -134,15 +86,13 @@ console.log(`(punto 5) Las ventas del mes ${mes} de ${anio} ascienden a ARS ${mo
 
 //6. componenteMasVendido()
 let bestSeller = salesList => {
-  const salesByComponent = salesList.map(({item})=>timesItWasSold(item))
-  const bestNumber = Math.max(...salesByComponent)
-  
-  let bestSellerList =[]
-  data.prices.map(({item})=> timesItWasSold(item)>= bestNumber ? bestSellerList.push(item) :null)
+  const salesByComponent = salesList.map(({item})=>{return {item:item, sales:timesItWasSold(item)}})
+  const bestNumber = Math.max(...salesByComponent.map(({sales})=>sales).flat())
+  const bestSellerList = salesByComponent.filter(({sales})=> sales>= bestNumber).map(({item})=>item).flat()
   return bestSellerList
 }
 
-//esta parte es para probar
+// esta parte es para probar
 bestSeller(data.prices).length < 2 ? 
   console.log (`(punto 6) El componente históricamente más vendido es ${bestSeller(data.prices)}`) 
   : console.log (`(punto 6) Los componentes históricamente más vendidos son ${bestSeller(data.prices)}`)
