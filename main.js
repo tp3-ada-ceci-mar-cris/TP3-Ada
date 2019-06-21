@@ -161,26 +161,37 @@ bestSeller(data.prices).length < 2 ?
 //let sucursal = "Centro"
 //YA ESTA
 
-//8. agregar a cada venta (son objetos adentro de un array, adentro del objeto principal) la sucursal en la que se hizo
+//2.b agregar a cada venta (son objetos adentro de un array, adentro del objeto principal) la sucursal en la que se hizo
 //YA ESTA
 
-//9. agregar un array con las sucursales al objeto principal
+//2.c agregar un array con las sucursales al objeto principal
 
 data.branchOffice = ['Downtown', 'Caballito']
 console.log(data)
 
-//10. cargar nuevas ventas en el array correspondiente, en el objeto principal
+//2.d cargar nuevas ventas en el array correspondiente, en el objeto principal
 //YA ESTA CARGADO A MANO
 
-//11.Crear la función ventasSucursal(sucursal), que obtiene las ventas totales realizadas por una sucursal sin límite de fecha.
+//2.e Crear la función ventasSucursal(sucursal), que obtiene las ventas totales realizadas por una sucursal sin límite de fecha.
 //Adaptar la función de total de ventas por vendedora para que también sirva para total de ventas por sucursal
 
-//12.Crear la función sucursalDelMes(mes, anio), que se le pasa dos parámetros numéricos, (mes, anio) y devuelve el nombre de la 
+let salesByBranchOffice = name => {
+  const selectSalesBranchOffice = data.sales.filter(({branchOffice})=>branchOffice===name)
+  let arrangeSalesBranchOffice = []
+  selectSalesBranchOffice.forEach(({itemSold})=> itemSold.forEach(e=>arrangeSalesBranchOffice.push(e)))
+  const branchOfficeRevenue = salePrice (arrangeSalesBranchOffice)
+  return branchOfficeRevenue
+}
+
+//esta parte para probar` 
+const sucursal = "Caballito"
+console.log(`(punto 2.e) Las ventas históricas de ${sucursal} ascienden a ARS ${salesByBranchOffice(sucursal)}`)
+
+
+//12.f Crear la función sucursalDelMes(mes, anio), que se le pasa dos parámetros numéricos, (mes, anio) y devuelve el nombre de la 
 //sucursal que más vendió en plata en el mes. No cantidad de ventas, sino importe total de las ventas. El importe de una venta es el 
 //que indica la función precioMaquina. El mes es un número entero que va desde el 1 (enero) hasta el 12 (diciembre).  
 //(ver si no se parece a vendedora del mes)
-
-
 
 let branchOfficeOfTheMonth = (year, realMonth) => {
   let month = realMonth-1
@@ -217,7 +228,7 @@ let branchOfficeOfTheMonth = (year, realMonth) => {
 //esta parte es para probar
 const anioCris=2019
 const mesCris=1
-console.log (`(punto 3) La sucursal con mejores ventas del mes ${mesCris} de ${anioCris} es ${branchOfficeOfTheMonth(anio2,mes2)}`) 
+console.log (`(punto 12.f) La sucursal con mejores ventas del mes ${mesCris} de ${anioCris} es ${branchOfficeOfTheMonth(anio2,mes2)}`) 
 
 // -----hasta acá Cris
 
