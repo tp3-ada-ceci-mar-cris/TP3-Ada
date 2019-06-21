@@ -155,18 +155,24 @@ let monthlyRender = () => {
     }
   })
 
-  console.log(january)
+  //let salePrice = sale => {
+    //let salePrice = 0
+    //sale.forEach(e => {
+      //  const component = data.prices.find(({item}) => e === item)
+        //salePrice = salePrice + component.price
+    //})
+    //return salePrice
+  //}
 
-  let januaryTotalSales = () => {
+
     let januarySales = 0
     january.forEach(e => {
-      let item = data.prices.filter(({item}) => e === item) // NaN ?????
-      januarySales += e.price
+      let component = data.prices.find(({item}) => e === item) // capturar precios
+      console.log(component) // component is undefined
+      januarySales += component.price // esto no toma en cuenta que algo se pudo haber vendido varias veces
     })
-    return januarySales
-  }
 
-  januaryTotalSales()
+
 
   let februarySales = 0
   february.forEach(e => {
