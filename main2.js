@@ -10,15 +10,15 @@ let data = {
     ],
   
     prices: [
-      { id:0001,type:"monitor", item: "Monitor GPRS 3000", price: 200 },
-      { id:0002,type:"mother", item: "Motherboard ASUS 1500", price: 120 },
-      { id:0003,type:"monitor", item: "Monitor ASC 543", price: 250 },
-      { id:0004,type:"mother", item: "Motherboard ASUS 1200", price: 100 },
-      { id:0005,type:"mother", item: "Motherboard MZI", price: 30 },
-      { id:0006,type:"HDD", item: "HDD Toyiva", price: 90 },
-      { id:0007,type:"HDD", item: "HDD Wezter Dishital", price: 75 },
-      { id:0008,type:"RAM", item: "RAM Quinston", price: 110 },
-      { id:0009,type:"RAM", item: "RAM Quinston Fury", price: 230 }
+      { item: "Monitor GPRS 3000", price: 200 },
+      { item: "Motherboard ASUS 1500", price: 120 },
+      { item: "Monitor ASC 543", price: 250 },
+      { item: "Motherboard ASUS 1200", price: 100 },
+      { item: "Motherboard MZI", price: 30 },
+      { item: "HDD Toyiva", price: 90 },
+      { item: "HDD Wezter Dishital", price: 75 },
+      { item: "RAM Quinston", price: 110 },
+      { item: "RAM Quinston Fury", price: 230 }
     ]
 }
 
