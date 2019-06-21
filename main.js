@@ -87,6 +87,7 @@ console.log(`(punto 5) Las ventas del mes ${mes} de ${anio} ascienden a ARS ${mo
 //6. componenteMasVendido()
 let bestSeller = salesList => {
   const salesByComponent = salesList.map(({item})=>{return {item:item, sales:timesItWasSold(item)}})
+  console.log(salesByComponent)
   const bestNumber = Math.max(...salesByComponent.map(({sales})=>sales).flat())
   const bestSellerList = salesByComponent.filter(({sales})=> sales>= bestNumber).map(({item})=>item).flat()
   return bestSellerList
@@ -103,8 +104,9 @@ bestSeller(data.prices).length < 2 ?
 //hasta el 12 (diciembre).
 
 
-   
-    
+
+
+     
     
 //PUNTO 2
 //2.a En las ventas ya existentes, tenemos que agregar la propiedad sucursal con el valor Centro (ya que es la sucursal original). 
