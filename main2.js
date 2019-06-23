@@ -144,7 +144,7 @@ let checkMonth = (year,realMonth)=> {
 
 //esta parte es para probar
 const anio4=2019
-const mes4 =13
+const mes4 =3
 checkMonth (anio4,mes4)
 
 //8. agregar a cada venta la sucursal en la que se hizo
