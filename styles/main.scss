@@ -48,7 +48,7 @@ body{
             }
         
             a{
-                color: purple;
+                color: black;
                 text-decoration: none;
                
             }
@@ -64,6 +64,7 @@ body{
     .secondSection{
          
         #sales{
+            padding-bottom: 200px;
             h3{
                 font-family: $backFont;
                 font-size: 55px;
@@ -93,12 +94,20 @@ body{
                 padding: 10px 5px;
                 margin: 40px 150px;
             }
+            
+        }
+        .footy{
+            background-image: url(../image/fondoC.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 50px;
         }
         #statistics{
             width: 90%;
             margin: 150px auto;
             font-family: $backFont;
             font-size: 80px;
+
             h3{
                 font-family: $backFont;
                 font-size: 55px;
@@ -107,30 +116,56 @@ body{
             }
             .stats{
                 width: 80%;
-                margin-left: 210px;
+                margin-left: 170px;
                 .btn{
                     font-family: $backFont;
                     width: 200px;
                     height: 130px;
                     padding: 0 10px;
                     margin: 20px;
+                    font-weight: bold;
                 }
             }
         }
         #reports{
             margin: 0 auto;
             font-family: 'Rubik', sans-serif;
-            font-size: 80px;
             h3{
                 font-family: $backFont;
                 font-size: 55px;
                 text-align: center;
                 margin: 30px 0; 
             }
-            .collapse{
-                margin: auto;
-                width: 80%;
                 
+            .collapse-group {
+                padding: 50px 40px;
+                border: 1px solid darkgrey;
+                margin-bottom: 10px;
+                .panel{
+                    padding: 20px 40px;
+                    .panel-title{
+                        font-family: $backFont;
+                        color: purple;
+                        .trigger.collapsed{
+                            text-decoration: none;
+                            color: purple;
+                            
+                        }
+                        &:before {
+                            content: '\e082';
+                            text-decoration: none;
+                            color: purple;
+                            font-family: 'Glyphicons Halflings';
+                            vertical-align: text-bottom;
+                            }
+                        &:before {
+                            text-decoration: none;
+                            color: purple;
+                            
+                            content: '\e081';    
+                        }    
+                    } 
+                }
             }
         }
     }

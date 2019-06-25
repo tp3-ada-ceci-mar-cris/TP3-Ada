@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body header {
   background-image: url(../image/fondoC.jpg);
   width: 100%;
@@ -35,7 +36,7 @@ body .firstSection .turn .carousel-inner {
   border-radius: 25px;
 }
 body .firstSection .turn a {
-  color: purple;
+  color: black;
   text-decoration: none;
 }
 body .firstSection .footy {
@@ -43,6 +44,9 @@ body .firstSection .footy {
   background-size: cover;
   width: 100%;
   height: 100px;
+}
+body .secondSection #sales {
+  padding-bottom: 200px;
 }
 body .secondSection #sales h3 {
   font-family: "Varela Round", sans-serif;
@@ -73,6 +77,12 @@ body .secondSection #sales .newSale {
   padding: 10px 5px;
   margin: 40px 150px;
 }
+body .secondSection .footy {
+  background-image: url(../image/fondoC.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 50px;
+}
 body .secondSection #statistics {
   width: 90%;
   margin: 150px auto;
@@ -87,7 +97,7 @@ body .secondSection #statistics h3 {
 }
 body .secondSection #statistics .stats {
   width: 80%;
-  margin-left: 210px;
+  margin-left: 170px;
 }
 body .secondSection #statistics .stats .btn {
   font-family: "Varela Round", sans-serif;
@@ -95,11 +105,11 @@ body .secondSection #statistics .stats .btn {
   height: 130px;
   padding: 0 10px;
   margin: 20px;
+  font-weight: bold;
 }
 body .secondSection #reports {
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
-  font-size: 80px;
 }
 body .secondSection #reports h3 {
   font-family: "Varela Round", sans-serif;
@@ -107,9 +117,33 @@ body .secondSection #reports h3 {
   text-align: center;
   margin: 30px 0;
 }
-body .secondSection #reports .collapse {
-  margin: auto;
-  width: 80%;
+body .secondSection #reports .collapse-group {
+  padding: 50px 40px;
+  border: 1px solid darkgrey;
+  margin-bottom: 10px;
+}
+body .secondSection #reports .collapse-group .panel {
+  padding: 20px 40px;
+}
+body .secondSection #reports .collapse-group .panel .panel-title {
+  font-family: "Varela Round", sans-serif;
+  color: purple;
+}
+body .secondSection #reports .collapse-group .panel .panel-title .trigger.collapsed {
+  text-decoration: none;
+  color: purple;
+}
+body .secondSection #reports .collapse-group .panel .panel-title:before {
+  content: "";
+  text-decoration: none;
+  color: purple;
+  font-family: "Glyphicons Halflings";
+  vertical-align: text-bottom;
+}
+body .secondSection #reports .collapse-group .panel .panel-title:before {
+  text-decoration: none;
+  color: purple;
+  content: "";
 }
 
 /*# sourceMappingURL=main.css.map */
