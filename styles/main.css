@@ -67,19 +67,49 @@ body .secondSection #sales .newSale {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  color: purple;
+  color: black;
   background-image: url(../image/fondoC.jpg);
   border-radius: 10px;
   padding: 10px 5px;
   margin: 40px 150px;
 }
 body .secondSection #statistics {
+  width: 90%;
+  margin: 150px auto;
+  font-family: "Varela Round", sans-serif;
+  font-size: 80px;
+}
+body .secondSection #statistics h3 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 55px;
+  text-align: center;
+  margin: 30px 0;
+}
+body .secondSection #statistics .stats {
+  width: 80%;
+  margin-left: 210px;
+}
+body .secondSection #statistics .stats .btn {
+  font-family: "Varela Round", sans-serif;
+  width: 200px;
+  height: 130px;
+  padding: 0 10px;
+  margin: 20px;
+}
+body .secondSection #reports {
+  margin: 0 auto;
   font-family: "Rubik", sans-serif;
   font-size: 80px;
 }
-body .secondSection #reports {
-  font-family: "Rubik", sans-serif;
-  font-size: 80px;
+body .secondSection #reports h3 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 55px;
+  text-align: center;
+  margin: 30px 0;
+}
+body .secondSection #reports .collapse {
+  margin: auto;
+  width: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */

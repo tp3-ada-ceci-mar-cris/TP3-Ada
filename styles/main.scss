@@ -1,3 +1,12 @@
+
+
+
+//VARIABLES
+$titleFont : 'Lobster', cursive;
+$backFont : 'Varela Round', sans-serif;
+
+
+
 body{
     header{
         background-image: url(../image/fondoC.jpg);
@@ -7,7 +16,7 @@ body{
         text-align: center;
         
         h1{
-            font-family: 'Lobster', cursive; 
+            font-family: $titleFont; 
             font-size: 130px;
             margin: 0 auto;
             padding-top: 20px;
@@ -31,7 +40,7 @@ body{
             margin: 140px auto 80px auto;
             .carousel-inner{
                 height: 120px;
-                font-family: 'Varela Round', sans-serif;
+                font-family: $backFont;
                 font-size: 75px;
                 text-align: center;
                 background-color: pink;
@@ -56,14 +65,14 @@ body{
          
         #sales{
             h3{
-                font-family: 'Varela Round', sans-serif;
+                font-family: $backFont;
                 font-size: 55px;
                 text-align: center;
                 margin: 30px 0;
             }
             table{
                 font-size: 18px;
-                font-family: 'Varela Round', sans-serif;
+                font-family: $backFont;
                 text-align: center;
                 margin: 0 auto;
                 border: 1px solid pink;
@@ -73,12 +82,12 @@ body{
             }
             .newSale{
                 float: right;
-                font-family: 'Varela Round', sans-serif;
+                font-family: $backFont;
                 border: 1px solid pink;
                 text-decoration: none; 
                 font-size: 20px;
                 font-weight: bold;
-                color: purple;
+                color: black;
                 background-image: url(../image/fondoC.jpg);
                 border-radius: 10px;
                 padding: 10px 5px;
@@ -86,12 +95,43 @@ body{
             }
         }
         #statistics{
-            font-family: 'Rubik', sans-serif;
+            width: 90%;
+            margin: 150px auto;
+            font-family: $backFont;
             font-size: 80px;
+            h3{
+                font-family: $backFont;
+                font-size: 55px;
+                text-align: center;
+                margin: 30px 0;
+            }
+            .stats{
+                width: 80%;
+                margin-left: 210px;
+                .btn{
+                    font-family: $backFont;
+                    width: 200px;
+                    height: 130px;
+                    padding: 0 10px;
+                    margin: 20px;
+                }
+            }
         }
         #reports{
+            margin: 0 auto;
             font-family: 'Rubik', sans-serif;
             font-size: 80px;
+            h3{
+                font-family: $backFont;
+                font-size: 55px;
+                text-align: center;
+                margin: 30px 0; 
+            }
+            .collapse{
+                margin: auto;
+                width: 80%;
+                
+            }
         }
     }
 }
