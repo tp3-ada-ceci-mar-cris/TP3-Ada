@@ -1,6 +1,4 @@
 
-
-
 //VARIABLES
 $titleFont : 'Lobster', cursive;
 $backFont : 'Varela Round', sans-serif;
@@ -40,7 +38,7 @@ body{
                 
                 margin: 50px auto;
                 .carousel-inner{
-                    background-image: url(../image/vestidos-niñas-unicornio.jpg);
+                    background-image: url(../image/vestidos-niñas-unicornio.jpg), url(../image/fondoC.jpg);
                     background-size: cover;
                     background-blend-mode: luminosity;
                     height: 380px;
@@ -50,11 +48,10 @@ body{
                     background-color: pink;
                     border-radius: 30px;
                 }
-            
-                
                 a{     
                     text-decoration: none; 
                     color: black;  
+                    line-height: 100px;
                     span{
                         color: white;
                         background-color: purple;
@@ -83,29 +80,29 @@ body{
                     text-align: center;
                     margin: 30px 0;
                 }
-                table{
-                    font-size: 18px;
-                    font-family: $backFont;
-                    text-align: center;
-                    margin: 0 auto;
-                    border: 1px solid pink;
-                    th, td{
-                        border: 1px solid pink; 
-                    } 
-                }
-                .newSale{
-                    float: right;
-                    font-family: $backFont;
-                    border: 1px solid pink;
-                    text-decoration: none; 
-                    font-size: 20px;
-                    font-weight: bold;
-                    color: black;
-                    background-image: url(../image/fondoC.jpg);
-                    border-radius: 10px;
-                    padding: 10px 5px;
-                    margin: 40px 150px;
-                }
+                        table{
+                            font-size: 18px;
+                            font-family: $backFont;
+                            text-align: center;
+                            margin: 0 auto;
+                            border: 1px solid pink;
+                            th, td{
+                                border: 1px solid pink; 
+                            } 
+                        }
+                        .newSale{
+                            float: right;
+                            font-family: $backFont;
+                            border: 1px solid pink;
+                            text-decoration: none; 
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: black;
+                            background-image: url(../image/fondoC.jpg);
+                            border-radius: 10px;
+                            padding: 10px 5px;
+                            margin: 40px 150px;
+                        }
                 
             }
             .footy{
@@ -118,7 +115,9 @@ body{
                 width: 90%;
                 margin: 150px auto;
                 font-family: $backFont;
+                overflow: hidden;
                 
+                          
 
                 h3{
                     font-family: $backFont;
@@ -126,19 +125,62 @@ body{
                     text-align: center;
                     margin: 30px 0;
                 }
-                .stats{
-                    width: 50%;
-                    .btn{
-                        font-size: 14px;
-                        margin: 15px;
+                .salesStats{
+                    border: 1px purple dotted;
+                    padding: 40px 40px;
+                    overflow: hidden;
+                    border-radius: 25px; 
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    form{
+                        background-color: #FFF87F;
+                        width: 25%;
+                        float: left;
                         font-family: $backFont;
-                        width: 90px;
-                        height: 80px;
-                        padding: 0 10px;
-                        font-weight: bold;
+                        font-size: 18px;
+                        border-radius: 10px;
+                        
+                        p{
+                            margin-left: 10px;
+                            margin-top: 10px;
+                            
+                        } 
+                    }
+                    .stats{
+                        float: left;
+                        width: 50%;
+                        margin-left: 50px;
+                        
+                        .btn{
+                            font-size: 13px;
+                            text-align: center;
+                            margin: 13px;
+                            font-family: $backFont;
+                            width: 100px;
+                            height: 80px;
+                            padding: 0 10px;
+                            font-weight: bold;
+                        }
+                    }
+                    .result{
+                        float: left;
+                        font-family: $backFont;
+                        font-size: 20px;
+                        background-color: #FFF87F;
+                        width: 25%;
+                        height: 320px;
+                        border-radius: 10px;
+                        
+                        p{
+                            margin-left: 10px;
+                            margin-top: 10px;
+                        }
+
                     }
                 }
             }
+
             #reports{
                 margin: 0 auto;
                 font-family: 'Rubik', sans-serif;
@@ -148,11 +190,11 @@ body{
                     text-align: center;
                     margin: 30px 0; 
                 }
-                    
                 .collapse-group {
-                    padding: 50px 40px;
-                    border: 1px solid darkgrey;
+                    padding: 40px 40px;
+                    border: 1px purple dotted;
                     margin-bottom: 10px;
+                    border-radius: 25px;
                     .panel{
                         padding: 20px 40px;
                         .panel-title{
@@ -161,7 +203,6 @@ body{
                             .trigger.collapsed{
                                 text-decoration: none;
                                 color: purple;
-                                
                             }
                             &:before {
                                 content: '\e082';
@@ -173,7 +214,6 @@ body{
                             &:before {
                                 text-decoration: none;
                                 color: purple;
-                                
                                 content: '\e081';    
                             }    
                         } 

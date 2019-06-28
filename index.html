@@ -18,7 +18,6 @@
         <header>
             <h1>Unicorn Store</h1>
             
-            <span></span>
         </header>
         <div class="container">
             <section class="firstSection">
@@ -57,7 +56,7 @@
                 </div>
                 
             </section>
-
+            <!-- TABLA CON NUEVAS VENTAS -->
             <section class="secondSection">
                 <div class="footy"></div>
                 <div id="sales">
@@ -121,19 +120,35 @@
                     <a href="#" class="newSale">Nueva venta</a>
                 </div>
                 <div class="footy"></div>
+
                 <div id="statistics">
                     <h3>ESTADISTICAS</h3>
-                    <nav class="stats">
-                        <button type="button" class="btn btn-outline-primary">Precio Maquina</button>
-                        <button type="button" class="btn btn-outline-secondary">Ventas por Componente</button>
-                        <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
-                        <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
-                        <button type="button" class="btn btn-outline-warning">Ventas del Mes</button>
-                        <button type="button" class="btn btn-outline-danger">Componente mas Vendido</button>
-                        <button type="button" class="btn btn-outline-success">Hubo Ventas</button>
-                        <button type="button" class="btn btn-outline-secondary">Ventas por Sucursal</button>
-                        <button type="button" class="btn btn-outline-primary">Sucursal del Mes</button>
-                    </nav>
+                    <div class="salesStats">
+                        <form id="insertData">
+                            <p>
+                            Fecha:<br>
+                            Empleada:<br>
+                            Sucursal:<br>
+                            Monitor:<br>
+                            Mother:<br>
+                            HDD:<br>
+                            RAM:<br>
+                            </p> 
+                        </form>
+                        <!-- BOTONERA DE FUNCIONES -->
+                        <nav class="stats">
+                            <button type="button" class="btn btn-outline-primary">Precio Maquina</button>
+                            <button type="button" class="btn btn-outline-secondary">Ventas por Componente</button>
+                            <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
+                            <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
+                            <button type="button" class="btn btn-outline-warning">Ventas del Mes</button>
+                            <button type="button" class="btn btn-outline-danger">Componente mas Vendido</button>
+                            <button type="button" class="btn btn-outline-success">Hubo Ventas</button>
+                            <button type="button" class="btn btn-outline-secondary">Ventas por Sucursal</button>
+                            <button type="button" class="btn btn-outline-primary">Sucursal del Mes</button>
+                        </nav>
+                        <div class="result"><p>Resultados</p></div>
+                    </div>
                 </div>
                 <div class="footy"></div>
                 <div id="reports">

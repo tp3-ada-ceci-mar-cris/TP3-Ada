@@ -42,6 +42,7 @@ body .container .firstSection .turn .carousel-inner {
 body .container .firstSection .turn a {
   text-decoration: none;
   color: black;
+  line-height: 100px;
 }
 body .container .firstSection .turn a span {
   color: white;
@@ -97,6 +98,7 @@ body .container .secondSection #statistics {
   width: 90%;
   margin: 150px auto;
   font-family: "Varela Round", sans-serif;
+  overflow: hidden;
 }
 body .container .secondSection #statistics h3 {
   font-family: "Varela Round", sans-serif;
@@ -104,17 +106,53 @@ body .container .secondSection #statistics h3 {
   text-align: center;
   margin: 30px 0;
 }
-body .container .secondSection #statistics .stats {
-  width: 50%;
+body .container .secondSection #statistics .salesStats {
+  border: 1px purple dotted;
+  padding: 40px 40px;
+  overflow: hidden;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
 }
-body .container .secondSection #statistics .stats .btn {
-  font-size: 14px;
-  margin: 15px;
+body .container .secondSection #statistics .salesStats form {
+  background-color: #FFF87F;
+  width: 25%;
+  float: left;
   font-family: "Varela Round", sans-serif;
-  width: 90px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+body .container .secondSection #statistics .salesStats form p {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+body .container .secondSection #statistics .salesStats .stats {
+  float: left;
+  width: 50%;
+  margin-left: 50px;
+}
+body .container .secondSection #statistics .salesStats .stats .btn {
+  font-size: 13px;
+  text-align: center;
+  margin: 13px;
+  font-family: "Varela Round", sans-serif;
+  width: 100px;
   height: 80px;
   padding: 0 10px;
   font-weight: bold;
+}
+body .container .secondSection #statistics .salesStats .result {
+  float: left;
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  background-color: #FFF87F;
+  width: 25%;
+  height: 320px;
+  border-radius: 10px;
+}
+body .container .secondSection #statistics .salesStats .result p {
+  margin-left: 10px;
+  margin-top: 10px;
 }
 body .container .secondSection #reports {
   margin: 0 auto;
@@ -127,9 +165,10 @@ body .container .secondSection #reports h3 {
   margin: 30px 0;
 }
 body .container .secondSection #reports .collapse-group {
-  padding: 50px 40px;
-  border: 1px solid darkgrey;
+  padding: 40px 40px;
+  border: 1px purple dotted;
   margin-bottom: 10px;
+  border-radius: 25px;
 }
 body .container .secondSection #reports .collapse-group .panel {
   padding: 20px 40px;
