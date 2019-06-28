@@ -6,7 +6,194 @@
         <meta http-equiv='X-UA-Compatible' content ='ie=edge'>
         <title>Flavegerino</title>
         <script src='main.js' type='text/javascript'></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
     </head>
     <body>
+        <header>
+            <h1>Unicorn Store</h1>
+            
+            <span></span>
+        </header>
+        <div class="container">
+            <section class="firstSection">
+                <!-- NAV DE BOTONES -->
+                <!-- <nav class="menu">
+                    <button type="button" class="btn btn-outline-primary">ADMINISTRACION</button>
+                    <button type="button" class="btn btn-outline-secondary">RRHH</button>
+                    <button type="button" class="btn btn-outline-success">FINANZAS</button>
+                    <button type="button" class="btn btn-outline-primary">MARKETING</button>
+                    <button type="button" class="btn btn-outline-danger">COBRANZAS</button>
+                    <button type="button" class="btn btn-outline-warning">COMERCIAL</button>
+                    <button type="button" class="btn btn-outline-info">PRODUCCION</button>
+                    
+                </nav> -->
+                <!-- CARRUSEL -->
+                <div id="carouselExampleControls" class="carousel slide turn" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <a href="#sales"><span>Ventas</span></a>
+                        </div>
+                        <div class="carousel-item">
+                        <a href="#statistics"><span>Estadisticas</span></a>
+                        </div>
+                        <div class="carousel-item">
+                        <a href="#reports"><span>Reportes</span></a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev arrow" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon arrow" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next arrow" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon arrow" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                
+            </section>
+
+            <section class="secondSection">
+                <div class="footy"></div>
+                <div id="sales">
+                    <h3>VENTAS</h3>
+                    <table style="width:80%">
+                        <tr>
+                            <th class="table-danger">SaleDate</th>
+                            <th class="table-warning">EmployeeName</th> 
+                            <th class="table-success">itemSold</th>
+                            <th class="table-info">BranchOffice</th>
+                        </tr>
+                        <tr>
+                            <td>Jill</td>
+                            <td>Smith</td>
+                            <td>50</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Eve</td>
+                            <td>Jackson</td>
+                            <td>94</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>80</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Jill</td>
+                            <td>Smith</td>
+                            <td>50</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Eve</td>
+                            <td>Jackson</td>
+                            <td>94</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>80</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Eve</td>
+                            <td>Jackson</td>
+                            <td>94</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>80</td>
+                            <td>50</td>
+                        </tr>
+                    </table>
+                    <a href="#" class="newSale">Nueva venta</a>
+                </div>
+                <div class="footy"></div>
+                <div id="statistics">
+                    <h3>ESTADISTICAS</h3>
+                    <nav class="stats">
+                        <button type="button" class="btn btn-outline-primary">Precio Maquina</button>
+                        <button type="button" class="btn btn-outline-secondary">Ventas por Componente</button>
+                        <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
+                        <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
+                        <button type="button" class="btn btn-outline-warning">Ventas del Mes</button>
+                        <button type="button" class="btn btn-outline-danger">Componente mas Vendido</button>
+                        <button type="button" class="btn btn-outline-success">Hubo Ventas</button>
+                        <button type="button" class="btn btn-outline-secondary">Ventas por Sucursal</button>
+                        <button type="button" class="btn btn-outline-primary">Sucursal del Mes</button>
+                    </nav>
+                </div>
+                <div class="footy"></div>
+                <div id="reports">
+                    <h3>REPORTES</h3>   
+                <!-- PRUEBA DE COLLAPSE -->
+                    <div class="collapse-group">
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="trigger collapsed">
+                                Reporte por mes
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae dolorum, soluta temporibus vero perferendis quo odit eaque cum fugiat nihil earum error vitae libero nostrum sed ipsam, beatae ea.
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="trigger collapsed">
+                                Reporte por sucursal
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                Sunt quia aperiam, officiis tempora quis quasi fugit ab ipsa quo expedita reiciendis quod iusto! Enim delectus unde voluptatem officiis molestiae repudiandae.
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="trigger collapsed">
+                                Reporte final
+                                </a>
+                            </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae dolorum, soluta temporibus vero perferendis quo odit eaque cum fugiat nihil earum error vitae libero nostrum sed ipsam, beatae ea.
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </body>
 </html>
+                     
+                                          
+               
+                        
+                            
+             

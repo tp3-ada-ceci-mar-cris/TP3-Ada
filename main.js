@@ -19,7 +19,7 @@ let data = {
     { saleDate: new Date(2019, 2, 27), employeeName: "Hedy", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 22), employeeName: "Grace", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Downtown"},
     { saleDate: new Date(2019, 2, 05), employeeName: "Ada", itemSold: ["Motherboard ASUS 1500", "RAM Quinston"], branchOffice : "Downtown"},
-    { saleDate: new Date(2019, 2, 01), employeeName: "Grace", itemSold: ["Motherboard MZI, HDD Wezter Dishital"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Grace", itemSold: ["Motherboard MZI", "HDD Wezter Dishital"], branchOffice : "Downtown"},
     { saleDate: new Date(2019, 2, 07), employeeName: "Sheryl", itemSold: ["Monitor GPRS 3000", "RAM Quinston"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 14), employeeName: "Ada", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Downtown"}
   ],
@@ -45,11 +45,11 @@ const maquina = ["Motherboard ASUS 1200", "Motherboard ASUS 1500", "HDD Toyiva",
 console.log(`(punto 1) La venta de ${maquina} tiene un valor total de ARS ${salePrice(maquina)}`)
 
 //2. cantidadVentasComponente(componente): 
-let timesItWasSold = comp => data.sales.map(({itemSold}) => itemSold).flat().filter(e=>e==comp).length
+let timesSold = comp => data.sales.map(({itemSold}) => itemSold).flat().filter(e=>e==comp).length
   
 // esta parte es para probar
 const cosa="Monitor GPRS 3000"
-console.log(`(punto 2) El ítem "${cosa}" fue vendido históricamente ${timesItWasSold(cosa)} veces`)
+console.log(`(punto 2) El ítem "${cosa}" fue vendido históricamente ${timesSold(cosa)} veces`)
 
 //3. vendedoraDelMes(mes, anio)
 let employeeOfTheMonth = (year, month) => {
@@ -66,6 +66,16 @@ let employeeOfTheMonth = (year, month) => {
 const anio2=2019
 const mes2=2
 console.log (`(punto 3) La mejor vendedora del mes ${mes2} de ${anio2} es ${employeeOfTheMonth(anio2,mes2)}`) 
+
+let bestEmployee = () =>{
+  const girl = data.employees.map(name =>{
+    return { name:name, sales:salePrice(data.sales.filter(({employeeName})=>employeeName===name).map(({itemSold})=>itemSold).flat())}
+  })
+  const bestGirl = Math.max(...girl.map(({sales})=>sales).flat())
+  const a = girl.filter(({sales})=> sales>= bestGirl).map(({name})=>name).flat()
+  return a
+}
+console.log(bestEmployee())
 
 //4. ventasVendedora(nombre)
 let salesByEmployee = name => 
@@ -86,8 +96,8 @@ console.log(`(punto 5) Las ventas del mes ${mes} de ${anio} ascienden a ARS ${mo
 
 //6. componenteMasVendido()
 let bestSeller = salesList => {
-  const salesByComponent = salesList.map(({item})=>{return {item:item, sales:timesItWasSold(item)}})
-  console.log(salesByComponent)
+  const salesByComponent = salesList.map(({item})=>{return {item:item, sales:timesSold(item)}})
+  
   const bestNumber = Math.max(...salesByComponent.map(({sales})=>sales).flat())
   const bestSellerList = salesByComponent.filter(({sales})=> sales>= bestNumber).map(({item})=>item).flat()
   return bestSellerList
@@ -103,11 +113,20 @@ bestSeller(data.prices).length < 2 ?
 //7. huboVentas(mes, anio): que indica si hubo ventas en un mes determinado. El mes es un número entero que va desde el 1 (enero) 
 //hasta el 12 (diciembre).
 
+//7. huboVentas(mes, anio): 
+let checkMonth = (year,realMonth)=> {
+  const month=realMonth-1
+  const hay= data.sales.find(({saleDate})=>month===saleDate.getMonth()&&year===saleDate.getFullYear())
+  hay?console.log(`(punto 7) Hubo ventas en el mes ${realMonth} de ${year}`)
+      :console.log(`(punto 7) No hubo ventas en el mes ${realMonth} de ${year}`)
+}
 
+//esta parte es para probar
+const anio4=2019
+const mes4 =3
+checkMonth (anio4,mes4)
 
-
-     
-    
+   
 //PUNTO 2
 //2.a En las ventas ya existentes, tenemos que agregar la propiedad sucursal con el valor Centro (ya que es la sucursal original). 
 //let sucursal = "Centro"
@@ -185,9 +204,49 @@ console.log (`(punto 12.f) La sucursal con mejores ventas del mes ${mesCris} de 
 // -----hasta acá Cris
 
 //13. Un reporte que diga las ventas por sucursal y por mes, para eso:
-//13.a. renderPorMes(): Muestra una lista ordenada del importe total vendido por cada mes/año
-
+let monthlyReport = year=> {
+  let saleByMonth =[
+      {month:"enero", sales:undefined},
+      {month:"febrero", sales:undefined},
+      {month:"marzo", sales:undefined},
+      {month:"abril", sales:undefined},
+      {month:"mayo", sales:undefined},
+      {month:"junio", sales:undefined},
+      {month:"julio", sales:undefined},
+      {month:"agosto", sales:undefined},
+      {month:"septiembre", sales:undefined},
+      {month:"octubre", sales:undefined},
+      {month:"noviembre", sales:undefined},
+      {month:"diciembre", sales:undefined},
+  ]
+  saleByMonth.map((eachMonth,i)=>{
+      eachMonth.sales = (monthlySales(year,i+1))
+  })
+  return saleByMonth
+}
 
 //13.b. renderPorSucursal(): Muestra una lista del importe total vendido por cada sucursal
+
+// let listSalesBySP = listSP  =>
+//   listSP.forEach(
+//     sP => {
+//       let cosa =salePrice((data.sales.filter(({branchOffice})=>branchOffice===sP).map(({itemSold})=>itemSold).flat()))
+//       return{branchOffice: sP, sales:cosa} 
+//     })
+
+// console.log(listSalesBySP(data.branchOffice))
+
 //13.c. render(): Tiene que mostrar la unión de los dos reportes anteriores, cual fue el producto más vendido 
 //y la vendedora que más ingresos generó
+
+let render = () =>{
+  console.log(monthlyReport(2019))
+  console.log(bestSeller(data.prices))
+  console.log(bestEmployee())
+}
+render()
+
+
+
+
+ 
