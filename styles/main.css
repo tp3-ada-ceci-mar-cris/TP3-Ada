@@ -15,21 +15,23 @@ body header h1 {
   text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
   letter-spacing: 4px;
 }
-body .container {
+
+.container {
   width: 90%;
 }
-body .container .firstSection .menu {
+
+.firstSection .menu {
   margin-top: 20px;
   margin-left: 270px;
 }
-body .container .firstSection .menu .btn {
+.firstSection .menu .btn {
   background-color: white;
 }
-body .container .firstSection .turn {
+.firstSection .turn {
   margin: 50px auto;
 }
-body .container .firstSection .turn .carousel-inner {
-  background-image: url(../image/vestidos-niñas-unicornio.jpg), url(../image/fondoC.jpg);
+.firstSection .turn .carousel-inner {
+  background-image: url(../image/vestidos-niñas-unicornio.jpg);
   background-size: cover;
   background-blend-mode: luminosity;
   height: 380px;
@@ -39,42 +41,44 @@ body .container .firstSection .turn .carousel-inner {
   background-color: pink;
   border-radius: 30px;
 }
-body .container .firstSection .turn a {
+.firstSection .turn a {
   text-decoration: none;
   color: black;
 }
-body .container .firstSection .turn a span {
+.firstSection .turn a span {
   color: white;
   background-color: purple;
   border-radius: 20px;
   padding: 15px;
 }
-body .container .firstSection .footy {
+.firstSection .footy {
   background-image: url(../image/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 100px;
 }
-body .container .secondSection #sales {
+
+.secondSection #sales {
   padding-bottom: 200px;
 }
-body .container .secondSection #sales h3 {
+.secondSection #sales h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
-body .container .secondSection #sales table {
+.secondSection #sales table {
   font-size: 18px;
   font-family: "Varela Round", sans-serif;
   text-align: center;
   margin: 0 auto;
   border: 1px solid pink;
 }
-body .container .secondSection #sales table th, body .container .secondSection #sales table td {
+.secondSection #sales table th,
+.secondSection #sales table td {
   border: 1px solid pink;
 }
-body .container .secondSection #sales .newSale {
+.secondSection #sales .newSale {
   float: right;
   font-family: "Varela Round", sans-serif;
   border: 1px solid pink;
@@ -87,27 +91,27 @@ body .container .secondSection #sales .newSale {
   padding: 10px 5px;
   margin: 40px 150px;
 }
-body .container .secondSection .footy {
+.secondSection .footy {
   background-image: url(../image/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 50px;
 }
-body .container .secondSection #statistics {
+.secondSection #statistics {
   width: 90%;
   margin: 150px auto;
   font-family: "Varela Round", sans-serif;
 }
-body .container .secondSection #statistics h3 {
+.secondSection #statistics h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
-body .container .secondSection #statistics .stats {
+.secondSection #statistics .stats {
   width: 50%;
 }
-body .container .secondSection #statistics .stats .btn {
+.secondSection #statistics .stats .btn {
   font-size: 14px;
   margin: 15px;
   font-family: "Varela Round", sans-serif;
@@ -116,40 +120,40 @@ body .container .secondSection #statistics .stats .btn {
   padding: 0 10px;
   font-weight: bold;
 }
-body .container .secondSection #reports {
+.secondSection #reports {
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
 }
-body .container .secondSection #reports h3 {
+.secondSection #reports h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
-body .container .secondSection #reports .collapse-group {
+.secondSection #reports .collapse-group {
   padding: 50px 40px;
   border: 1px solid darkgrey;
   margin-bottom: 10px;
 }
-body .container .secondSection #reports .collapse-group .panel {
+.secondSection #reports .collapse-group .panel {
   padding: 20px 40px;
 }
-body .container .secondSection #reports .collapse-group .panel .panel-title {
+.secondSection #reports .collapse-group .panel .panel-title {
   font-family: "Varela Round", sans-serif;
   color: purple;
 }
-body .container .secondSection #reports .collapse-group .panel .panel-title .trigger.collapsed {
+.secondSection #reports .collapse-group .panel .panel-title .trigger.collapsed {
   text-decoration: none;
   color: purple;
 }
-body .container .secondSection #reports .collapse-group .panel .panel-title:before {
+.secondSection #reports .collapse-group .panel .panel-title:before {
   content: "";
   text-decoration: none;
   color: purple;
   font-family: "Glyphicons Halflings";
   vertical-align: text-bottom;
 }
-body .container .secondSection #reports .collapse-group .panel .panel-title:before {
+.secondSection #reports .collapse-group .panel .panel-title:before {
   text-decoration: none;
   color: purple;
   content: "";
