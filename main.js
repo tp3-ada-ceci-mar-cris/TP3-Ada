@@ -2,38 +2,38 @@ let data = {
   employees: ["Cristina", "Marina", "Cecilia", "Agustina"],
 
   sales: [
-    { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "HDD Toyiva"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 24), employeeName: "Cristina", itemSold: ["HDD Wezter Dishital", "Motherboard ASUS 1500"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 01), employeeName: "Agustina", itemSold: ["Motherboard MZI", "RAM Quinston Fury"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 11), employeeName: "Cecilia", itemSold: ["Monitor ASC 543", "RAM Quinston"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 15), employeeName: "Agustina", itemSold: ["Motherboard ASUS 1200", "RAM Quinston Fury"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 12), employeeName: "Marina", itemSold: ["Motherboard ASUS 1500", "HDD Toyiva"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 21), employeeName: "Cecilia", itemSold: ["Motherboard MZI", "RAM Quinston"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 08), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 16), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "RAM Quinston Fury"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 27), employeeName: "Marina", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 22), employeeName: "Cecilia", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 05), employeeName: "Agustina", itemSold: ["Motherboard ASUS 1500", "RAM Quinston"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 01), employeeName: "Cecilia", itemSold: ["Motherboard MZI", "HDD Wezter Dishital"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 07), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "RAM Quinston"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 14), employeeName: "Agustina", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "Motherboard MZI"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Monitor ASC 543", "Motherboard ASUS 1200"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1200"], branchOffice : "Centro"}
+    { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio", "Brocha unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 24), employeeName: "Cristina", itemSold: ["Bata unicornio rosa", "Vincha rígida unicornio"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Agustina", itemSold: ["Llavero unicornio", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 11), employeeName: "Cecilia", itemSold: ["Portacosméticos cute", "Bata unicornio azul"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 15), employeeName: "Agustina", itemSold: ["Llavero pompón", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 12), employeeName: "Marina", itemSold: ["Vincha rígida unicornio", "Brocha unicornio"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 21), employeeName: "Cecilia", itemSold: ["Llavero unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 08), employeeName: "Cristina", itemSold: ["Portacosméticos cute", "Bata unicornio rosa"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 16), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 27), employeeName: "Marina", itemSold: ["Llavero pompón", "Brocha unicornio"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 22), employeeName: "Cecilia", itemSold: ["Portacosméticos cute", "Bata unicornio rosa"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 05), employeeName: "Agustina", itemSold: ["Vincha rígida unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Cecilia", itemSold: ["Llavero unicornio", "Bata unicornio rosa"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 07), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Bata unicornio azul"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 14), employeeName: "Agustina", itemSold: ["Llavero pompón", "Brocha unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Vincha rígida unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Esmalte unicornio", "Vincha rígida unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Portacosméticos cute", "Llavero unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Portacosméticos cute", "Llavero pompón"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio", "Llavero pompón"], branchOffice : "Centro"}
   ],
 
   prices: [
-    { id:"0001",type:"monitor", item: "Monitor GPRS 3000", price: 200 },
-    { id:"0002",type:"mother", item: "Motherboard ASUS 1500", price: 120 },
-    { id:"0003",type:"monitor", item: "Monitor ASC 543", price: 250 },
-    { id:"0004",type:"mother", item: "Motherboard ASUS 1200", price: 100 },
-    { id:"0005",type:"mother", item: "Motherboard MZI", price: 30 },
-    { id:"0006",type:"HDD", item: "HDD Toyiva", price: 90 },
-    { id:"0007",type:"HDD", item: "HDD Wezter Dishital", price: 75 },
-    { id:"0008",type:"RAM", item: "RAM Quinston", price: 110 },
-    { id:"0009",type:"RAM", item: "RAM Quinston Fury", price: 230 }
+    { id:"0001",type:"beauty", item: "Esmalte unicornio", price: 200 },
+    { id:"0002",type:"accessory", item: "Vincha rígida unicornio", price: 120 },
+    { id:"0003",type:"beauty", item: "Portacosméticos cute", price: 250 },
+    { id:"0004",type:"accessory", item: "Llavero pompón", price: 100 },
+    { id:"0005",type:"accessory", item: "Llavero unicornio", price: 30 },
+    { id:"0006",type:"beauty", item: "Brocha unicornio", price: 90 },
+    { id:"0007",type:"textile", item: "Bata unicornio rosa", price: 75 },
+    { id:"0008",type:"textile", item: "Bata unicornio azul", price: 110 },
+    { id:"0009",type:"accessory", item: "Cartuchera llama unicornio", price: 230 }
   ]
 }
 
@@ -42,14 +42,14 @@ let data = {
 let salePrice = sale => sale.length>0?sale.map(e => data.prices.find(({item}) => e === item).price).reduce((a,b)=>a+b):0
 
 //esta parte es para probar
-const maquina = ["Motherboard ASUS 1200", "Motherboard ASUS 1500", "HDD Toyiva", "RAM Quinston Fury"]
+const maquina = ["Llavero pompón", "Vincha rígida unicornio", "Brocha unicornio", "Cartuchera llama unicornio"]
 console.log(`(punto 1) La venta de ${maquina} tiene un valor total de ARS ${salePrice(maquina)}`)
 
 //2. cantidadVentasComponente(componente): 
 let timesSold = comp => data.sales.map(({itemSold}) => itemSold).flat().filter(e=>e==comp).length
   
 // esta parte es para probar
-const cosa="Monitor GPRS 3000"
+const cosa="Esmalte unicornio"
 console.log(`(punto 2) El ítem "${cosa}" fue vendido históricamente ${timesSold(cosa)} veces`)
 
 //3. vendedoraDelMes(mes, anio)
@@ -232,7 +232,7 @@ const fillTable = () => {
     const li = document.createElement('li')
     const itemList = document.getElementById('itemList')
     itemList.appendChild(li)
-    li.innerText = item.itemSold
+    li.innerText = item.itemSold.join(`, `)
   })
 
   data.sales.forEach(item => {
