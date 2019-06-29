@@ -21,6 +21,13 @@ const createOption = comp => {
   return option
 }
 
+const createOption2=e=> {
+    let option=document.createElement("option")
+    option.innerText=e
+    option.value=e
+    return option
+}
+
 //4. una función para poblar los selects
 const fillSelects =list => {
     list.forEach(e=> {
@@ -33,12 +40,19 @@ const fillSelects =list => {
     })
 }
 
+const fillSelects2=(list, type)=> {
+    let select = document.getElementById(type)
+    list.forEach (e=>{
+        select.appendChild(createOption2(e))
+    })
+}
+
 //inicialización del programa
 const initialize = () => {
     let compDiv = document.getElementById("itemsData")
     createSelects (compTypes, compDiv)
     fillSelects(data.prices)
-    // let empDiv = document.getElementById("employee")
-
+    fillSelects2(data.employees, "employees")
+    fillSelects2(data.branchOffice, "branchOffice")
     // printOrders()
 }
