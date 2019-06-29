@@ -15,21 +15,23 @@ body header h1 {
   text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
   letter-spacing: 4px;
 }
-body .container {
+
+.container {
   width: 90%;
 }
-body .container .firstSection .menu {
+
+.firstSection .menu {
   margin-top: 20px;
   margin-left: 270px;
 }
-body .container .firstSection .menu .btn {
+.firstSection .menu .btn {
   background-color: white;
 }
-body .container .firstSection .turn {
+.firstSection .turn {
   margin: 50px auto;
 }
-body .container .firstSection .turn .carousel-inner {
-  background-image: url(../image/vestidos-niñas-unicornio.jpg), url(../image/fondoC.jpg);
+.firstSection .turn .carousel-inner {
+  background-image: url(../image/vestidos-niñas-unicornio.jpg);
   background-size: cover;
   background-blend-mode: luminosity;
   height: 380px;
@@ -39,43 +41,63 @@ body .container .firstSection .turn .carousel-inner {
   background-color: pink;
   border-radius: 30px;
 }
-body .container .firstSection .turn a {
+.firstSection .turn a {
   text-decoration: none;
   color: black;
   line-height: 100px;
 }
-body .container .firstSection .turn a span {
+.firstSection .turn a span {
   color: white;
   background-color: purple;
   border-radius: 20px;
   padding: 15px;
 }
-body .container .firstSection .footy {
+.firstSection .footy {
   background-image: url(../image/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 100px;
 }
-body .container .secondSection #sales {
+
+.secondSection .table-border {
+  border: 1px purple dotted;
+  padding: 50px 40px 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.secondSection #sales {
   padding-bottom: 200px;
 }
-body .container .secondSection #sales h3 {
+.secondSection #sales h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
-body .container .secondSection #sales table {
+.secondSection #sales .table {
+  display: flex;
+  justify-content: center;
+}
+.secondSection #sales .table ul {
   font-size: 18px;
   font-family: "Varela Round", sans-serif;
   text-align: center;
   margin: 0 auto;
   border: 1px solid pink;
+  list-style: none;
+  margin: 0px;
+  padding: 30px;
 }
-body .container .secondSection #sales table th, body .container .secondSection #sales table td {
-  border: 1px solid pink;
+.secondSection #sales .table ul .table-header {
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid pink;
 }
-body .container .secondSection #sales .newSale {
+.secondSection #sales .newSale {
   float: right;
   font-family: "Varela Round", sans-serif;
   border: 1px solid pink;
@@ -88,24 +110,25 @@ body .container .secondSection #sales .newSale {
   padding: 10px 5px;
   margin: 40px 150px;
 }
-body .container .secondSection .footy {
+.secondSection .footy {
   background-image: url(../image/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 50px;
 }
-body .container .secondSection #statistics {
+.secondSection #statistics {
   width: 90%;
   margin: 150px auto;
   font-family: "Varela Round", sans-serif;
   overflow: hidden;
 }
-body .container .secondSection #statistics h3 {
+.secondSection #statistics h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
+<<<<<<< HEAD
 body .container .secondSection #statistics .salesStats {
   border: 1px purple dotted;
   padding: 40px 40px;
@@ -128,19 +151,29 @@ body .container .secondSection #statistics .salesStats form p {
 }
 body .container .secondSection #statistics .salesStats .stats {
   float: left;
+=======
+.secondSection #statistics .stats {
+>>>>>>> 87a4212aee7ecd1fe14b0135af36bfd0b5e2bba1
   width: 50%;
   margin-left: 50px;
 }
+<<<<<<< HEAD
 body .container .secondSection #statistics .salesStats .stats .btn {
   font-size: 13px;
   text-align: center;
   margin: 13px;
+=======
+.secondSection #statistics .stats .btn {
+  font-size: 14px;
+  margin: 15px;
+>>>>>>> 87a4212aee7ecd1fe14b0135af36bfd0b5e2bba1
   font-family: "Varela Round", sans-serif;
   width: 100px;
   height: 80px;
   padding: 0 10px;
   font-weight: bold;
 }
+<<<<<<< HEAD
 body .container .secondSection #statistics .salesStats .result {
   float: left;
   font-family: "Varela Round", sans-serif;
@@ -155,40 +188,49 @@ body .container .secondSection #statistics .salesStats .result p {
   margin-top: 10px;
 }
 body .container .secondSection #reports {
+=======
+.secondSection #reports {
+>>>>>>> 87a4212aee7ecd1fe14b0135af36bfd0b5e2bba1
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
 }
-body .container .secondSection #reports h3 {
+.secondSection #reports h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
+<<<<<<< HEAD
 body .container .secondSection #reports .collapse-group {
   padding: 40px 40px;
   border: 1px purple dotted;
+=======
+.secondSection #reports .collapse-group {
+  padding: 50px 40px;
+  border: 1px solid darkgrey;
+>>>>>>> 87a4212aee7ecd1fe14b0135af36bfd0b5e2bba1
   margin-bottom: 10px;
   border-radius: 25px;
 }
-body .container .secondSection #reports .collapse-group .panel {
+.secondSection #reports .collapse-group .panel {
   padding: 20px 40px;
 }
-body .container .secondSection #reports .collapse-group .panel .panel-title {
+.secondSection #reports .collapse-group .panel .panel-title {
   font-family: "Varela Round", sans-serif;
   color: purple;
 }
-body .container .secondSection #reports .collapse-group .panel .panel-title .trigger.collapsed {
+.secondSection #reports .collapse-group .panel .panel-title .trigger.collapsed {
   text-decoration: none;
   color: purple;
 }
-body .container .secondSection #reports .collapse-group .panel .panel-title:before {
+.secondSection #reports .collapse-group .panel .panel-title:before {
   content: "";
   text-decoration: none;
   color: purple;
   font-family: "Glyphicons Halflings";
   vertical-align: text-bottom;
 }
-body .container .secondSection #reports .collapse-group .panel .panel-title:before {
+.secondSection #reports .collapse-group .panel .panel-title:before {
   text-decoration: none;
   color: purple;
   content: "";
