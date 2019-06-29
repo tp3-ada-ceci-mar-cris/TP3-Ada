@@ -2,26 +2,26 @@ let data = {
   employees: ["Cristina", "Marina", "Cecilia", "Agustina"],
 
   sales: [
-    { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "HDD Toyiva"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "HDD Toyiva"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 24), employeeName: "Cristina", itemSold: ["HDD Wezter Dishital", "Motherboard ASUS 1500"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 01), employeeName: "Agustina", itemSold: ["Motherboard MZI", "RAM Quinston Fury"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Agustina", itemSold: ["Motherboard MZI", "RAM Quinston Fury"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 11), employeeName: "Cecilia", itemSold: ["Monitor ASC 543", "RAM Quinston"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 15), employeeName: "Agustina", itemSold: ["Motherboard ASUS 1200", "RAM Quinston Fury"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 15), employeeName: "Agustina", itemSold: ["Motherboard ASUS 1200", "RAM Quinston Fury"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 12), employeeName: "Marina", itemSold: ["Motherboard ASUS 1500", "HDD Toyiva"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 21), employeeName: "Cecilia", itemSold: ["Motherboard MZI", "RAM Quinston"], branchOffice : "Downtown"},
-    { saleDate: new Date(2019, 2, 08), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Downtown"},
-    { saleDate: new Date(2019, 2, 16), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "RAM Quinston Fury"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 21), employeeName: "Cecilia", itemSold: ["Motherboard MZI", "RAM Quinston"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 08), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 16), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "RAM Quinston Fury"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 27), employeeName: "Marina", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 22), employeeName: "Cecilia", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Downtown"},
-    { saleDate: new Date(2019, 2, 05), employeeName: "Agustina", itemSold: ["Motherboard ASUS 1500", "RAM Quinston"], branchOffice : "Downtown"},
-    { saleDate: new Date(2019, 2, 01), employeeName: "Cecilia", itemSold: ["Motherboard MZI", "HDD Wezter Dishital"], branchOffice : "Downtown"},
+    { saleDate: new Date(2019, 2, 22), employeeName: "Cecilia", itemSold: ["Monitor ASC 543", "HDD Wezter Dishital"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 05), employeeName: "Agustina", itemSold: ["Motherboard ASUS 1500", "RAM Quinston"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Cecilia", itemSold: ["Motherboard MZI", "HDD Wezter Dishital"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 07), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "RAM Quinston"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 14), employeeName: "Agustina", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Downtown"},
-    { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"]},
-    { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"]},
-    { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "Motherboard MZI"]},
-    { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Monitor ASC 543", "Motherboard ASUS 1200"]},
-    { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1200"]},
+    { saleDate: new Date(2019, 2, 14), employeeName: "Agustina", itemSold: ["Motherboard ASUS 1200", "HDD Toyiva"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1500"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Monitor ASC 543", "Motherboard MZI"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Monitor ASC 543", "Motherboard ASUS 1200"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Monitor GPRS 3000", "Motherboard ASUS 1200"], branchOffice : "Centro"}
   ],
 
   prices: [
@@ -137,7 +137,7 @@ checkMonth (anio4,mes4)
 
 //2.c agregar un array con las sucursales al objeto principal
 
-data.branchOffice = ['Downtown', 'Caballito']
+data.branchOffice = ['Centro', 'Caballito']
 console.log(data)
 
 //2.d cargar nuevas ventas en el array correspondiente, en el objeto principal
@@ -246,7 +246,32 @@ let render = () =>{
 }
 render()
 
+const fillTable = () => {
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    const dateList = document.getElementById('dateList')
+    dateList.appendChild(li)
+    li.innerText = item.saleDate.toLocaleDateString()
+  })
 
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    const nameList = document.getElementById('nameList')
+    nameList.appendChild(li)
+    li.innerText = item.employeeName
+  })
 
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    const itemList = document.getElementById('itemList')
+    itemList.appendChild(li)
+    li.innerText = item.itemSold
+  })
 
- 
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    const branchList = document.getElementById('branchList')
+    branchList.appendChild(li)
+    li.innerText = item.branchOffice
+  })
+}
