@@ -27,13 +27,13 @@ body header h1 {
   background-color: white;
 }
 .container .firstSection .turn {
-  margin: 50px auto;
+  margin: 40px auto;
 }
 .container .firstSection .turn .carousel-inner {
-  background-image: url(../image/vestidos-niñas-unicornio.jpg);
+  background-image: url(../image/productos.jpg);
   background-size: cover;
-  background-blend-mode: luminosity;
-  height: 380px;
+  background-position: center;
+  height: 420px;
   font-family: "Varela Round", sans-serif;
   font-size: 70px;
   text-align: center;
@@ -42,7 +42,6 @@ body header h1 {
 }
 .container .firstSection .turn a {
   text-decoration: none;
-  color: black;
 }
 .container .firstSection .turn a span {
   color: white;
