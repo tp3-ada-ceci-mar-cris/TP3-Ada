@@ -37,6 +37,34 @@ let data = {
   ]
 }
 
+const fillOptions = () => {
+    data.employees.forEach(name => {
+      let option = document.createElement('option')
+      option.innerText = name
+      option.value = index
+      let nameSelector = document.getElementById('selectEmployeeName')
+      nameSelector.appendChild(nameItem)
+      return option
+    })
+
+    data.employees.map(function (name, index) {
+      let nameItem = document.createElement('option')
+      nameItem.innerText = name
+      nameItem.value = index
+      let nameSelector = document.getElementById('selectEmployeeName')
+      nameSelector.appendChild(nameItem)
+    })
+
+    data.prices.forEach(e => {
+      const option = document.createElement('option')
+      option.innerText = e.item
+      option.value = e.id
+      const itemSelector = document.getElementById('selectItemSold')
+      itemSelector.appendChild(option)
+      return option
+    })
+}
+
 // NUEVA VENTA
 // Modelo de nueva venta
 function sale(saleDate, employeeName, itemSold, branchOffice) {

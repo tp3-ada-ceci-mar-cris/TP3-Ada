@@ -54,5 +54,6 @@ const initialize = () => {
     fillSelects(data.prices)
     fillSelects2(data.employees, "employees")
     fillSelects2(data.branchOffice, "branchOffice")
+    fillOptions()
     // printOrders()
 }
