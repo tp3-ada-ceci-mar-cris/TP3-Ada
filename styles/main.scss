@@ -1,22 +1,44 @@
-
-
-
 //VARIABLES
-$titleFont : 'Lobster', cursive;
-$backFont : 'Varela Round', sans-serif;
+$titleFont: 'Lobster', cursive;
+$backFont: 'Varela Round', sans-serif;
 
+//MIXINS
+@mixin footy($height) {
+    background-image: url(../image/fondoC.jpg);
+    background-size: cover;
+    width: 100%;
+    height: $height;
+}
 
+@mixin title {
+    font-family: $backFont;
+    font-size: 55px;
+    text-align: center;
+    margin: 30px 0;
+}
 
-body{
-    header{
+@mixin sale-buttons {
+    font-family: $backFont;
+    border: 1px solid pink;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-image: url(../image/fondoC.jpg);
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
+body {
+    header {
         background-image: url(../image/fondoC.jpg);
         width: 100%;
         height: 180px;
         background-size: cover;
         text-align: center;
-        
-        h1{
-            font-family: $titleFont; 
+
+        h1 {
+            font-family: $titleFont;
             font-size: 130px;
             margin: 0 auto;
             padding-top: 20px;
@@ -24,162 +46,209 @@ body{
             text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
             letter-spacing: 4px;
         }
-        
     }
-    .container{
-        width: 90%;
-        .firstSection{
-            .menu{
+
+
+    .container {
+        width: 100%;
+        .firstSection {
+            .menu {
                 margin-top: 20px;
                 margin-left: 270px;
-                .btn{
+
+                .btn {
                     background-color: white;
                 }
             }
-            .turn{
-                
-                margin: 50px auto;
-                .carousel-inner{
-                    background-image: url(../image/vestidos-niñas-unicornio.jpg);
+            .turn {
+                margin: 40px auto;
+
+                .carousel-inner {
+                    background-image: url(../image/productos.jpg);
                     background-size: cover;
-                    background-blend-mode: luminosity;
-                    height: 380px;
+                    background-position: center;
+                    height: 420px;
                     font-family: $backFont;
                     font-size: 70px;
                     text-align: center;
                     background-color: pink;
                     border-radius: 30px;
                 }
-            
-                
-                a{     
-                    text-decoration: none; 
-                    color: black;  
-                    span{
+                a{
+                    text-decoration: none;
+                    span {
                         color: white;
                         background-color: purple;
                         border-radius: 20px;
                         padding: 15px;
-                        
                     }
-   
                 }
             }
-            .footy{
-                background-image: url(../image/fondoC.jpg);
-                background-size: cover;
-                width: 100%;
-                height: 100px;
+            .footy {
+                @include footy(100px)
             }
         }
-        
-        .secondSection{
-            
-            #sales{
-                padding-bottom: 200px;
-                h3{
-                    font-family: $backFont;
-                    font-size: 55px;
-                    text-align: center;
-                    margin: 30px 0;
-                }
-                table{
-                    font-size: 18px;
-                    font-family: $backFont;
-                    text-align: center;
-                    margin: 0 auto;
-                    border: 1px solid pink;
-                    th, td{
-                        border: 1px solid pink; 
-                    } 
-                }
-                .newSale{
-                    float: right;
-                    font-family: $backFont;
-                    border: 1px solid pink;
-                    text-decoration: none; 
-                    font-size: 20px;
-                    font-weight: bold;
-                    color: black;
-                    background-image: url(../image/fondoC.jpg);
-                    border-radius: 10px;
-                    padding: 10px 5px;
-                    margin: 40px 150px;
-                }
-                
-            }
-            .footy{
-                background-image: url(../image/fondoC.jpg);
-                background-size: cover;
-                width: 100%;
-                height: 50px;
-            }
-            #statistics{
-                width: 90%;
-                margin: 150px auto;
-                font-family: $backFont;
-                
 
-                h3{
-                    font-family: $backFont;
-                    font-size: 55px;
-                    text-align: center;
-                    margin: 30px 0;
+        .secondSection {
+
+            
+            #sales {
+                margin: 100px auto;
+
+                h3 {
+                    @include title
                 }
-                .stats{
-                    width: 50%;
-                    .btn{
-                        font-size: 14px;
-                        margin: 15px;
-                        font-family: $backFont;
-                        width: 90px;
-                        height: 80px;
-                        padding: 0 10px;
-                        font-weight: bold;
-                    }
-                }
-            }
-            #reports{
-                margin: 0 auto;
-                font-family: 'Rubik', sans-serif;
-                h3{
-                    font-family: $backFont;
-                    font-size: 55px;
-                    text-align: center;
-                    margin: 30px 0; 
-                }
-                    
-                .collapse-group {
-                    padding: 50px 40px;
-                    border: 1px solid darkgrey;
-                    margin-bottom: 10px;
-                    .panel{
-                        padding: 20px 40px;
-                        .panel-title{
+                .table-border {
+                    width: 95%;
+                    margin: auto;
+                    border: 1px purple dotted;
+                    padding: 50px 40px 0 40px;
+                    overflow: hidden;
+                    border-radius: 25px;
+                    .table {
+                        display: flex;
+                        justify-content: center;
+                        ul {
+                            font-size: 18px;
                             font-family: $backFont;
-                            color: purple;
-                            .trigger.collapsed{
-                                text-decoration: none;
+                            text-align: center;
+                            margin: 0 auto;
+                            border: 1px solid pink;
+                            list-style: none;
+                            margin: 0px;
+                            padding: 30px;
+                            .table-header {
+                                font-family: $backFont;
+                                font-size: 20px;
+                                text-align: center;
                                 color: purple;
-                                
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                                border-bottom: 1px solid pink;
                             }
-                            &:before {
-                                content: '\e082';
-                                text-decoration: none;
-                                color: purple;
-                                font-family: 'Glyphicons Halflings';
-                                vertical-align: text-bottom;
-                                }
-                            &:before {
-                                text-decoration: none;
-                                color: purple;
-                                
-                                content: '\e081';    
-                            }    
+                        }
+                    }
+
+                }
+                .newSale {
+                    float: right;
+                    margin: 40px 150px;
+                    @include sale-buttons
+                }
+                   
+                
+            }
+        
+            .create-sale-btn, .cancel-btn {
+                @include sale-buttons
+            }
+ 
+            .footy {
+                @include footy(50px)
+            }
+            #statistics {
+                margin: 100px auto;
+                font-family: $backFont;
+                width: 95%;
+                
+                h3 {
+                    @include title
+                }
+                .salesStats{
+                    border: 1px purple dotted;
+                    padding: 40px 40px;
+                    overflow: hidden;
+                    border-radius: 25px; 
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    form{
+                        background-color: #FFF87F;
+                        width: 25%;
+                        float: left;
+                        font-family: $backFont;
+                        font-size: 18px;
+                        border-radius: 10px;
+                        
+                        p{
+                            margin-left: 10px;
+                            margin-top: 10px;
+                            
                         } 
                     }
+                    .stats{
+                        float: left;
+                        width: 50%;
+                        margin-left: 50px;
+                        
+                        .btn{
+                            font-size: 13px;
+                            text-align: center;
+                            margin: 13px;
+                            font-family: $backFont;
+                            width: 100px;
+                            height: 80px;
+                            padding: 0 10px;
+                            font-weight: bold;
+                        }
+                    }
+                    .result{
+                        float: left;
+                        font-family: $backFont;
+                        font-size: 20px;
+                        background-color: #FFF87F;
+                        width: 25%;
+                        height: 320px;
+                        border-radius: 10px;
+                        
+                        p{
+                            margin-left: 10px;
+                            margin-top: 10px;
+                        }
+
+                    }
                 }
             }
-        }
+            #reports {
+                margin: 100px auto;
+                font-family: $backFont;
+                width: 95%;
+                margin-bottom: 200px;
+                
+                h3 {
+                    @include title
+                }
+
+                .collapse-group {
+                    padding: 50px 40px;
+                    border: 1px purple dotted;
+                    border-radius: 25px;
+                    margin-bottom: 10px;
+
+                    .panel {
+                        padding: 20px 40px;
+                        color: purple;
+                        
+                        .panel-title {
+                            text-decoration: none;
+                            font-family: $backFont;
+                            font-size: 25px;
+                            text-align: center;
+                            margin: 30px 0;
+                            &:before {
+                                
+                                text-decoration: none;
+                                font-family: 'Glyphicons Halflings';
+                                vertical-align: text-bottom;
+                                content: '\e082';
+                                content: '\e081';
+                            }
+                            
+                        }
+                    }
+                }
+            }
+ 
+        } 
     }    
 }
