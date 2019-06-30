@@ -231,32 +231,3 @@ let render = () =>{
 }
 render()
 
-const fillTable = () => {
-  data.sales.forEach(item => {
-    const li = document.createElement('li')
-    const dateList = document.getElementById('dateList')
-    dateList.appendChild(li)
-    li.innerText = item.saleDate.toLocaleDateString()
-  })
-
-  data.sales.forEach(item => {
-    const li = document.createElement('li')
-    const nameList = document.getElementById('nameList')
-    nameList.appendChild(li)
-    li.innerText = item.employeeName
-  })
-
-  data.sales.forEach(item => {
-    const li = document.createElement('li')
-    const itemList = document.getElementById('itemList')
-    itemList.appendChild(li)
-    li.innerText = item.itemSold.join(`, `)
-  })
-
-  data.sales.forEach(item => {
-    const li = document.createElement('li')
-    const branchList = document.getElementById('branchList')
-    branchList.appendChild(li)
-    li.innerText = item.branchOffice
-  })
-}
