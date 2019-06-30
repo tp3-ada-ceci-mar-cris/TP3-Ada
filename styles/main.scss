@@ -17,6 +17,18 @@ $backFont: 'Varela Round', sans-serif;
     margin: 30px 0;
 }
 
+@mixin sale-buttons {
+    font-family: $backFont;
+    border: 1px solid pink;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-image: url(../image/fondoC.jpg);
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
 body {
     header {
         background-image: url(../image/fondoC.jpg);
@@ -129,18 +141,13 @@ body {
 
         .newSale {
             float: right;
-            font-family: $backFont;
-            border: 1px solid pink;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-            color: black;
-            background-image: url(../image/fondoC.jpg);
-            border-radius: 10px;
-            padding: 10px 5px;
             margin: 40px 150px;
+            @include sale-buttons
         }
 
+        .create-sale-btn, .cancel-btn {
+            @include sale-buttons
+        }
     }
 
     .footy {
@@ -196,7 +203,7 @@ body {
                         color: purple;
                     }
 
-                    &:before {
+                    &:before {                        //HAY QUE SELECCIONAR UNO
                         content: '\e082';
                         text-decoration: none;
                         color: purple;

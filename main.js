@@ -31,10 +31,31 @@ let data = {
     { id:"0004",type:"accessory", item: "Llavero pompón", price: 100 },
     { id:"0005",type:"accessory", item: "Llavero unicornio", price: 30 },
     { id:"0006",type:"beauty", item: "Brocha unicornio", price: 90 },
-    { id:"0007",type:"textile", item: "Bata unicornio rosa", price: 75 },
-    { id:"0008",type:"textile", item: "Bata unicornio azul", price: 110 },
+    { id:"0007",type:"clothing", item: "Bata unicornio rosa", price: 75 },
+    { id:"0008",type:"clothing", item: "Bata unicornio azul", price: 110 },
     { id:"0009",type:"accessory", item: "Cartuchera llama unicornio", price: 230 }
   ]
+}
+
+// NUEVA VENTA
+// Modelo de nueva venta
+function sale(saleDate, employeeName, itemSold, branchOffice) {
+  this.saleDate = new Date(saleDate)
+  this.employeeName = employeeName
+  this.itemSold = itemSold
+  this.branchOffice = branchOffice
+}
+
+// Popup modal para ingresar informacion segun selects
+// una vez seleccionado, agregar boton que diga "agregar nueva venta"
+// ahi va el siguiente codigo:
+const createSale = () => {
+  let saleDateField = document.getElementById('enterSaleDate')
+  let employeeNameField = document.getElementById('selectEmployeeName')
+  let itemSoldField = document.getElementById('selectItemSold')
+  let branchOfficeField = document.getElementById('selectBranchOffice')
+  let newSale = new sale(saleDateField.value, employeeNameField.value, itemSoldField.value, branchOfficeField.value)
+  data.sales.push(newSale)
 }
 
 // PUNTO1

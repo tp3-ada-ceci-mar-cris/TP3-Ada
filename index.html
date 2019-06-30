@@ -6,6 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>Unicorn Store</title>
     <script src='main.js' type='text/javascript'></script>
+    <script src='interaction.js' type='text/javascript'></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round&display=swap" rel="stylesheet">
@@ -72,12 +73,54 @@
                     </ul>
                 </div>
                 </div>
-                <a href="#" class="newSale">Nueva venta</a>
+                <a href="#" class="newSale" data-toggle="modal" data-target="#myModal">Nueva venta</a>
+                <!--Modal-->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Crear nueva venta</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <input id="enterSaleDate" type="date"></input>
+                                    <select id="selectEmployeeName">
+
+                                    </select>
+                                    <select id="selectItemSold">
+
+                                    </select>
+                                    <select id="selectBranchOffice">
+
+                                    </select>
+                            </div>
+                            </form>
+                            <div class="modal-footer">
+                                <a href="#" class="create-sale-btn" onclick="createSale()">Crear</a>
+                                <button type="button" class="cancel-btn" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Modal-->
             </div>
             </div>
             <div class="footy"></div>
             <div id="statistics">
                 <h3>ESTADISTICAS</h3>
+                <div class="salesStats">
+                    <form id="insertData">
+                        <p>
+                            Fecha:<br>
+                            Empleada:<br>
+                            Sucursal:<br>
+                            Monitor:<br>
+                            Mother:<br>
+                            HDD:<br>
+                            RAM:<br>
+                        </p>
+                    </form>
                 <nav class="stats">
                     <button type="button" class="btn btn-outline-primary">Precio Maquina</button>
                     <button type="button" class="btn btn-outline-secondary">Ventas por Componente</button>
