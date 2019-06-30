@@ -47,22 +47,22 @@ const fillOptions = () => {
       return option
     })
 
-    data.employees.map(function (name, index) {
-      let nameItem = document.createElement('option')
-      nameItem.innerText = name
-      nameItem.value = index
-      let nameSelector = document.getElementById('selectEmployeeName')
-      nameSelector.appendChild(nameItem)
-    })
+    // data.employees.map(function (name, index) {
+    //   let nameItem = document.createElement('option')
+    //   nameItem.innerText = name
+    //   nameItem.value = name.index
+    //   let nameSelector = document.getElementById('selectEmployeeName')
+    //   nameSelector.appendChild(nameItem)
+    // })
 
-    data.prices.forEach(e => {
-      const option = document.createElement('option')
-      option.innerText = e.item
-      option.value = e.id
-      const itemSelector = document.getElementById('selectItemSold')
-      itemSelector.appendChild(option)
-      return option
-    })
+    // data.prices.forEach(e => {
+    //   const option = document.createElement('option')
+    //   option.innerText = e.item
+    //   option.value = e.id
+    //   const itemSelector = document.getElementById('selectItemSold')
+    //   itemSelector.appendChild(option)
+    //   return option
+    // })
 }
 
 // NUEVA VENTA
@@ -260,6 +260,10 @@ let render = () =>{
 render()
 
 const fillTable = () => {
+  data.sales.sort(function(a, b) {
+    return b.saleDate - a.saleDate
+  })
+
   data.sales.forEach(item => {
     const li = document.createElement('li')
     const dateList = document.getElementById('dateList')
