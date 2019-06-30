@@ -46,9 +46,6 @@ function sale(saleDate, employeeName, itemSold, branchOffice) {
   this.branchOffice = branchOffice
 }
 
-// Popup modal para ingresar informacion segun selects
-// una vez seleccionado, agregar boton que diga "agregar nueva venta"
-// ahi va el siguiente codigo:
 const createSale = () => {
   let saleDateField = document.getElementById('enterSaleDate')
   let employeeNameField = document.getElementById('selectEmployeeName')
