@@ -47,10 +47,10 @@ body {
             letter-spacing: 4px;
         }
     }
-}
 
-.container {
-    width: 100%;
+
+    .container {
+        width: 100%;
         .firstSection {
             .menu {
                 margin-top: 20px;
@@ -74,7 +74,7 @@ body {
                     background-color: pink;
                     border-radius: 30px;
                 }
-                a {
+                a{
                     text-decoration: none;
                     span {
                         color: white;
@@ -91,148 +91,127 @@ body {
 
         .secondSection {
 
-            .table-border {
-                width: 95%;
-                margin: auto;
-                border: 1px purple dotted;
-                padding: 50px 40px 0 40px;
-                overflow: hidden;
-                border-radius: 25px;
-            }
-
+            
             #sales {
-                margin: 100px 0;
+                margin: 100px auto;
 
                 h3 {
                     @include title
                 }
-                .table {
-                    display: flex;
-                    justify-content: center;
-                    ul {
-                        font-size: 18px;
-                        font-family: $backFont;
-                        text-align: center;
-                        margin: 0 auto;
-                        border: 1px solid pink;
-                        list-style: none;
-                        margin: 0px;
-                        padding: 30px;
-                        .table-header {
+                .table-border {
+                    width: 95%;
+                    margin: auto;
+                    border: 1px purple dotted;
+                    padding: 50px 40px 0 40px;
+                    overflow: hidden;
+                    border-radius: 25px;
+                    .table {
+                        display: flex;
+                        justify-content: center;
+                        ul {
+                            font-size: 18px;
                             font-family: $backFont;
-                            font-size: 20px;
                             text-align: center;
-                            color: purple;
-                            font-weight: bold;
-                            margin-bottom: 10px;
-                            border-bottom: 1px solid pink;
+                            margin: 0 auto;
+                            border: 1px solid pink;
+                            list-style: none;
+                            margin: 0px;
+                            padding: 30px;
+                            .table-header {
+                                font-family: $backFont;
+                                font-size: 20px;
+                                text-align: center;
+                                color: purple;
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                                border-bottom: 1px solid pink;
+                            }
                         }
                     }
+
                 }
                 .newSale {
                     float: right;
-                    font-family: $backFont;
-                    border: 1px solid pink;
-                    text-decoration: none;
-                    font-size: 20px;
-                    font-weight: bold;
-                    color: black;
-                    background-image: url(../image/fondoC.jpg);
-                    border-radius: 10px;
-                    padding: 10px 5px;
                     margin: 40px 150px;
+                    @include sale-buttons
                 }
+                   
+                
             }
-        }
-
-        .newSale {
-            float: right;
-            margin: 40px 150px;
-            @include sale-buttons
-        }
-
-        .create-sale-btn, .cancel-btn {
-            @include sale-buttons
-        }
-    }
-
-    .footy {
-        @include footy(50px)
-    }
-
-    #statistics {
-        width: 90%;
-        margin: 150px auto;
-        font-family: $backFont;
-
-        h3 {
-            @include title
-        }
-
-        .stats {
-            width: 50%;
-
-            .btn {
-                font-size: 14px;
-                margin: 15px;
+        
+            .create-sale-btn, .cancel-btn {
+                @include sale-buttons
+            }
+ 
+            .footy {
+                @include footy(50px)
+            }
+            #statistics {
+                margin: 100px auto;
                 font-family: $backFont;
+                width: 95%;
+                
                 h3 {
                     @include title
                 }
                 .salesStats{
-                        border: 1px purple dotted;
-                        padding: 40px 40px;
-                        overflow: hidden;
-                        border-radius: 25px; 
-                        display: flex;
-                        justify-content: space-around;
-                        form{
-                            background-color: #FFF87F;
-                            width: 25%;
-                            float: left;
+                    border: 1px purple dotted;
+                    padding: 40px 40px;
+                    overflow: hidden;
+                    border-radius: 25px; 
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    form{
+                        background-color: #FFF87F;
+                        width: 25%;
+                        float: left;
+                        font-family: $backFont;
+                        font-size: 18px;
+                        border-radius: 10px;
+                        
+                        p{
+                            margin-left: 10px;
+                            margin-top: 10px;
+                            
+                        } 
+                    }
+                    .stats{
+                        float: left;
+                        width: 50%;
+                        margin-left: 50px;
+                        
+                        .btn{
+                            font-size: 13px;
+                            text-align: center;
+                            margin: 13px;
                             font-family: $backFont;
-                            font-size: 18px;
-                            border-radius: 10px;
-                            p{
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                
-                            } 
+                            width: 100px;
+                            height: 80px;
+                            padding: 0 10px;
+                            font-weight: bold;
                         }
-                        .stats{
-                            float: left;
-                            width: 50%;
-                            margin-left: 50px;
-                            .btn{
-                                font-size: 13px;
-                                text-align: center;
-                                margin: 13px;
-                                font-family: $backFont;
-                                width: 100px;
-                                height: 80px;
-                                padding: 0 10px;
-                                font-weight: bold;
-                            }
+                    }
+                    .result{
+                        float: left;
+                        font-family: $backFont;
+                        font-size: 20px;
+                        background-color: #FFF87F;
+                        width: 25%;
+                        height: 320px;
+                        border-radius: 10px;
+                        
+                        p{
+                            margin-left: 10px;
+                            margin-top: 10px;
                         }
-                        .result{
-                            float: left;
-                            font-family: $backFont;
-                            font-size: 20px;
-                            background-color: #FFF87F;
-                            width: 25%;
-                            height: 320px;
-                            border-radius: 10px;
-                            p{
-                                margin-left: 10px;
-                                margin-top: 10px;
-                            }
-                        }
+
+                    }
                 }
             }
-
             #reports {
-                margin: 0 auto;
-                font-family: 'Rubik', sans-serif;
+                margin: 100px auto;
+                font-family: $backFont;
                 width: 95%;
                 margin-bottom: 200px;
                 
@@ -249,23 +228,27 @@ body {
                     .panel {
                         padding: 20px 40px;
                         color: purple;
+                        
                         .panel-title {
+                            text-decoration: none;
                             font-family: $backFont;
                             font-size: 25px;
                             text-align: center;
                             margin: 30px 0;
                             &:before {
-                                content: '\e082';
-                                content: '\e081';
+                                
                                 text-decoration: none;
                                 font-family: 'Glyphicons Halflings';
                                 vertical-align: text-bottom;
+                                content: '\e082';
+                                content: '\e081';
                             }
-                              
+                            
                         }
                     }
-
-                
+                }
             }
-        }             
-    }
+ 
+        } 
+    }    
+}

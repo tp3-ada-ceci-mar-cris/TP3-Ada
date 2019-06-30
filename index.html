@@ -25,6 +25,12 @@
                     <div class="carousel-item active">
                         <a href="#sales"><span>Ventas</span></a>
                     </div>
+                    <div class="carousel-item">
+                        <a href="#statistics"><span>Estadisticas</span></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#reports"><span>Reportes</span></a>
+                    </div>
                     <a class="carousel-control-prev arrow" href="#carouselExampleControls" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon arrow" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -34,74 +40,68 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-            </section>
-            <section class="secondSection">
-                <div class="footy"></div>
-                <div id="sales">
-                    <h3>VENTAS</h3>
-                    <div class="table-border">
-                        <div class="table">
-                    
-                        <div>
+            </div>    
+        </section>
+        <section class="secondSection">
+            <div class="footy"></div>
+            <div id="sales">
+                <h3>VENTAS</h3>
+                <div class="table-border">
+                    <div class="table">
+                        <ul id="dateList">
+                            <li class="table-header">Fecha</li>
+        
+                        </ul>
+                        <ul id="nameList">
+                            <li class="table-header">Vendedora</li>
+        
+                        </ul>
+                        <ul id="itemList">
+                            <li class="table-header">Producto</li>
+        
+                        </ul>
+                        <ul id="branchList">
+                            <li class="table-header">Sucursal</li>
+        
+                        </ul>
                     </div>
-                    <div>
-                    <ul id="dateList">
-                        <li class="table-header">Fecha</li>
-
-                    </ul>
+                    <a href="#" class="newSale" data-toggle="modal" data-target="#myModal">Nueva venta</a>
                 </div>
-                <div>
-                    <ul id="nameList">
-                        <li class="table-header">Vendedora</li>
+            
+            </div>
+            
+            <!--Modal-->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Crear nueva venta</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <input id="enterSaleDate" type="date"></input>
+                                <select name="hola" id="selectEmployeeName">
 
-                    </ul>
-                </div>
-                <div>
-                    <ul id="itemList">
-                        <li class="table-header">Producto</li>
+                                </select>
+                                <select name="hola2" id="selectItemSold">
 
-                    </ul>
-                </div>
-                <div>
-                    <ul id="branchList">
-                        <li class="table-header">Sucursal</li>
+                                </select>
+                                <select name="hola3" id="selectBranchOffice">
 
-                    </ul>
-                </div>
-                </div>
-                <a href="#" class="newSale" data-toggle="modal" data-target="#myModal">Nueva venta</a>
-                <!--Modal-->
-                <div id="myModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-lg">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Crear nueva venta</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <input id="enterSaleDate" type="date"></input>
-                                    <select name="hola" id="selectEmployeeName">
-
-                                    </select>
-                                    <select name="hola2" id="selectItemSold">
-
-                                    </select>
-                                    <select name="hola3" id="selectBranchOffice">
-
-                                    </select>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#" class="create-sale-btn" onclick="createSale()">Crear</a>
-                                <button type="button" class="cancel-btn" data-dismiss="modal">Cancelar</button>
-                            </div>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="create-sale-btn" onclick="createSale()">Crear</a>
+                            <button type="button" class="cancel-btn" data-dismiss="modal">Cancelar</button>
                         </div>
                     </div>
                 </div>
-                <!--Modal-->
             </div>
-            </div>
+            <!--Modal-->
+        
+            
             <div class="footy"></div>
             <div id="statistics">
                 <h3>ESTADISTICAS</h3>
@@ -117,80 +117,81 @@
                             RAM:<br>
                         </p>
                     </form>
-                <nav class="stats">
-                    <button type="button" class="btn btn-outline-primary">Precio Maquina</button>
-                    <button type="button" class="btn btn-outline-secondary">Ventas por Componente</button>
-                    <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
-                    <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
-                    <button type="button" class="btn btn-outline-warning">Ventas del Mes</button>
-                    <button type="button" class="btn btn-outline-danger">Componente mas Vendido</button>
-                    <button type="button" class="btn btn-outline-success">Hubo Ventas</button>
-                    <button type="button" class="btn btn-outline-secondary">Ventas por Sucursal</button>
-                    <button type="button" class="btn btn-outline-primary">Sucursal del Mes</button>
-                </nav>
+                    <nav class="stats">
+                        <button type="button" class="btn btn-outline-primary">Precio Compra</button>
+                        <button type="button" class="btn btn-outline-secondary">Ventas por Articulo</button>
+                        <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
+                        <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
+                        <button type="button" class="btn btn-outline-warning">Ventas del Mes</button>
+                        <button type="button" class="btn btn-outline-danger">Articulo mas Vendido</button>
+                        <button type="button" class="btn btn-outline-success">Hubo Ventas</button>
+                        <button type="button" class="btn btn-outline-secondary">Ventas por Sucursal</button>
+                        <button type="button" class="btn btn-outline-primary">Sucursal del Mes</button>
+                    </nav>
+                    <div class="result"><p>Resultados</p></div>
+                </div>
             </div>
             <div class="footy"></div>
             <div id="reports">
                 <h3>REPORTES</h3>
                 <!-- PRUEBA DE COLLAPSE -->
                 <div class="collapse-group">
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne" class="trigger collapsed">
-                                        Reporte por mes
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingOne">
-                                <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae dolorum,
-                                    soluta temporibus vero perferendis quo odit eaque cum fugiat nihil earum error vitae
-                                    libero nostrum sed ipsam, beatae ea.
-                                </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne" class="trigger collapsed">
+                                    Reporte por mes
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae dolorum,
+                                soluta temporibus vero perferendis quo odit eaque cum fugiat nihil earum error vitae
+                                libero nostrum sed ipsam, beatae ea.
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingTwo">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true"
-                                        aria-controls="collapseTwo" class="trigger collapsed">
-                                        Reporte por sucursal
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingTwo">
-                                <div class="panel-body">
-                                    Sunt quia aperiam, officiis tempora quis quasi fugit ab ipsa quo expedita reiciendis
-                                    quod iusto! Enim delectus unde voluptatem officiis molestiae repudiandae.
-                                </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true"
+                                    aria-controls="collapseTwo" class="trigger collapsed">
+                                    Reporte por sucursal
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                Sunt quia aperiam, officiis tempora quis quasi fugit ab ipsa quo expedita reiciendis
+                                quod iusto! Enim delectus unde voluptatem officiis molestiae repudiandae.
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="headingThree">
-                                <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true"
-                                        aria-controls="collapseThree" class="trigger collapsed">
-                                        Reporte final
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-                                aria-labelledby="headingThree">
-                                <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae dolorum,
-                                    soluta temporibus vero perferendis quo odit eaque cum fugiat nihil earum error vitae
-                                    libero nostrum sed ipsam, beatae ea.
-                                </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true"
+                                    aria-controls="collapseThree" class="trigger collapsed">
+                                    Reporte final
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae dolorum,
+                                soluta temporibus vero perferendis quo odit eaque cum fugiat nihil earum error vitae
+                                libero nostrum sed ipsam, beatae ea.
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
-    </body>
+            </div>
+        </section>
+    </div>
+</body>
 </html>
