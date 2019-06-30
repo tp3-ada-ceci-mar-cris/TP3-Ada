@@ -1,39 +1,29 @@
 <!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <meta charset='UTF-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <meta http-equiv='X-UA-Compatible' content ='ie=edge'>
-        <title>Flavegerino</title>
-        <script src='main.js' type='text/javascript'></script>
-        <script src='interaction.js' type='text/javascript'></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round&display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </head>
-
-    <body onload="initialize()">
-        <header>
-            <h1>Unicorn Store</h1>
-            
-        </header>
-        <div class="container">
-            <section class="firstSection">
-                <!-- CARRUSEL -->
-                <div id="carouselExampleControls" class="carousel slide turn" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="#sales"><span>Ventas</span></a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#statistics"><span>Estadisticas</span></a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#reports"><span>Reportes</span></a>
-                        </div>
+<html lang='sp'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Unicorn Store</title>
+    <script src='main.js' type='text/javascript'></script>
+    <script src='interaction.js' type='text/javascript'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body onload="fillTable()" onload="initialize()">
+    <header>
+        <h1>Unicorn Store</h1>
+    </header>
+    <div class="container">
+        <section class="firstSection">
+            <div id="carouselExampleControls" class="carousel slide turn" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#sales"><span>Ventas</span></a>
                     </div>
                     <a class="carousel-control-prev arrow" href="#carouselExampleControls" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon arrow" aria-hidden="true"></span>
@@ -51,81 +41,73 @@
                     <h3>VENTAS</h3>
                     <div class="table-border">
                         <div class="table">
-                            <div>
-                            <ul>
-                                <li class="table-header">Fecha</li>
-                                <li>12/03/2019</li>
-                                <li>24/03/2019</li>
-                                <li>01/03/2019</li>
-                                <li>11/03/2019</li>
-                                <li>11/11/2018</li>
-                                <li>11/11/2018</li>
-                                <li>11/11/2018</li>
-                                <li>11/11/2018</li>
-                                <li>11/11/2018</li>
-                                <li>11/11/2018</li>
-                            </ul>
+                    
+                        <div>
+                    </div>
+                    <div>
+                    <ul id="dateList">
+                        <li class="table-header">Fecha</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul id="nameList">
+                        <li class="table-header">Vendedora</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul id="itemList">
+                        <li class="table-header">Producto</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul id="branchList">
+                        <li class="table-header">Sucursal</li>
+
+                    </ul>
+                </div>
+                </div>
+                <a href="#" class="newSale" data-toggle="modal" data-target="#myModal">Nueva venta</a>
+                <!--Modal-->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Crear nueva venta</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <input id="enterSaleDate" type="date"></input>
+                                    <select name="hola" id="selectEmployeeName">
+
+                                    </select>
+                                    <select name="hola2" id="selectItemSold">
+
+                                    </select>
+                                    <select name="hola3" id="selectBranchOffice">
+
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="create-sale-btn" onclick="createSale()">Crear</a>
+                                <button type="button" class="cancel-btn" data-dismiss="modal">Cancelar</button>
+                            </div>
                         </div>
-                    <div>
-                        <ul>
-                            <li class="table-header">Vendedora</li>
-                            <li>Cecilia</li>
-                            <li>Cristina</li>
-                            <li>Agustina</li>
-                            <li>Cecilia</li>
-                            <li>Agustina</li>
-                            <li>Marina</li>
-                            <li>Cecilia</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                        </ul>
                     </div>
-                    <div>
-                        <ul>
-                            <li class="table-header">Componente</li>
-                            <li>11/11/2018</li>
-                            <li>Monitor GPRS 3000</li>
-                            <li>Monitor GPRS 3000</li>
-                            <li>Monitor GPRS 3000</li>
-                            <li>Monitor GPRS 3000</li>
-                            <li>Monitor GPRS 3000</li>
-                            <li>Monitor GPRS 3000</li>
-                            <li>Monitor GPRS 3000</li>
-                            <li>Monitor GPRS 3000</li>
-                            <li>Monitor GPRS 3000</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li class="table-header">Sucursal</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                            <li>11/11/2018</li>
-                        </ul>
-                    </div>
-                    </div>
-                    <a href="#" class="newSale">Nueva venta</a>
                 </div>
-                </div>
-                <div class="footy"></div>
-                <div id="itemsData"></div>
-                <select id="employees"></select>
-                <select id="branchOffice"></select>
-                <input type="text" name="year" id="year" placeholder="Ingrese año para estadísticas">
-                <input type="text" name="month" id="month" placeholder="Ingrese mes para estadísticas"></inputtype>
-                <div id="statistics">
-                    <h3>ESTADISTICAS</h3>
-                    <div class="salesStats">
-                        <form id="insertData">
-                            <p>
+                <!--Modal-->
+            </div>
+            </div>
+            <div class="footy"></div>
+            <div id="statistics">
+                <h3>ESTADISTICAS</h3>
+                <div class="salesStats">
+                    <form id="insertData">
+                        <p>
                             Fecha:<br>
                             Empleada:<br>
                             Sucursal:<br>
@@ -133,28 +115,25 @@
                             Mother:<br>
                             HDD:<br>
                             RAM:<br>
-                            </p> 
-                        </form>
-                        <!-- BOTONERA DE FUNCIONES -->
-                        <nav class="stats">
-                            <button type="button" class="btn btn-outline-primary">Precio Maquina</button>
-                            <button type="button" class="btn btn-outline-secondary">Ventas por Componente</button>
-                            <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
-                            <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
-                            <button type="button" class="btn btn-outline-warning">Ventas del Mes</button>
-                            <button type="button" class="btn btn-outline-danger">Componente mas Vendido</button>
-                            <button type="button" class="btn btn-outline-success">Hubo Ventas</button>
-                            <button type="button" class="btn btn-outline-secondary">Ventas por Sucursal</button>
-                            <button type="button" class="btn btn-outline-primary">Sucursal del Mes</button>
-                        </nav>
-                    <div class="result"><p>Resultados</p></div>
-                    </div>
-                </div>
-                <div class="footy"></div>
-                <div id="reports">
-                    <h3>REPORTES</h3>
-                    <!-- PRUEBA DE COLLAPSE -->
-                    <div class="collapse-group">
+                        </p>
+                    </form>
+                <nav class="stats">
+                    <button type="button" class="btn btn-outline-primary">Precio Maquina</button>
+                    <button type="button" class="btn btn-outline-secondary">Ventas por Componente</button>
+                    <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
+                    <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
+                    <button type="button" class="btn btn-outline-warning">Ventas del Mes</button>
+                    <button type="button" class="btn btn-outline-danger">Componente mas Vendido</button>
+                    <button type="button" class="btn btn-outline-success">Hubo Ventas</button>
+                    <button type="button" class="btn btn-outline-secondary">Ventas por Sucursal</button>
+                    <button type="button" class="btn btn-outline-primary">Sucursal del Mes</button>
+                </nav>
+            </div>
+            <div class="footy"></div>
+            <div id="reports">
+                <h3>REPORTES</h3>
+                <!-- PRUEBA DE COLLAPSE -->
+                <div class="collapse-group">
 
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingOne">

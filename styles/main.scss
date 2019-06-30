@@ -17,6 +17,18 @@ $backFont: 'Varela Round', sans-serif;
     margin: 30px 0;
 }
 
+@mixin sale-buttons {
+    font-family: $backFont;
+    border: 1px solid pink;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-image: url(../image/fondoC.jpg);
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
 body {
     header {
         background-image: url(../image/fondoC.jpg);
@@ -131,12 +143,38 @@ body {
                     margin: 40px 150px;
                 }
             }
-            .footy {
-                @include footy(50px)
-            }
-            #statistics {
-                width: 95%;
-                margin: 100px auto;
+        }
+
+        .newSale {
+            float: right;
+            margin: 40px 150px;
+            @include sale-buttons
+        }
+
+        .create-sale-btn, .cancel-btn {
+            @include sale-buttons
+        }
+    }
+
+    .footy {
+        @include footy(50px)
+    }
+
+    #statistics {
+        width: 90%;
+        margin: 150px auto;
+        font-family: $backFont;
+
+        h3 {
+            @include title
+        }
+
+        .stats {
+            width: 50%;
+
+            .btn {
+                font-size: 14px;
+                margin: 15px;
                 font-family: $backFont;
                 h3 {
                     @include title
@@ -211,7 +249,6 @@ body {
                     .panel {
                         padding: 20px 40px;
                         color: purple;
-
                         .panel-title {
                             font-family: $backFont;
                             font-size: 25px;
@@ -219,21 +256,16 @@ body {
                             margin: 30px 0;
                             &:before {
                                 content: '\e082';
+                                content: '\e081';
                                 text-decoration: none;
-                                
                                 font-family: 'Glyphicons Halflings';
                                 vertical-align: text-bottom;
-                                }
-                            &:before {
-                                text-decoration: none;
-                                color: purple;
-                                content: '\e081';    
-                            }  
+                            }
+                              
                         }
-                    } 
+                    }
 
-
-                }
+                
             }
         }             
     }
