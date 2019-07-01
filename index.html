@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
-<body onload="fillTable()" onload="initialize()">
+<body onload="initialize()">
     <header>
         <h1>Unicorn Store</h1>
     </header>
@@ -107,18 +107,14 @@
                 <h3>ESTADISTICAS</h3>
                 <div class="salesStats">
                     <form id="insertData">
-                        <p>
-                            Fecha:<br>
-                            Empleada:<br>
-                            Sucursal:<br>
-                            Monitor:<br>
-                            Mother:<br>
-                            HDD:<br>
-                            RAM:<br>
-                        </p>
+                        <div id="itemsData"></div>
+                        <select id="employees"></select>
+                        <select id="branchOffice"></select>
+                        <input type="text" name="year" id="year" placeholder="Ingrese año para estadísticas">
+                        <input type="text" name="month" id="month" placeholder="Ingrese mes para estadísticas"></inputtype>
                     </form>
                     <nav class="stats">
-                        <button type="button" class="btn btn-outline-primary">Precio Compra</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="newInput()">Precio Compra</button>
                         <button type="button" class="btn btn-outline-secondary">Ventas por Articulo</button>
                         <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
                         <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
