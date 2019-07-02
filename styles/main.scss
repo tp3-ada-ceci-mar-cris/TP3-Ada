@@ -73,8 +73,11 @@ body {
                     text-align: center;
                     background-color: pink;
                     border-radius: 30px;
+                    .carousel-item {
+                        margin-top: 150px;
+                    }
                 }
-                a{
+                a {
                     text-decoration: none;
                     span {
                         color: white;

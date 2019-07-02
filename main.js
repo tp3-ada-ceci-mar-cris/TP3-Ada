@@ -65,24 +65,6 @@ const fillOptions = () => {
     // })
 }
 
-// NUEVA VENTA
-// Modelo de nueva venta
-function sale(saleDate, employeeName, itemSold, branchOffice) {
-  this.saleDate = new Date(saleDate)
-  this.employeeName = employeeName
-  this.itemSold = itemSold
-  this.branchOffice = branchOffice
-}
-
-const createSale = () => {
-  let saleDateField = document.getElementById('enterSaleDate')
-  let employeeNameField = document.getElementById('selectEmployeeName')
-  let itemSoldField = document.getElementById('selectItemSold')
-  let branchOfficeField = document.getElementById('selectBranchOffice')
-  let newSale = new sale(saleDateField.value, employeeNameField.value, itemSoldField.value, branchOfficeField.value)
-  data.sales.push(newSale)
-}
-
 // PUNTO1
 //1. precioMaquina(componentes): 
 let salePrice = sale => sale.length>0?sale.map(e => data.prices.find(({item}) => e === item).price).reduce((a,b)=>a+b):0
@@ -258,37 +240,3 @@ let render = () =>{
   console.table(listSalesBySP(data.branchOffice))
 }
 render()
-
-const fillTable = () => {
-  data.sales.sort(function(a, b) {
-    return b.saleDate - a.saleDate
-  })
-
-  data.sales.forEach(item => {
-    const li = document.createElement('li')
-    const dateList = document.getElementById('dateList')
-    dateList.appendChild(li)
-    li.innerText = item.saleDate.toLocaleDateString()
-  })
-
-  data.sales.forEach(item => {
-    const li = document.createElement('li')
-    const nameList = document.getElementById('nameList')
-    nameList.appendChild(li)
-    li.innerText = item.employeeName
-  })
-
-  data.sales.forEach(item => {
-    const li = document.createElement('li')
-    const itemList = document.getElementById('itemList')
-    itemList.appendChild(li)
-    li.innerText = item.itemSold.join(`, `)
-  })
-
-  data.sales.forEach(item => {
-    const li = document.createElement('li')
-    const branchList = document.getElementById('branchList')
-    branchList.appendChild(li)
-    li.innerText = item.branchOffice
-  })
-}

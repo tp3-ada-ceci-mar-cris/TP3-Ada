@@ -1,5 +1,9 @@
 //1. Para completar la tabla de ventas
 const fillTable = () => {
+    data.sales.sort(function(a, b) {
+        return b.saleDate - a.saleDate
+      })
+    
     data.sales.forEach(item => {
       const li = document.createElement('li')
       const dateList = document.getElementById('dateList')
