@@ -16,6 +16,7 @@ body header h1 {
 }
 body .container {
   width: 100%;
+  min-width: 1212px;
 }
 body .container .firstSection .menu {
   margin-top: 20px;
