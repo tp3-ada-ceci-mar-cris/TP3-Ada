@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
-<body onload="fillTable()" onload="initialize()">
+<body onload="initialize()">
     <header>
         <h1>Unicorn Store</h1>
     </header>
@@ -31,49 +31,42 @@
                     <div class="carousel-item">
                         <a href="#reports"><span>Reportes</span></a>
                     </div>
+                    <a class="carousel-control-prev arrow" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon arrow" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next arrow" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon arrow" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev arrow" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon arrow" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next arrow" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon arrow" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+            </div>    
         </section>
         <section class="secondSection">
             <div class="footy"></div>
             <div id="sales">
                 <h3>VENTAS</h3>
                 <div class="table-border">
-                <div class="table">
-                    <div>
-                    <ul id="dateList">
-                        <li class="table-header">Fecha</li>
-
-                    </ul>
+                    <div class="table">
+                        <ul id="dateList">
+                            <li class="table-header">Fecha</li>
+        
+                        </ul>
+                        <ul id="nameList">
+                            <li class="table-header">Vendedora</li>
+        
+                        </ul>
+                        <ul id="itemList">
+                            <li class="table-header">Producto</li>
+        
+                        </ul>
+                        <ul id="branchList">
+                            <li class="table-header">Sucursal</li>
+        
+                        </ul>
+                    </div>
+                    <a href="#" class="newSale" data-toggle="modal" data-target="#myModal">Nueva venta</a>
                 </div>
-                <div>
-                    <ul id="nameList">
-                        <li class="table-header">Vendedora</li>
-
-                    </ul>
-                </div>
-                <div>
-                    <ul id="itemList">
-                        <li class="table-header">Producto</li>
-
-                    </ul>
-                </div>
-                <div>
-                    <ul id="branchList">
-                        <li class="table-header">Sucursal</li>
-
-                    </ul>
-                </div>
-                </div>
-                <a href="#" class="newSale" data-toggle="modal" data-target="#myModal">Nueva venta</a>
                 <!--Modal-->
                 <div id="myModal" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-lg">
@@ -86,13 +79,13 @@
                                     <input id="enterSaleDate" type="date"></input>
                                     <select name="hola" id="selectEmployeeName">
 
-                                    </select>
-                                    <select name="hola2" id="selectItemSold">
+                                </select>
+                                <select name="hola2" id="selectItemSold">
 
-                                    </select>
-                                    <select name="hola3" id="selectBranchOffice">
+                                </select>
+                                <select name="hola3" id="selectBranchOffice">
 
-                                    </select>
+                                </select>
                             </div>
                             <div class="modal-footer">
                                 <a href="#" class="create-sale-btn" onclick="createSale()">Crear</a>
@@ -101,42 +94,38 @@
                         </div>
                     </div>
                 </div>
-                <!--Modal-->
             </div>
-            </div>
+            <!--Modal-->
             <div class="footy"></div>
             <div id="statistics">
                 <h3>ESTADISTICAS</h3>
                 <div class="salesStats">
                     <form id="insertData">
-                        <p>
-                            Fecha:<br>
-                            Empleada:<br>
-                            Sucursal:<br>
-                            Monitor:<br>
-                            Mother:<br>
-                            HDD:<br>
-                            RAM:<br>
-                        </p>
+                        <div id="itemsData"></div>
+                        <select id="employees" class="inputFill"></select>
+                        <select id="branchOffice" class="inputFill"></select>
+                        <input type="text" name="year" id="year" placeholder="Ingrese año para estadísticas" class="inputFill">
+                        <input type="text" name="month" id="month" placeholder="Ingrese mes para estadísticas" class="inputFill">
                     </form>
-                <nav class="stats">
-                    <button type="button" class="btn btn-outline-primary">Precio Maquina</button>
-                    <button type="button" class="btn btn-outline-secondary">Ventas por Componente</button>
-                    <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
-                    <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
-                    <button type="button" class="btn btn-outline-warning">Ventas del Mes</button>
-                    <button type="button" class="btn btn-outline-danger">Componente mas Vendido</button>
-                    <button type="button" class="btn btn-outline-success">Hubo Ventas</button>
-                    <button type="button" class="btn btn-outline-secondary">Ventas por Sucursal</button>
-                    <button type="button" class="btn btn-outline-primary">Sucursal del Mes</button>
-                </nav>
+                    <nav class="stats">
+                        <button type="button" class="btn btn-outline-primary" onclick="newInput()">Precio Compra</button>
+                        <button type="button" class="btn btn-outline-secondary">Ventas por Articulo</button>
+                        <button type="button" class="btn btn-outline-success">Vendedora del Mes</button>
+                        <button type="button" class="btn btn-outline-danger">Ventas por Vendedora</button>
+                        <button type="button" class="btn btn-outline-warning">Ventas del Mes</button>
+                        <button type="button" class="btn btn-outline-danger">Articulo mas Vendido</button>
+                        <button type="button" class="btn btn-outline-success">Hubo Ventas</button>
+                        <button type="button" class="btn btn-outline-secondary">Ventas por Sucursal</button>
+                        <button type="button" class="btn btn-outline-primary">Sucursal del Mes</button>
+                    </nav>
+                    <div class="result"><p>Resultados</p></div>
+                </div>
             </div>
             <div class="footy"></div>
             <div id="reports">
                 <h3>REPORTES</h3>
                 <!-- PRUEBA DE COLLAPSE -->
                 <div class="collapse-group">
-
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
