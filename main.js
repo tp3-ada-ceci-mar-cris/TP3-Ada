@@ -38,31 +38,27 @@ let data = {
 }
 
 const fillOptions = () => {
-    data.employees.forEach(name => {
+    data.employees.forEach((name, index) => {
       let option = document.createElement('option')
       option.innerText = name
       option.value = index
       let nameSelector = document.getElementById('selectEmployeeName')
-      nameSelector.appendChild(nameItem)
+      nameSelector.appendChild(option)
       return option
     })
 
-    // data.employees.map(function (name, index) {
-    //   let nameItem = document.createElement('option')
-    //   nameItem.innerText = name
-    //   nameItem.value = name.index
-    //   let nameSelector = document.getElementById('selectEmployeeName')
-    //   nameSelector.appendChild(nameItem)
-    // })
+    data.prices.map (({item}) => {
+      console.log(item)
+      item.forEach((product, index) => {
+        let option = document.createElement('option')
+        option.innerText = product
+        option.value = index
+        let productSelector = document.getElementById('selectItemSold')
+        productSelector.appendChild(option)
+        return option
+      })
+    })
 
-    // data.prices.forEach(e => {
-    //   const option = document.createElement('option')
-    //   option.innerText = e.item
-    //   option.value = e.id
-    //   const itemSelector = document.getElementById('selectItemSold')
-    //   itemSelector.appendChild(option)
-    //   return option
-    // })
 }
 
 // PUNTO1
