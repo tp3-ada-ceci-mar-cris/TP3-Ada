@@ -108,7 +108,7 @@ const fillSelects2=(list, type)=> {
 
 //4. Función que agarra el input y me da un conjunto de datos.
 const newInput = e=> {
-    let input = {products:[], employee:undefined, year:undefined, month:undefined}
+    let input = {products:[], employee:undefined, branchOffice: undefined, year:undefined, month:undefined}
     compTypes.forEach(e => {
         let select = document.getElementById(e)
         let product = data.prices.find(e=>e.id===select.value)
@@ -116,6 +116,7 @@ const newInput = e=> {
     })
     
     input.employee  = document.getElementById("employees").value
+    input.branchOffice=document.getElementById("branchOffice").value
     let auxDate = new Date (document.getElementById("year").value)
     input.year= auxDate.getFullYear()
     input.month=auxDate.getMonth()
@@ -161,17 +162,21 @@ let btnArtVend = e => {
   printResult (`El artículo más vendido de la historia es`,"result")
 }
 
-// let btnHuboVent = e => {
-  
-//   printResult (``,"result")
-// }
+let btnHuboVent = e => {
+  const anySales= data.sales.find(({saleDate})=>newInput(e).month===saleDate.getMonth()&&newInput(e).year===saleDate.getFullYear())
+  if (anySales) {
+    printResult(`Hubo ventas en el mes`, "result")
+  } else {
+    printResult(`No hubo ventas en el mes`, "result")
+  }
+}
 
-// let btnVentSuc = e => {  
-//   printResult (,"result")}
+let btnVentSuc = e => {  
+  printResult (`La sucursal ${newInput(e).branchOffice} vendió ARS ${salesByBranchOffice(newInput(e).branchOffice)} desde que comenzó sus operaciones`,"result")}
 
-// let btnSucMes = e => {
-//   printResult (,"result")
-// }
+let btnSucMes = e => {
+  printResult (`La sucursal que más vendió este mes fue ${branchOfTheMonth(newInput(e).year,newInput(e).month)}`,"result")
+}
 
 //6. Funciones para los reportes
 let renderByMonth = e => {
