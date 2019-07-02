@@ -1,0 +1,223 @@
+@charset "UTF-8";
+body header {
+  background-image: url(../image/fondoC.jpg);
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  text-align: center;
+}
+body header h1 {
+  font-family: "Lobster", cursive;
+  font-size: 130px;
+  margin: 0 auto;
+  padding-top: 20px;
+  color: white;
+  text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
+  letter-spacing: 4px;
+}
+body .container {
+  width: 100%;
+}
+body .container .firstSection .menu {
+  margin-top: 20px;
+  margin-left: 270px;
+}
+body .container .firstSection .menu .btn {
+  background-color: white;
+}
+body .container .firstSection .turn {
+  margin: 40px auto;
+}
+body .container .firstSection .turn .carousel-inner {
+  background-image: url(../image/productos.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 420px;
+  font-family: "Varela Round", sans-serif;
+  font-size: 70px;
+  text-align: center;
+  background-color: pink;
+  border-radius: 30px;
+}
+body .container .firstSection .turn a {
+  text-decoration: none;
+}
+body .container .firstSection .turn a span {
+  color: white;
+  background-color: purple;
+  border-radius: 20px;
+  padding: 15px;
+}
+body .container .firstSection .footy {
+  background-image: url(../image/fondoC.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100px;
+}
+body .container .secondSection #sales {
+  margin: 100px auto;
+}
+body .container .secondSection #sales h3 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 55px;
+  text-align: center;
+  margin: 30px 0;
+}
+body .container .secondSection #sales .table-border {
+  width: 95%;
+  margin: auto;
+  border: 1px purple dotted;
+  padding: 50px 40px 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+body .container .secondSection #sales .table-border .table {
+  display: flex;
+  justify-content: center;
+}
+body .container .secondSection #sales .table-border .table ul {
+  font-size: 18px;
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid pink;
+  list-style: none;
+  margin: 0px;
+  padding: 30px;
+}
+body .container .secondSection #sales .table-border .table ul .table-header {
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid pink;
+}
+body .container .secondSection #sales .newSale {
+  float: right;
+  margin: 40px 150px;
+  font-family: "Varela Round", sans-serif;
+  border: 1px solid pink;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background-image: url(../image/fondoC.jpg);
+  border-radius: 10px;
+  padding: 10px 5px;
+}
+body .container .secondSection .create-sale-btn, body .container .secondSection .cancel-btn {
+  font-family: "Varela Round", sans-serif;
+  border: 1px solid pink;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background-image: url(../image/fondoC.jpg);
+  border-radius: 10px;
+  padding: 10px 5px;
+}
+body .container .secondSection .footy {
+  background-image: url(../image/fondoC.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 50px;
+}
+body .container .secondSection #statistics {
+  margin: 100px auto;
+  font-family: "Varela Round", sans-serif;
+  width: 95%;
+}
+body .container .secondSection #statistics h3 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 55px;
+  text-align: center;
+  margin: 30px 0;
+}
+body .container .secondSection #statistics .salesStats {
+  border: 1px purple dotted;
+  padding: 40px 40px;
+  overflow: hidden;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+body .container .secondSection #statistics .salesStats form {
+  background-color: #FFF87F;
+  width: 25%;
+  float: left;
+  font-family: "Varela Round", sans-serif;
+  font-size: 18px;
+  border-radius: 10px;
+}
+body .container .secondSection #statistics .salesStats form select {
+  font-family: "Varela Round", sans-serif;
+  font-size: 12px;
+}
+body .container .secondSection #statistics .salesStats .stats {
+  float: left;
+  width: 50%;
+  margin-left: 50px;
+}
+body .container .secondSection #statistics .salesStats .stats .btn {
+  font-size: 13px;
+  text-align: center;
+  margin: 13px;
+  font-family: "Varela Round", sans-serif;
+  width: 100px;
+  height: 80px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+body .container .secondSection #statistics .salesStats .result {
+  float: left;
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  background-color: #FFF87F;
+  width: 25%;
+  height: 320px;
+  border-radius: 10px;
+}
+body .container .secondSection #statistics .salesStats .result p {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+body .container .secondSection #reports {
+  margin: 100px auto;
+  font-family: "Varela Round", sans-serif;
+  width: 95%;
+  margin-bottom: 200px;
+}
+body .container .secondSection #reports h3 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 55px;
+  text-align: center;
+  margin: 30px 0;
+}
+body .container .secondSection #reports .collapse-group {
+  padding: 50px 40px;
+  border: 1px purple dotted;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+body .container .secondSection #reports .collapse-group .panel {
+  padding: 20px 40px;
+  color: purple;
+}
+body .container .secondSection #reports .collapse-group .panel .panel-title {
+  text-decoration: none;
+  font-family: "Varela Round", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin: 30px 0;
+}
+body .container .secondSection #reports .collapse-group .panel .panel-title:before {
+  text-decoration: none;
+  font-family: "Glyphicons Halflings";
+  vertical-align: text-bottom;
+  content: "";
+  content: "";
+}
+
+/*# sourceMappingURL=styles.main.css.map */

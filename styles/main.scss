@@ -161,7 +161,6 @@ body {
                     border-radius: 25px; 
                     display: flex;
                     justify-content: space-around;
-                    
                     form{
                         background-color: #FFF87F;
                         width: 25%;
@@ -169,12 +168,11 @@ body {
                         font-family: $backFont;
                         font-size: 18px;
                         border-radius: 10px;
-                        
-                        p{
-                            margin-left: 10px;
-                            margin-top: 10px;
-                            
-                        } 
+                        select{
+                            font-family: $backFont;
+                            font-size: 12px;
+                        }
+                         
                     }
                     .stats{
                         float: left;

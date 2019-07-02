@@ -1,22 +1,22 @@
 let data = {
-  employees: ["Cristina", "Marina", "Cecilia", "Agustina"],
+  employees: ["Cristina", "Marina", "Cecilia", "Rosalia"],
 
   sales: [
     { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio", "Brocha unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 24), employeeName: "Cristina", itemSold: ["Bata unicornio rosa", "Vincha rígida unicornio"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 01), employeeName: "Agustina", itemSold: ["Llavero unicornio", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Rosalia", itemSold: ["Llavero unicornio", "Cartuchera llama unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 11), employeeName: "Cecilia", itemSold: ["Portacosméticos cute", "Bata unicornio azul"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 15), employeeName: "Agustina", itemSold: ["Llavero pompón", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 15), employeeName: "Rosalia", itemSold: ["Llavero pompón", "Cartuchera llama unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 12), employeeName: "Marina", itemSold: ["Vincha rígida unicornio", "Brocha unicornio"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 21), employeeName: "Cecilia", itemSold: ["Llavero unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 08), employeeName: "Cristina", itemSold: ["Portacosméticos cute", "Bata unicornio rosa"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 16), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Cartuchera llama unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 27), employeeName: "Marina", itemSold: ["Llavero pompón", "Brocha unicornio"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 22), employeeName: "Cecilia", itemSold: ["Portacosméticos cute", "Bata unicornio rosa"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 05), employeeName: "Agustina", itemSold: ["Vincha rígida unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 05), employeeName: "Rosalia", itemSold: ["Vincha rígida unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 01), employeeName: "Cecilia", itemSold: ["Llavero unicornio", "Bata unicornio rosa"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 07), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Bata unicornio azul"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 14), employeeName: "Agustina", itemSold: ["Llavero pompón", "Brocha unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 14), employeeName: "Rosalia", itemSold: ["Llavero pompón", "Brocha unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Vincha rígida unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Esmalte unicornio", "Vincha rígida unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Portacosméticos cute", "Llavero unicornio"], branchOffice : "Centro"},
@@ -25,15 +25,15 @@ let data = {
   ],
 
   prices: [
-    { id:"0001",type:"beauty", item: "Esmalte unicornio", price: 200 },
-    { id:"0002",type:"accessory", item: "Vincha rígida unicornio", price: 120 },
-    { id:"0003",type:"beauty", item: "Portacosméticos cute", price: 250 },
-    { id:"0004",type:"accessory", item: "Llavero pompón", price: 100 },
-    { id:"0005",type:"accessory", item: "Llavero unicornio", price: 30 },
-    { id:"0006",type:"beauty", item: "Brocha unicornio", price: 90 },
-    { id:"0007",type:"clothing", item: "Bata unicornio rosa", price: 75 },
-    { id:"0008",type:"clothing", item: "Bata unicornio azul", price: 110 },
-    { id:"0009",type:"accessory", item: "Cartuchera llama unicornio", price: 230 }
+    { id:"0001",type:"Beauty", item: "Esmalte unicornio", price: 200 },
+    { id:"0002",type:"Props", item: "Vincha rígida unicornio", price: 120 },
+    { id:"0003",type:"Beauty", item: "Portacosméticos cute", price: 250 },
+    { id:"0004",type:"Props", item: "Llavero pompón", price: 100 },
+    { id:"0005",type:"Props", item: "Llavero unicornio", price: 30 },
+    { id:"0006",type:"Beauty", item: "Brocha unicornio", price: 90 },
+    { id:"0007",type:"Clothing", item: "Bata unicornio rosa", price: 75 },
+    { id:"0008",type:"Clothing", item: "Bata unicornio azul", price: 110 },
+    { id:"0009",type:"Props", item: "Cartuchera llama unicornio", price: 230 }
   ]
 }
 
