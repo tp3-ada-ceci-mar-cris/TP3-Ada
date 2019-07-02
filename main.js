@@ -37,6 +37,34 @@ let data = {
   ]
 }
 
+const fillOptions = () => {
+    data.employees.forEach(name => {
+      let option = document.createElement('option')
+      option.innerText = name
+      option.value = index
+      let nameSelector = document.getElementById('selectEmployeeName')
+      nameSelector.appendChild(nameItem)
+      return option
+    })
+
+    // data.employees.map(function (name, index) {
+    //   let nameItem = document.createElement('option')
+    //   nameItem.innerText = name
+    //   nameItem.value = name.index
+    //   let nameSelector = document.getElementById('selectEmployeeName')
+    //   nameSelector.appendChild(nameItem)
+    // })
+
+    // data.prices.forEach(e => {
+    //   const option = document.createElement('option')
+    //   option.innerText = e.item
+    //   option.value = e.id
+    //   const itemSelector = document.getElementById('selectItemSold')
+    //   itemSelector.appendChild(option)
+    //   return option
+    // })
+}
+
 // PUNTO1
 //1. precioMaquina(componentes): 
 let salePrice = sale => sale.length>0?sale.map(e => data.prices.find(({item}) => e === item).price).reduce((a,b)=>a+b):0

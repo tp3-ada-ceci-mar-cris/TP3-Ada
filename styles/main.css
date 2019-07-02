@@ -38,6 +38,9 @@ body .container .firstSection .turn .carousel-inner {
   background-color: pink;
   border-radius: 30px;
 }
+body .container .firstSection .turn .carousel-inner .carousel-item {
+  margin-top: 150px;
+}
 body .container .firstSection .turn a {
   text-decoration: none;
 }
