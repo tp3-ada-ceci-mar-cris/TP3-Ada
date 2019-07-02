@@ -36,7 +36,6 @@ body {
         height: 180px;
         background-size: cover;
         text-align: center;
-
         h1 {
             font-family: $titleFont;
             font-size: 130px;
@@ -47,22 +46,18 @@ body {
             letter-spacing: 4px;
         }
     }
-
-
     .container {
         width: 100%;
         .firstSection {
             .menu {
                 margin-top: 20px;
                 margin-left: 270px;
-
                 .btn {
                     background-color: white;
                 }
             }
             .turn {
                 margin: 40px auto;
-
                 .carousel-inner {
                     background-image: url(../image/productos.jpg);
                     background-size: cover;
@@ -91,10 +86,7 @@ body {
                 @include footy(100px)
             }
         }
-
         .secondSection {
-
-            
             #sales {
                 margin: 100px auto;
 
@@ -131,21 +123,16 @@ body {
                             }
                         }
                     }
-
                 }
                 .newSale {
                     float: right;
                     margin: 40px 150px;
                     @include sale-buttons
                 }
-                   
-                
             }
-        
             .create-sale-btn, .cancel-btn {
                 @include sale-buttons
             }
- 
             .footy {
                 @include footy(50px)
             }
@@ -153,7 +140,6 @@ body {
                 margin: 100px auto;
                 font-family: $backFont;
                 width: 95%;
-                
                 h3 {
                     @include title
                 }
@@ -175,13 +161,11 @@ body {
                             font-family: $backFont;
                             font-size: 12px;
                         }
-                         
                     }
                     .stats{
                         float: left;
                         width: 50%;
                         margin-left: 50px;
-                        
                         .btn{
                             font-size: 13px;
                             text-align: center;
@@ -201,12 +185,10 @@ body {
                         width: 25%;
                         height: 320px;
                         border-radius: 10px;
-                        
                         p{
                             margin-left: 10px;
                             margin-top: 10px;
                         }
-
                     }
                 }
             }
@@ -215,37 +197,36 @@ body {
                 font-family: $backFont;
                 width: 95%;
                 margin-bottom: 200px;
-                
                 h3 {
                     @include title
                 }
-
                 .collapse-group {
                     padding: 50px 40px;
                     border: 1px purple dotted;
                     border-radius: 25px;
                     margin-bottom: 10px;
-
                     .panel {
                         padding: 20px 40px;
                         color: purple;
-                        
-                        .panel-title {
-                            text-decoration: none;
-                            font-family: $backFont;
-                            font-size: 25px;
-                            text-align: center;
-                            margin: 30px 0;
-                            &:before {
-                                
-                                text-decoration: none;
-                                font-family: 'Glyphicons Halflings';
-                                vertical-align: text-bottom;
-                                content: '\e082';
-                                content: '\e081';
+                        div{
+                            .panel-title {
+                                font-family: $backFont;
+                                font-size: 35px;
+                                margin: 30px 0;
+                                a{
+                                    color: purple;
+                                    text-decoration: none;
+                                    text-justify: right;
+                                }
                             }
-                            
                         }
+                        div{
+                            .panel-body{
+                                font-family: $backFont;
+                                font-size: 25px;
+                            }
+                        }
+                        
                     }
                 }
             }
