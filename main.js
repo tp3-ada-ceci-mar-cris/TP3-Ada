@@ -47,14 +47,14 @@ const fillOptions = () => {
       return option
     })
 
-    data.map(({item}, index)=> {
-      console.log(item)
+    data.prices.map(({item}) => {
+      
       let option = document.createElement('option')
-      option.innerText = product
+      option.innerText = item
       option.value = index
-      let productSelector = document.getElementById('selectItemSold')
-      productSelector.appendChild(option)
-      return option
+      let nameSelector = document.getElementById('selectItemSold')
+      nameSelector.appendChild(option)
+      return option 
       
     })
 
