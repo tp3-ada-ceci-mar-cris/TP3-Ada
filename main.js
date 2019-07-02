@@ -47,13 +47,26 @@ const fillOptions = () => {
       return option
     })
 
-    // data.employees.map(function (name, index) {
-    //   let nameItem = document.createElement('option')
-    //   nameItem.innerText = name
-    //   nameItem.value = name.index
-    //   let nameSelector = document.getElementById('selectEmployeeName')
-    //   nameSelector.appendChild(nameItem)
-    // })
+    data.prices.map(({item}) => {
+      console.log()
+      // item.forEach((product, index) => {
+      //   let option = document.createElement(‘option’)
+      //   option.innerText = product
+      //   option.value = index
+      //   let productSelector = document.getElementById(‘selectItemSold’)
+      //   productSelector.appendChild(option)
+      //   return option
+      // })
+    })
+
+
+
+
+
+
+
+
+    
 
     // data.prices.forEach(e => {
     //   const option = document.createElement('option')

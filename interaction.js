@@ -191,6 +191,7 @@ let otherRecords = () => {
 //inicialización del programa
 const initialize = () => {
     fillTable()
+    fillOptions()
     let compDiv = document.getElementById("itemsData")
     createSelects (compTypes, compDiv)
     fillSelects(data.prices)
