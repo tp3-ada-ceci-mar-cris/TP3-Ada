@@ -38,12 +38,23 @@ let data = {
 }
 
 const fillOptions = () => {
-    data.employees.forEach((name, index) => {
+  data.employees.forEach((name, index) => {
+    let option = document.createElement('option')
+    option.innerText = name
+    option.value = index
+    let nameSelector = document.getElementById('selectEmployeeName')
+    nameSelector.appendChild(option)
+    return option
+  })
+
+  data.prices.map(({item}) => {
+    console.log(item)
+    item.forEach = (e, index) => {
       let option = document.createElement('option')
-      option.innerText = name
+      option.innerText = e
       option.value = index
-      let nameSelector = document.getElementById('selectEmployeeName')
-      nameSelector.appendChild(option)
+      let productSelector = document.getElementById('selectItemSold')
+      productSelector.appendChild(option)
       return option
     })
 
@@ -58,6 +69,14 @@ const fillOptions = () => {
     }
     })
 
+  data.branchOffice.forEach((branch, index) => {
+    let option = document.createElement('option')
+    option.innerText = branch
+    option.value = index
+    let branchSelector = document.getElementById('selectBranchOffice')
+    branchSelector.appendChild(option)
+    return option
+  })
 }
 
 // PUNTO1
