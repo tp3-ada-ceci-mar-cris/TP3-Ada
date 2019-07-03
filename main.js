@@ -48,14 +48,14 @@ const fillOptions = () => {
     })
 
     data.prices.map(({item}) => {
-      
+      item.forEach = (e, index) =>{ 
       let option = document.createElement('option')
-      option.innerText = item
+      option.innerText = e
       option.value = index
       let nameSelector = document.getElementById('selectItemSold')
       nameSelector.appendChild(option)
       return option 
-      
+    }
     })
 
 }
