@@ -47,16 +47,24 @@ const fillOptions = () => {
     return option
   })
 
-  data.prices.map(({item}) => {
-    console.log(item)
-    item.forEach = (e, index) => {
-      let option = document.createElement('option')
-      option.innerText = e
-      option.value = index
-      let productSelector = document.getElementById('selectItemSold')
-      productSelector.appendChild(option)
-      return option
-    })
+  // data.prices.map(({item}) => {
+  //   console.log(item)
+  //   item.forEach = (e, index) => {
+  //     let checkBox = document.createElement('input')
+  //     option.innerText = e
+  //     option.value = index
+  //     let productSelector = document.getElementById('selectItemSold')
+  //     productSelector.appendChild(option)
+  //     return option
+  // })
+    const createSelects =(list, container) => {
+      list.forEach(e=> {
+          let select = document.createElement("select")
+          select.id=e 
+          container.appendChild(select)
+      })
+    
+}
 
     data.prices.map(({item}) => {
       item.forEach = (e, index) =>{ 
