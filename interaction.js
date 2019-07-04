@@ -42,14 +42,14 @@ function sale(saleDate, employeeName, itemSold, branchOffice) {
     this.branchOffice = branchOffice
   }
   
-  const createSale = () => {
-    let saleDateField = document.getElementById('enterSaleDate')
-    let employeeNameField = document.getElementById('selectEmployeeName')
-    let itemSoldField = document.getElementById('selectItemSold')
-    let branchOfficeField = document.getElementById('selectBranchOffice')
-    let newSale = new sale(saleDateField.value, employeeNameField.value, itemSoldField.value, branchOfficeField.value)
-    data.sales.push(newSale)
-  }
+const createSale = () => {
+  let saleDateField = document.getElementById('enterSaleDate')
+  let employeeNameField = document.getElementById('selectEmployeeName')
+  let itemSoldField = document.getElementById('selectItemSold')
+  let branchOfficeField = document.getElementById('selectBranchOffice')
+  let newSale = new sale(saleDateField.value, employeeNameField.value, itemSoldField.value, branchOfficeField.value)
+  data.sales.push(newSale)
+}
 
 //3. Para armar selects y opciones
 //3.a identificar tipos de componentes
@@ -186,6 +186,7 @@ let renderByMonth = e => {
 
 let renderBySP = () => {
   printResult(`Las ventas históricas por sucursal son:`, "panel-body-two")
+  // ver cómo imprimo tabla
 }
 
 let otherRecords = () => {
@@ -198,10 +199,13 @@ const initialize = () => {
     fillTable()
     fillOptions()
     let compDiv = document.getElementById("itemsData")
+    let compDiv2 =document.gete
     createSelects (compTypes, compDiv)
+    createSelects (compTypes,)
     fillSelects(data.prices)
     fillSelects2(data.employees, "employees")
     fillSelects2(data.branchOffice, "branchOffice")
+    fillSelects (data.prices)
     renderByMonth(2019)
     renderBySP()
     otherRecords()
