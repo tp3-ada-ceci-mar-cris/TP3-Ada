@@ -94,7 +94,7 @@ const createSale = () => {
   let itemSoldField = document.getElementById('selectItemSold')
   let branchOfficeField = document.getElementById('selectBranchOffice')
   let newSale = new sale(saleDateField.value, employeeNameField.value, itemSoldField.value, branchOfficeField.value)
-  data.sales.push(newSale)
+  data.sales.unshift(newSale) // FALTA HACER QUE APAREZCA LA NUEVA VENTA, Y QUE SE CIERRE EL MODAL
 }
 
 //3. Para armar selects y opciones
@@ -247,7 +247,7 @@ const initialize = () => {
     let compDiv = document.getElementById("itemsData")
     let compDiv2 =document.gete
     createSelects (compTypes, compDiv)
-    createSelects (compTypes,)
+    //createSelects (compTypes,)
     fillSelects(data.prices)
     fillSelects2(data.employees, "employees")
     fillSelects2(data.branchOffice, "branchOffice")
