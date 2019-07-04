@@ -174,29 +174,12 @@ body header h1 {
   width: 25%;
   float: left;
   font-family: "Varela Round", sans-serif;
+  font-size: 18px;
   border-radius: 10px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-<<<<<<< HEAD
-body .container .secondSection #statistics .salesStats form ::placeholder {
-  color: black;
-  padding-left: 5px;
-}
-body .container .secondSection #statistics .salesStats form .dateInput {
-  margin: 20px 10px;
-  width: 220px;
-}
-body .container .secondSection #statistics .salesStats form .square {
-  border: 2px purple solid;
-  border-radius: 5px;
-=======
 .secondSection #statistics .salesStats form select {
   font-family: "Varela Round", sans-serif;
   font-size: 12px;
->>>>>>> 8dd10743ebb49a7d072b50aad762258b5a3b55cf
 }
 .secondSection #statistics .salesStats .stats {
   float: left;

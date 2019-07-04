@@ -95,6 +95,7 @@ const createSale = () => {
   let branchOfficeField = document.getElementById('selectBranchOffice')
   let newSale = new sale(saleDateField.value, employeeNameField.value, itemSoldField.value, branchOfficeField.value)
   data.sales.unshift(newSale) // FALTA HACER QUE APAREZCA LA NUEVA VENTA, Y QUE SE CIERRE EL MODAL
+  console.log(newSale)
 }
 
 //3. Para armar selects y opciones
