@@ -1,6 +1,7 @@
 //VARIABLES
 $titleFont: 'Lobster', cursive;
 $backFont: 'Varela Round', sans-serif;
+$generalColor: purple;
 
 //MIXINS
 @mixin footy($height) {
@@ -78,7 +79,7 @@ body {
                     text-decoration: none;
                     span {
                         color: white;
-                        background-color: purple;
+                        background-color: $generalColor;
                         border-radius: 20px;
                         padding: 15px;
                     }
@@ -98,7 +99,7 @@ body {
                 .table-border {
                     width: 95%;
                     margin: auto;
-                    border: 1px purple dotted;
+                    border: 1px $generalColor dotted;
                     padding: 50px 40px 0 40px;
                     overflow: hidden;
                     border-radius: 25px;
@@ -118,7 +119,7 @@ body {
                                 font-family: $backFont;
                                 font-size: 20px;
                                 text-align: center;
-                                color: purple;
+                                color: $generalColor;
                                 font-weight: bold;
                                 margin-bottom: 10px;
                                 border-bottom: 1px solid pink;
@@ -146,7 +147,7 @@ body {
                     @include title
                 }
                 .salesStats{
-                    border: 1px purple dotted;
+                    border: 1px $generalColor dotted;
                     padding: 40px 40px;
                     overflow: hidden;
                     border-radius: 25px; 
@@ -162,11 +163,18 @@ body {
                         display: flex;
                         flex-direction: column;
                         justify-content:center;
+                        ::placeholder{
+                            color: black;
+                            padding-left: 5px;
+                        }
                         .dateInput{
                             margin: 20px 10px;
                             width: 220px;
                         }
-                        
+                        .square{
+                            border: 2px $generalColor solid;
+                            border-radius: 5px;
+                        }
                     }
                     .stats{
                         float: left;
@@ -208,19 +216,19 @@ body {
                 }
                 .collapse-group {
                     padding: 50px 40px;
-                    border: 1px purple dotted;
+                    border: 1px $generalColor dotted;
                     border-radius: 25px;
                     margin-bottom: 10px;
                     .panel {
                         padding: 20px 40px;
-                        color: purple;
+                        color: $generalColor;
                         div{
                             .panel-title {
                                 font-family: $backFont;
                                 font-size: 30px;
                                 margin: 30px 0;
                                 a{
-                                    color: purple;
+                                    color: $generalColor;
                                     text-decoration: none;
                                     text-justify: right;
                                 }

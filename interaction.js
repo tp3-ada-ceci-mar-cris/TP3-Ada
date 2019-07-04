@@ -123,10 +123,10 @@ const createOption = comp => {
 }
 
 const createOption2=e=> {
-    let option=document.createElement("option")
-    option.innerText=e
-    option.value=e
-    return option
+  let option=document.createElement("option")
+  option.innerText=e
+  option.value=e
+  return option
 }
 
 //3.d una función para poblar los selects

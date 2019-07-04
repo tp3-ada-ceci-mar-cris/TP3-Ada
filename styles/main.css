@@ -157,9 +157,17 @@ body .container .secondSection #statistics .salesStats form {
   flex-direction: column;
   justify-content: center;
 }
+body .container .secondSection #statistics .salesStats form ::placeholder {
+  color: black;
+  padding-left: 5px;
+}
 body .container .secondSection #statistics .salesStats form .dateInput {
   margin: 20px 10px;
   width: 220px;
+}
+body .container .secondSection #statistics .salesStats form .square {
+  border: 2px purple solid;
+  border-radius: 5px;
 }
 body .container .secondSection #statistics .salesStats .stats {
   float: left;
