@@ -4,30 +4,38 @@ const fillTable = () => {
         return b.saleDate - a.saleDate
       })
     
+    const dateList = document.getElementById('dateList')
+    dateList.innerHTML=""
     data.sales.forEach(item => {
       const li = document.createElement('li')
-      const dateList = document.getElementById('dateList')
       dateList.appendChild(li)
       li.innerText = item.saleDate.toLocaleDateString()
     })
   
+    const nameList = document.getElementById('nameList')
+    nameList.innerHTML=""
     data.sales.forEach(item => {
       const li = document.createElement('li')
-      const nameList = document.getElementById('nameList')
       nameList.appendChild(li)
       li.innerText = item.employeeName
     })
   
+    const itemList = document.getElementById('itemList')
+    itemList.innerHTML=""
     data.sales.forEach(item => {
       const li = document.createElement('li')
-      const itemList = document.getElementById('itemList')
       itemList.appendChild(li)
-      li.innerText = item.itemSold.join(`, `)
+      if (item.length>1){
+        li.innerText = item.itemSold.join(`, `)
+      }else {
+        li.innerText = item.itemSold
+      }
     })
   
+    const branchList = document.getElementById('branchList')
+    branchList.innerHTML=""
     data.sales.forEach(item => {
       const li = document.createElement('li')
-      const branchList = document.getElementById('branchList')
       branchList.appendChild(li)
       li.innerText = item.branchOffice
     })
@@ -35,10 +43,10 @@ const fillTable = () => {
 
   // Para completar las opciones del modal
   const fillOptions = () => {
-    data.employees.forEach((name, index) => {
+    data.employees.forEach(name => {
       let option = document.createElement('option')
       option.innerText = name
-      option.value = index
+      option.value = name
       let nameSelector = document.getElementById('selectEmployeeName')
       nameSelector.appendChild(option)
       return option
@@ -63,16 +71,16 @@ const fillTable = () => {
       // newInput.setAttribute('name', 'materials')
       newInput.setAttribute('type', 'checkbox')
       newInput.setAttribute('value', idList[i])
-      console.log(newInput)   
+       
   
       productSelector.appendChild(newLabel)    
       $(newLabel).after(newInput)        
   }
   
-    data.branchOffice.forEach((branch, index) => {
+    data.branchOffice.forEach(branch => {
       let option = document.createElement('option')
       option.innerText = branch
-      option.value = index
+      option.value = branch
       let branchSelector = document.getElementById('selectBranchOffice')
       branchSelector.appendChild(option)
       return option
@@ -81,21 +89,22 @@ const fillTable = () => {
 
 //2. Para crear nuevas ventas
 // Modelo de nueva venta
-function sale(saleDate, employeeName, itemSold, branchOffice) {
-    this.saleDate = new Date(saleDate)
-    this.employeeName = employeeName
-    this.itemSold = itemSold
-    this.branchOffice = branchOffice
-  }
+// function sale(saleDate, employeeName, itemSold, branchOffice) {
+//     this.saleDate = new Date(saleDate)
+//     this.employeeName = employeeName
+//     this.itemSold = itemSold
+//     this.branchOffice = branchOffice
+//   }
   
 const createSale = () => {
   let saleDateField = document.getElementById('enterSaleDate')
   let employeeNameField = document.getElementById('selectEmployeeName')
   let itemSoldField = document.getElementById('selectItemSold')
   let branchOfficeField = document.getElementById('selectBranchOffice')
-  let newSale = new sale(saleDateField.value, employeeNameField.value, itemSoldField.value, branchOfficeField.value)
-  data.sales.unshift(newSale) // FALTA HACER QUE APAREZCA LA NUEVA VENTA, Y QUE SE CIERRE EL MODAL
+  let newSale = {saleDate:new Date (saleDateField.value), employeeName:employeeNameField.value, itemSold:itemSoldField.value, branchOffice:branchOfficeField.value}
+  data.sales.unshift(newSale) 
   console.log(newSale)
+  fillTable()// FALTA HACER QUE APAREZCA LA NUEVA VENTA, Y QUE SE CIERRE EL MODAL
 }
 
 //3. Para armar selects y opciones

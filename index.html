@@ -12,6 +12,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -25,7 +27,9 @@
 
 <body onload="initialize()">
     <header>
-        <h1>Unicorn Store</h1>
+        <a href="#">
+            <h1>Unicorn Store</h1>
+        </a>
     </header>
     <div class="container">
         <section class="firstSection">
@@ -59,20 +63,22 @@
                 <h3>VENTAS</h3>
                 <div class="table-border">
                     <div class="table">
+                        <ul>
+                            <li class="table-header">Fecha</li> 
+                            <li class="table-header">Vendedora</li>
+                            <li class="table-header">Producto</li>
+                            <li class="table-header">Sucursal</li>
+                        </ul>
                         <ul id="dateList">
-                            <li class="table-header">Fecha</li>
 
                         </ul>
                         <ul id="nameList">
-                            <li class="table-header">Vendedora</li>
 
                         </ul>
                         <ul id="itemList">
-                            <li class="table-header">Producto</li>
 
                         </ul>
                         <ul id="branchList">
-                            <li class="table-header">Sucursal</li>
 
                         </ul>
                     </div>
@@ -215,6 +221,54 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-block">
+                    <h5>Tienda en línea</h5>
+                    <ul>
+                        <li><a href="#">Atención al cliente</a></li>
+                        <li><a href="#">Cambios y devoluciones</a></li>
+                        <li><a href="#">Información de envíos</a></li>
+                        <li><a href="#">Medios de pago</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h5>Compra segura</h5>
+                    <ul>
+                        <li>Entrega en tiendas</li>
+                        <li>30 días para cambios</li>
+                        <li>15 días para reembolso</li>
+                        <li>Protección de datos</li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h5>Institucional</h5>
+                    <ul>
+                        <li><a href="#">Quiénes somos</a></li>
+                        <li><a href="#">Trabajá con nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h5>Newsletter</h5>
+                    <p>Suscribite para recibir nuestras novedades.</p>
+                    <input type="email" id="sub-email" placeholder="Dirección de correo electrónico">
+                    <a href="#" class="subscribe-bttn">Suscribirme</a>
+                </div>
+            </div>
+            <div class="copyrightandlinks">
+                <p class="copyright">Copyright ©2019 | Unicorn Store</p>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 </body> 
 
