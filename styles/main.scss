@@ -36,6 +36,7 @@ body {
         height: 180px;
         background-size: cover;
         text-align: center;
+
         h1 {
             font-family: $titleFont;
             font-size: 130px;
@@ -45,6 +46,10 @@ body {
             text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
             letter-spacing: 4px;
         }
+        
+        a:hover {
+            text-decoration: none;
+        } 
     }   
 }
 
