@@ -133,10 +133,10 @@
                 <h3>ESTADISTICAS</h3>
                 <div class="salesStats">
                     <form id="insertData">
-                        <div id="itemsData"></div>
-                        <select id="employees"></select>
-                        <select id="branchOffice"></select>
-                        <input type="text" name="year" id="year" placeholder="mm/dd/aaaa para estadísticas">
+                        <div id="itemsData" class="dateInput"></div>
+                        <select id="employees" class="dateInput"></select>
+                        <select id="branchOffice" class="dateInput"></select>
+                        <input type="text" name="year" id="year" placeholder="mm/dd/aaaa" class="dateInput">
                     </form>
                     <nav class="stats">
                         <button type="button" class="btn btn-outline-primary" onclick="btnPrecioVenta()">Precio
@@ -197,7 +197,9 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
                             aria-labelledby="headingTwo">
-                            <div class="panel-body" id="panel-body-two"></div>
+                            <div class="panel-body" id="panel-body-two">
+                                collapseTwo
+                            </div>
                         </div>
                     </div>
                     <div class="panel panel-default">
@@ -211,7 +213,9 @@
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
                             aria-labelledby="headingThree">
-                            <div class="panel-body" id="panel-body-three"></div>
+                            <div class="panel-body" id="panel-body-three">
+                                collapseThree
+                            </div>
                         </div>
                     </div>
                 </div>
