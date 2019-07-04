@@ -32,7 +32,7 @@ $backFont: 'Varela Round', sans-serif;
 body {
     header {
         background-image: url(../image/fondoC.jpg);
-        width: 100%;
+        width: 100vw;
         height: 180px;
         background-size: cover;
         text-align: center;
@@ -227,7 +227,8 @@ body {
         margin: 100px auto;
         font-family: $backFont;
         width: 95%;
-        margin-bottom: 200px;
+        margin-bottom: 150px;
+
         h3 {
             @include title
         }
@@ -262,4 +263,73 @@ body {
         }
     }
 
-} 
+}
+
+footer {
+    font-family: $backFont;
+    
+    h5 {
+        font-size: 20px;
+        color: purple;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 90%;
+    
+        .footer-block {
+            display: inline-block;
+            text-decoration: none;
+        
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        .footer-newsletter {
+            display: inline-block;
+
+            .subscribe-bttn {
+                @include sale-buttons;
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .copyrightandlinks {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        .footer-links {
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    width: 50px;
+                    a {
+                        color: black;
+                        :hover {
+                            color: purple;
+                            transition: all 0.5s ease-in;
+                        }
+                    }
+                }
+            }
+        }
+    }
