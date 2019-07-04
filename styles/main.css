@@ -151,12 +151,15 @@ body .container .secondSection #statistics .salesStats form {
   width: 25%;
   float: left;
   font-family: "Varela Round", sans-serif;
-  font-size: 18px;
   border-radius: 10px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-body .container .secondSection #statistics .salesStats form select {
-  font-family: "Varela Round", sans-serif;
-  font-size: 12px;
+body .container .secondSection #statistics .salesStats form .dateInput {
+  margin: 20px 10px;
+  width: 220px;
 }
 body .container .secondSection #statistics .salesStats .stats {
   float: left;

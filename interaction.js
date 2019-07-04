@@ -201,7 +201,7 @@ const initialize = () => {
     let compDiv = document.getElementById("itemsData")
     let compDiv2 =document.gete
     createSelects (compTypes, compDiv)
-    createSelects (compTypes,)
+    // createSelects (compTypes,)
     fillSelects(data.prices)
     fillSelects2(data.employees, "employees")
     fillSelects2(data.branchOffice, "branchOffice")

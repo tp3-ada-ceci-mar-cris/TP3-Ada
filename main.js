@@ -2,30 +2,30 @@ let data = {
   employees: ["Cristina", "Marina", "Cecilia", "Rosalia"],
 
   sales: [
-    { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio", "Brocha unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio glitter", "Brocha unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 24), employeeName: "Cristina", itemSold: ["Bata unicornio rosa", "Vincha rígida unicornio"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 01), employeeName: "Rosalia", itemSold: ["Llavero unicornio", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Rosalia", itemSold: ["Llavero unicornio", "Cartuchera unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 11), employeeName: "Cecilia", itemSold: ["Portacosméticos cute", "Bata unicornio azul"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 15), employeeName: "Rosalia", itemSold: ["Llavero pompón", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 15), employeeName: "Rosalia", itemSold: ["Llavero pompón", "Cartuchera unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 12), employeeName: "Marina", itemSold: ["Vincha rígida unicornio", "Brocha unicornio"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 21), employeeName: "Cecilia", itemSold: ["Llavero unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 08), employeeName: "Cristina", itemSold: ["Portacosméticos cute", "Bata unicornio rosa"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 16), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 16), employeeName: "Cristina", itemSold: ["Esmalte unicornio glitter", "Cartuchera unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 27), employeeName: "Marina", itemSold: ["Llavero pompón", "Brocha unicornio"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 22), employeeName: "Cecilia", itemSold: ["Portacosméticos cute", "Bata unicornio rosa"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 05), employeeName: "Rosalia", itemSold: ["Vincha rígida unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 01), employeeName: "Cecilia", itemSold: ["Llavero unicornio", "Bata unicornio rosa"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 07), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Bata unicornio azul"], branchOffice : "Caballito"},
+    { saleDate: new Date(2019, 2, 07), employeeName: "Cristina", itemSold: ["Esmalte unicornio glitter", "Bata unicornio azul"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 14), employeeName: "Rosalia", itemSold: ["Llavero pompón", "Brocha unicornio"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Vincha rígida unicornio"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Esmalte unicornio", "Vincha rígida unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 1, 4), employeeName: "Cristina", itemSold: ["Esmalte unicornio glitter", "Vincha rígida unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 0, 1), employeeName: "Marina", itemSold: ["Esmalte unicornio glitter", "Vincha rígida unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 0, 2), employeeName: "Cristina", itemSold: ["Portacosméticos cute", "Llavero unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 0, 10), employeeName: "Marina", itemSold: ["Portacosméticos cute", "Llavero pompón"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio", "Llavero pompón"], branchOffice : "Centro"}
+    { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio glitter", "Llavero pompón"], branchOffice : "Centro"}
   ],
 
   prices: [
-    { id:"0001",type:"Beauty", item: "Esmalte unicornio", price: 200 },
+    { id:"0001",type:"Beauty", item: "Esmalte unicornio glitter", price: 200 },
     { id:"0002",type:"Props", item: "Vincha rígida unicornio", price: 120 },
     { id:"0003",type:"Beauty", item: "Portacosméticos cute", price: 250 },
     { id:"0004",type:"Props", item: "Llavero pompón", price: 100 },
@@ -33,7 +33,7 @@ let data = {
     { id:"0006",type:"Beauty", item: "Brocha unicornio", price: 90 },
     { id:"0007",type:"Clothing", item: "Bata unicornio rosa", price: 75 },
     { id:"0008",type:"Clothing", item: "Bata unicornio azul", price: 110 },
-    { id:"0009",type:"Props", item: "Cartuchera llama unicornio", price: 230 }
+    { id:"0009",type:"Props", item: "Cartuchera unicornio", price: 230 }
   ]
 }
 
@@ -57,25 +57,20 @@ const fillOptions = () => {
   //     productSelector.appendChild(option)
   //     return option
   // })
-    const createSelects =(list, container) => {
-      list.forEach(e=> {
-          let select = document.createElement("select")
-          select.id=e 
-          container.appendChild(select)
-      })
+   
     
-}
 
-    data.prices.map(({item}) => {
-      item.forEach = (e, index) =>{ 
-      let option = document.createElement('option')
-      option.innerText = e
-      option.value = index
-      let nameSelector = document.getElementById('selectItemSold')
-      nameSelector.appendChild(option)
-      return option 
-    }
-    })
+
+    // data.prices.map(({item}) => {
+    //   item.forEach = (e, index) =>{ 
+    //   let option = document.createElement('option')
+    //   option.innerText = e
+    //   option.value = index
+    //   let nameSelector = document.getElementById('selectItemSold')
+    //   nameSelector.appendChild(option)
+    //   return option 
+    // }
+    
 
   data.branchOffice.forEach((branch, index) => {
     let option = document.createElement('option')
@@ -85,21 +80,21 @@ const fillOptions = () => {
     branchSelector.appendChild(option)
     return option
   })
-}
+  }
 
 // PUNTO1
 //1. precioMaquina(componentes): 
 let salePrice = sale => sale.length>0?sale.map(e => data.prices.find(({item}) => e === item).price).reduce((a,b)=>a+b):0
 
 //esta parte es para probar
-const maquina = ["Llavero pompón", "Vincha rígida unicornio", "Brocha unicornio", "Cartuchera llama unicornio"]
+const maquina = ["Llavero pompón", "Vincha rígida unicornio", "Brocha unicornio", "Cartuchera unicornio"]
 console.log(`(punto 1) La venta de ${maquina} tiene un valor total de ARS ${salePrice(maquina)}`)
 
 //2. cantidadVentasComponente(componente): 
 let timesSold = comp => data.sales.map(({itemSold}) => itemSold).flat().filter(e=>e==comp).length
   
 // esta parte es para probar
-const cosa="Esmalte unicornio"
+const cosa="Esmalte unicornio glitter"
 console.log(`(punto 2) El ítem "${cosa}" fue vendido históricamente ${timesSold(cosa)} veces`)
 
 //3. vendedoraDelMes(mes, anio)

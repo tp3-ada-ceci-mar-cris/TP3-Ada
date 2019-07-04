@@ -157,12 +157,16 @@ body {
                         width: 25%;
                         float: left;
                         font-family: $backFont;
-                        font-size: 18px;
                         border-radius: 10px;
-                        select{
-                            font-family: $backFont;
-                            font-size: 12px;
+                        font-size: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content:center;
+                        .dateInput{
+                            margin: 20px 10px;
+                            width: 220px;
                         }
+                        
                     }
                     .stats{
                         float: left;
