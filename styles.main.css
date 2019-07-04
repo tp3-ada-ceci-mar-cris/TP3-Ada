@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body header {
   background-image: url(../image/fondoC.jpg);
   width: 100%;
@@ -16,7 +17,6 @@ body header h1 {
 }
 body .container {
   width: 100%;
-  min-width: 1212px;
 }
 body .container .firstSection .menu {
   margin-top: 20px;
@@ -38,9 +38,6 @@ body .container .firstSection .turn .carousel-inner {
   text-align: center;
   background-color: pink;
   border-radius: 30px;
-}
-body .container .firstSection .turn .carousel-inner .carousel-item {
-  margin-top: 150px;
 }
 body .container .firstSection .turn a {
   text-decoration: none;
@@ -208,19 +205,19 @@ body .container .secondSection #reports .collapse-group .panel {
   padding: 20px 40px;
   color: purple;
 }
-body .container .secondSection #reports .collapse-group .panel div .panel-title {
+body .container .secondSection #reports .collapse-group .panel .panel-title {
+  text-decoration: none;
   font-family: "Varela Round", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
+  text-align: center;
   margin: 30px 0;
 }
-body .container .secondSection #reports .collapse-group .panel div .panel-title a {
-  color: purple;
+body .container .secondSection #reports .collapse-group .panel .panel-title:before {
   text-decoration: none;
-  text-justify: right;
-}
-body .container .secondSection #reports .collapse-group .panel div .panel-body {
-  font-family: "Varela Round", sans-serif;
-  font-size: 18px;
+  font-family: "Glyphicons Halflings";
+  vertical-align: text-bottom;
+  content: "";
+  content: "";
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=styles.main.css.map */

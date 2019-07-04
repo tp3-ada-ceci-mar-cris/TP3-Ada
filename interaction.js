@@ -1,5 +1,9 @@
 //1. Para completar la tabla de ventas
 const fillTable = () => {
+    data.sales.sort(function(a, b) {
+        return b.saleDate - a.saleDate
+      })
+    
     data.sales.forEach(item => {
       const li = document.createElement('li')
       const dateList = document.getElementById('dateList')
@@ -84,7 +88,7 @@ const fillSelects =list => {
     list.forEach(e=> {
         let select = document.getElementById (e.type) 
         if (!select.childElementCount) {
-            let placeholder = {item: `seleccione ${e.type}` , id:""}
+            let placeholder = {item: `Seleccione ${e.type}` , id:""}
             select.appendChild(createOption(placeholder))
         }
         select.appendChild(createOption(e))
@@ -95,7 +99,7 @@ const fillSelects2=(list, type)=> {
     let select = document.getElementById(type)
     list.forEach (e=>{
         if (!select.childElementCount) {
-            let placeholder = {item: `seleccione una opción` , id:""}
+            let placeholder = {item: `Seleccione opcion` , id:""}
             select.appendChild(createOption(placeholder))
         }
         select.appendChild(createOption2(e))
@@ -193,6 +197,7 @@ let otherRecords = () => {
 //inicialización del programa
 const initialize = () => {
     fillTable()
+    fillOptions()
     let compDiv = document.getElementById("itemsData")
     let compDiv2 =document.gete
     createSelects (compTypes, compDiv)
