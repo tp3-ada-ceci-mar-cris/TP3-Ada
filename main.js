@@ -37,51 +37,6 @@ let data = {
   ]
 }
 
-const fillOptions = () => {
-  data.employees.forEach((name, index) => {
-    let option = document.createElement('option')
-    option.innerText = name
-    option.value = index
-    let nameSelector = document.getElementById('selectEmployeeName')
-    nameSelector.appendChild(option)
-    return option
-  })
-
-  const itemList = data.prices.map(({item}) => item)
-  const idList = data.prices.map(({id}) => id)
- 
-  for(i = 0; i < itemList.length; i++) {
-    productSelector = document.getElementById('selectItemSold')
-    const newLabel = document.createElement('label')
-    newLabel.setAttribute('for', itemList[i])
-    // newLabel.setAttribute('class', 'material-label')
-
-    const newLabelTextNode = document.createTextNode(itemList[i])
-    newLabel.appendChild(newLabelTextNode)
-
-    const newInput = document.createElement('input')
-    // newInput.className = 'shoe-materials'
-    // newInput.setAttribute('class', 'shoe-materials')
-    newInput.setAttribute('id', idList[i])
-    // newInput.setAttribute('name', 'materials')
-    newInput.setAttribute('type', 'checkbox')
-    newInput.setAttribute('value', idList[i])
-    console.log(newInput)   
-
-    productSelector.appendChild(newLabel)    
-    $(newLabel).after(newInput)        
-}
-
-  data.branchOffice.forEach((branch, index) => {
-    let option = document.createElement('option')
-    option.innerText = branch
-    option.value = index
-    let branchSelector = document.getElementById('selectBranchOffice')
-    branchSelector.appendChild(option)
-    return option
-  })
-}
-
 // PUNTO1
 //1. precioMaquina(componentes): 
 let salePrice = sale => sale.length>0?sale.map(e => data.prices.find(({item}) => e === item).price).reduce((a,b)=>a+b):0
