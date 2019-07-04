@@ -87,16 +87,31 @@
                                 <h4 class="modal-title">Crear nueva venta</h4>
                             </div>
                             <div class="modal-body">
-                                <input id="enterSaleDate" type="date"></input>
-                                <select id="selectEmployeeName">
+                                <div class="first-selectors">
+                                    <div class="date-selector">
+                                        <p>Seleccione la fecha:</p>
+                                        <label for="dateInput"></label>
+                                        <input id="enterSaleDate" type="date" value=""></input>
+                                    </div>
+                                    <div class="employee-selector">
+                                        <p>Seleccione la empleada:</p>
+                                        <select id="selectEmployeeName" value="">
 
-                                </select>
-                                <form id="selectItemSold">
+                                        </select>
+                                    </div>
+                                    <div class="branch-selector">
+                                        <p>Seleccione la sucursal:</p>
+                                        <select id="selectBranchOffice" value="">
 
-                                </form>
-                                <select id="selectBranchOffice">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="product-selector">
+                                    <p>Seleccione los productos vendidos:</p>
+                                    <form id="selectItemSold">
 
-                                </select>
+                                    </form>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <a href="#" class="create-sale-btn" onclick="createSale()">Crear</a>
@@ -201,6 +216,6 @@
             </div>
         </section>
     </div>
-</body>
+</body> 
 
 </html>

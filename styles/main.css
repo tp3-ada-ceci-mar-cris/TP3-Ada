@@ -14,21 +14,23 @@ body header h1 {
   text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
   letter-spacing: 4px;
 }
-body .container {
+
+.container {
   width: 100%;
   min-width: 1212px;
 }
-body .container .firstSection .menu {
+
+.firstSection .menu {
   margin-top: 20px;
   margin-left: 270px;
 }
-body .container .firstSection .menu .btn {
+.firstSection .menu .btn {
   background-color: white;
 }
-body .container .firstSection .turn {
+.firstSection .turn {
   margin: 40px auto;
 }
-body .container .firstSection .turn .carousel-inner {
+.firstSection .turn .carousel-inner {
   background-image: url(../image/productos.jpg);
   background-size: cover;
   background-position: center;
@@ -39,34 +41,35 @@ body .container .firstSection .turn .carousel-inner {
   background-color: pink;
   border-radius: 30px;
 }
-body .container .firstSection .turn .carousel-inner .carousel-item {
+.firstSection .turn .carousel-inner .carousel-item {
   margin-top: 150px;
 }
-body .container .firstSection .turn a {
+.firstSection .turn a {
   text-decoration: none;
 }
-body .container .firstSection .turn a span {
+.firstSection .turn a span {
   color: white;
   background-color: purple;
   border-radius: 20px;
   padding: 15px;
 }
-body .container .firstSection .footy {
+.firstSection .footy {
   background-image: url(../image/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 100px;
 }
-body .container .secondSection #sales {
+
+.secondSection #sales {
   margin: 100px auto;
 }
-body .container .secondSection #sales h3 {
+.secondSection #sales h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
-body .container .secondSection #sales .table-border {
+.secondSection #sales .table-border {
   width: 95%;
   margin: auto;
   border: 1px purple dotted;
@@ -74,11 +77,11 @@ body .container .secondSection #sales .table-border {
   overflow: hidden;
   border-radius: 25px;
 }
-body .container .secondSection #sales .table-border .table {
+.secondSection #sales .table-border .table {
   display: flex;
   justify-content: center;
 }
-body .container .secondSection #sales .table-border .table ul {
+.secondSection #sales .table-border .table ul {
   font-size: 18px;
   font-family: "Varela Round", sans-serif;
   text-align: center;
@@ -88,7 +91,7 @@ body .container .secondSection #sales .table-border .table ul {
   margin: 0px;
   padding: 30px;
 }
-body .container .secondSection #sales .table-border .table ul .table-header {
+.secondSection #sales .table-border .table ul .table-header {
   font-family: "Varela Round", sans-serif;
   font-size: 20px;
   text-align: center;
@@ -97,7 +100,7 @@ body .container .secondSection #sales .table-border .table ul .table-header {
   margin-bottom: 10px;
   border-bottom: 1px solid pink;
 }
-body .container .secondSection #sales .newSale {
+.secondSection #sales .newSale {
   float: right;
   margin: 40px 150px;
   font-family: "Varela Round", sans-serif;
@@ -110,7 +113,7 @@ body .container .secondSection #sales .newSale {
   border-radius: 10px;
   padding: 10px 5px;
 }
-body .container .secondSection .create-sale-btn, body .container .secondSection .cancel-btn {
+.secondSection .create-sale-btn, .secondSection .cancel-btn {
   font-family: "Varela Round", sans-serif;
   border: 1px solid pink;
   text-decoration: none;
@@ -121,24 +124,44 @@ body .container .secondSection .create-sale-btn, body .container .secondSection 
   border-radius: 10px;
   padding: 10px 5px;
 }
-body .container .secondSection .footy {
+.secondSection .modal-body .first-selectors {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.secondSection .modal-body .first-selectors p {
+  margin: 20px 0;
+}
+.secondSection .modal-body .product-selector {
+  margin: 20px 43px;
+  display: flex;
+  flex-direction: column;
+}
+.secondSection .modal-body .product-selector #selectItemSold {
+  display: flex;
+  flex-direction: column;
+}
+.secondSection .modal-body .product-selector #selectItemSold input, .secondSection .modal-body .product-selector #selectItemSold label {
+  display: inline-block;
+}
+.secondSection .footy {
   background-image: url(../image/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 50px;
 }
-body .container .secondSection #statistics {
+.secondSection #statistics {
   margin: 100px auto;
   font-family: "Varela Round", sans-serif;
   width: 95%;
 }
-body .container .secondSection #statistics h3 {
+.secondSection #statistics h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
-body .container .secondSection #statistics .salesStats {
+.secondSection #statistics .salesStats {
   border: 1px purple dotted;
   padding: 40px 40px;
   overflow: hidden;
@@ -146,7 +169,7 @@ body .container .secondSection #statistics .salesStats {
   display: flex;
   justify-content: space-around;
 }
-body .container .secondSection #statistics .salesStats form {
+.secondSection #statistics .salesStats form {
   background-color: #FFF87F;
   width: 25%;
   float: left;
@@ -157,6 +180,7 @@ body .container .secondSection #statistics .salesStats form {
   flex-direction: column;
   justify-content: center;
 }
+<<<<<<< HEAD
 body .container .secondSection #statistics .salesStats form ::placeholder {
   color: black;
   padding-left: 5px;
@@ -168,13 +192,18 @@ body .container .secondSection #statistics .salesStats form .dateInput {
 body .container .secondSection #statistics .salesStats form .square {
   border: 2px purple solid;
   border-radius: 5px;
+=======
+.secondSection #statistics .salesStats form select {
+  font-family: "Varela Round", sans-serif;
+  font-size: 12px;
+>>>>>>> 8dd10743ebb49a7d072b50aad762258b5a3b55cf
 }
-body .container .secondSection #statistics .salesStats .stats {
+.secondSection #statistics .salesStats .stats {
   float: left;
   width: 50%;
   margin-left: 50px;
 }
-body .container .secondSection #statistics .salesStats .stats .btn {
+.secondSection #statistics .salesStats .stats .btn {
   font-size: 13px;
   text-align: center;
   margin: 13px;
@@ -184,7 +213,7 @@ body .container .secondSection #statistics .salesStats .stats .btn {
   padding: 0 10px;
   font-weight: bold;
 }
-body .container .secondSection #statistics .salesStats .result {
+.secondSection #statistics .salesStats .result {
   float: left;
   font-family: "Varela Round", sans-serif;
   font-size: 20px;
@@ -193,43 +222,43 @@ body .container .secondSection #statistics .salesStats .result {
   height: 320px;
   border-radius: 10px;
 }
-body .container .secondSection #statistics .salesStats .result p {
+.secondSection #statistics .salesStats .result p {
   margin-left: 10px;
   margin-top: 10px;
 }
-body .container .secondSection #reports {
+.secondSection #reports {
   margin: 100px auto;
   font-family: "Varela Round", sans-serif;
   width: 95%;
   margin-bottom: 200px;
 }
-body .container .secondSection #reports h3 {
+.secondSection #reports h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
-body .container .secondSection #reports .collapse-group {
+.secondSection #reports .collapse-group {
   padding: 50px 40px;
   border: 1px purple dotted;
   border-radius: 25px;
   margin-bottom: 10px;
 }
-body .container .secondSection #reports .collapse-group .panel {
+.secondSection #reports .collapse-group .panel {
   padding: 20px 40px;
   color: purple;
 }
-body .container .secondSection #reports .collapse-group .panel div .panel-title {
+.secondSection #reports .collapse-group .panel div .panel-title {
   font-family: "Varela Round", sans-serif;
   font-size: 30px;
   margin: 30px 0;
 }
-body .container .secondSection #reports .collapse-group .panel div .panel-title a {
+.secondSection #reports .collapse-group .panel div .panel-title a {
   color: purple;
   text-decoration: none;
   text-justify: right;
 }
-body .container .secondSection #reports .collapse-group .panel div .panel-body {
+.secondSection #reports .collapse-group .panel div .panel-body {
   font-family: "Varela Round", sans-serif;
   font-size: 18px;
 }
