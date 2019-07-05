@@ -13,16 +13,12 @@
         border-radius: 25px;
         
         .table {
-            display: flex;
-            justify-content: center;
-            min-width: 80%;
-            
+            border: 1px solid pink;
             ul {
                 font-size: 18px;
                 font-family: $backFont;
                 text-align: center;
                 margin: 0 auto;
-                border: 1px solid pink;
                 list-style: none;
                 margin: 0px;
                 padding: 30px;
@@ -37,6 +33,35 @@
                     border-bottom: 1px solid pink;
                 }
             }
+            .table-header-container {
+                width: 870px;
+                margin: 0 auto;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    position: relative;
+                    padding-bottom: 30px;
+                    #header-1, #header-2, #header-3, #header-4, #header-5 {
+                        position: absolute;
+                    }
+                    #header-1 {
+                        left: 0%;
+                    }
+                    #header-2 {
+                        left: 14%;
+                    }
+                    #header-3 {
+                        left: 48%;
+                    }
+                    #header-4 {
+                        right: 9%;
+                    }
+                    #header-5 {
+                        right: -3%;
+                    }
+                }
+            }
         }
     }
     .newSale {
@@ -47,4 +72,10 @@
 }
 .footy {
     @include footy(50px)
+}
+
+#table-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
