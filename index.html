@@ -39,10 +39,10 @@
                         <a href="#sales"><span>Ventas</span></a>
                     </div>
                     <div class="carousel-item">
-                        <a href="#statistics"><span>Estadisticas</span></a>
+                        <a href="#statistics"><span>Estadísticas</span></a>
                     </div>
                     <div class="carousel-item">
-                        <a href="#reports"><span>Reportes</span></a>
+                        <a href="#about-us"><span>Más Info</span></a>
                     </div>
                     <a class="carousel-control-prev arrow" href="#carouselExampleControls" role="button"
                         data-slide="prev">
@@ -65,11 +65,15 @@
                     <div class="table">
                         <ul>
                             <li class="table-header">Fecha</li> 
+                            <li class="table-header">Sucursal</li>
                             <li class="table-header">Vendedora</li>
                             <li class="table-header">Producto</li>
-                            <li class="table-header">Sucursal</li>
+                            <li class="table-header">Monto (ARS)</li>
                         </ul>
                         <ul id="dateList">
+
+                        </ul>
+                        <ul id="branchList">
 
                         </ul>
                         <ul id="nameList">
@@ -78,7 +82,7 @@
                         <ul id="itemList">
 
                         </ul>
-                        <ul id="branchList">
+                        <ul id="priceList">
 
                         </ul>
                     </div>
@@ -121,7 +125,7 @@
                             </div>
                             <div class="modal-footer">
                                 <a href="#" class="create-sale-btn" onclick="createSale()">Crear</a>
-                                <button type="button" class="cancel-btn" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="cancel-btn" data-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -130,32 +134,32 @@
             <!--Modal-->
             <div class="footy"></div>
             <div id="statistics">
-                <h3>ESTADISTICAS</h3>
+                <h3>ESTADÍSTICAS</h3>
                 <div class="salesStats">
                     <form id="insertData">
-                        <div id="itemsData" class="dateInput"></div>
+                        <select id="itemsData" class="dateInput"></select>
                         <select id="employees" class="dateInput"></select>
                         <select id="branchOffice" class="dateInput"></select>
-                        <input type="text" name="year" id="year" placeholder="mm/dd/aaaa" class="dateInput">
+                        <input type="date" name="year" id="year" placeholder="mm/dd/aaaa" class="dateInput">
                     </form>
                     <nav class="stats">
                         <button type="button" class="btn btn-outline-primary" onclick="btnPrecioVenta()">Precio
-                            Compra</button>
+                            Artículo</button>
                         <button type="button" class="btn btn-outline-secondary" onclick="btnVtasArticulo()">Ventas por
-                            Articulo</button>
-                        <button type="button" class="btn btn-outline-success" onclick="btnVendMes()">Vendedora del
-                            Mes</button>
-                        <button type="button" class="btn btn-outline-danger" onclick="btnVentasVend()">Ventas por
-                            Vendedora</button>
-                        <button type="button" class="btn btn-outline-warning" onclick="btnVentMes()">Ventas del
-                            Mes</button>
-                        <button type="button" class="btn btn-outline-danger" onclick="btnArtVend()">Articulo mas
+                            Artículo</button>
+                        <button type="button" class="btn btn-outline-danger" onclick="btnArtVend()">Artículo mas
                             Vendido</button>
-                        <button type="button" class="btn btn-outline-success" onclick="btnHuboVent()">Hubo
-                            Ventas</button>
+                        <button type="button" class="btn btn-outline-warning" onclick="btnVendMes()">Vendedora del
+                            Mes</button>
+                        <button type="button" class="btn btn-outline-success" onclick="btnVentasVend()">Ventas por
+                            Vendedora</button>
+                        <button type="button" class="btn btn-outline-warning" onclick="btnMejVend()">Mejor
+                            Vendedora</button>
+                        <button type="button" class="btn btn-outline-danger" onclick="btnSucMes()">Sucursal del
+                            Mes</button>
                         <button type="button" class="btn btn-outline-secondary" onclick="btnVentSuc()">Ventas por
                             Sucursal</button>
-                        <button type="button" class="btn btn-outline-primary" onclick="btnSucMes()">Sucursal del
+                        <button type="button" class="btn btn-outline-primary" onclick="btnVentMes()">Ventas del
                             Mes</button>
                     </nav>
                     <div class="result" id="result">
@@ -163,10 +167,10 @@
                     </div>
                 </div>
             </div>
-            <div class="footy"></div>
+<!--        <div class="footy"></div>
             <div id="reports">
                 <h3>REPORTES</h3>
-                <!-- PRUEBA DE COLLAPSE -->
+                 //PRUEBA DE COLLAPSE 
                 <div class="collapse-group">
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOne">
@@ -219,9 +223,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </section>
-        <footer>
+        <footer id="about-us">
             <div class="footer-container">
                 <div class="footer-block">
                     <h5>Tienda en línea</h5>
