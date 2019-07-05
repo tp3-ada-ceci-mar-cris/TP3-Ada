@@ -2,7 +2,7 @@
 const fillTable = () => {
     data.sales.sort(function(a, b) {
         return b.saleDate - a.saleDate
-      })
+    })
     
     const dateList = document.getElementById('dateList')
     dateList.innerHTML=""
@@ -59,19 +59,15 @@ const fillTable = () => {
       productSelector = document.getElementById('selectItemSold')
       const newLabel = document.createElement('label')
       newLabel.setAttribute('for', itemList[i])
-      // newLabel.setAttribute('class', 'material-label')
   
       const newLabelTextNode = document.createTextNode(itemList[i])
       newLabel.appendChild(newLabelTextNode)
   
       const newInput = document.createElement('input')
-      // newInput.className = 'shoe-materials'
-      // newInput.setAttribute('class', 'shoe-materials')
       newInput.setAttribute('id', idList[i])
-      // newInput.setAttribute('name', 'materials')
       newInput.setAttribute('type', 'checkbox')
-      newInput.setAttribute('value', idList[i])
-       
+      newInput.setAttribute('value', itemList[i])
+      newInput.setAttribute('name', 'productCheckbox')
   
       productSelector.appendChild(newLabel)    
       $(newLabel).after(newInput)        
@@ -87,24 +83,27 @@ const fillTable = () => {
     })
   }
 
-//2. Para crear nuevas ventas
-// Modelo de nueva venta
-// function sale(saleDate, employeeName, itemSold, branchOffice) {
-//     this.saleDate = new Date(saleDate)
-//     this.employeeName = employeeName
-//     this.itemSold = itemSold
-//     this.branchOffice = branchOffice
-//   }
-  
+//2. Para crear nuevas ventas  
 const createSale = () => {
   let saleDateField = document.getElementById('enterSaleDate')
   let employeeNameField = document.getElementById('selectEmployeeName')
-  let itemSoldField = document.getElementById('selectItemSold')
+  let productCheckbox = document.getElementsByName('productCheckbox')
+	let selectedItems = " "
+	for (let i=0; i<productCheckbox.length; i++){
+		if(productCheckbox[i].type=='checkbox' && productCheckbox[i].checked==true)
+		selectedItems+=productCheckbox[i].value
+  }
+
   let branchOfficeField = document.getElementById('selectBranchOffice')
-  let newSale = {saleDate:new Date (saleDateField.value), employeeName:employeeNameField.value, itemSold:itemSoldField.value, branchOffice:branchOfficeField.value}
+  let newSale = {
+    saleDate: new Date (saleDateField.value), 
+    employeeName: employeeNameField.value, 
+    itemSold: selectedItems,
+    branchOffice: branchOfficeField.value
+  }
   data.sales.unshift(newSale) 
   console.log(newSale)
-  fillTable()// FALTA HACER QUE APAREZCA LA NUEVA VENTA, Y QUE SE CIERRE EL MODAL
+  fillTable()// FALTA HACER QUE SE CIERRE EL MODAL
 }
 
 //3. Para armar selects y opciones
