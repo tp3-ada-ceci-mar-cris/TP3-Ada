@@ -112,17 +112,18 @@ bestSeller(data.prices).length < 2 ?
   : console.log (`(punto 6) Los componentes históricamente más vendidos son ${bestSeller(data.prices)}`)
 
 //7. huboVentas(mes, anio): 
-let checkMonth = (year,realMonth)=> {
+let anySales = (year,realMonth)=> {
   const month=realMonth-1
-  const hay= data.sales.find(({saleDate})=>month===saleDate.getMonth()&&year===saleDate.getFullYear())
-  hay?console.log(`(punto 7) Hubo ventas en el mes ${realMonth} de ${year}`)
-      :console.log(`(punto 7) No hubo ventas en el mes ${realMonth} de ${year}`)
+  const checkMonth= data.sales.find(({saleDate})=>month===saleDate.getMonth()&&year===saleDate.getFullYear())? true: false
+  return checkMonth
 }
 
 //esta parte es para probar
 const anio4=2019
-const mes4 =3
-checkMonth (anio4,mes4)
+const mes4 =4
+anySales(anio4,mes4)
+  ?console.log(`(punto 7) Hubo ventas en el mes ${mes4} de ${anio4}`)
+  :console.log(`(punto 7) No hubo ventas en el mes ${mes4} de ${anio4}`)
 
    
 //PUNTO 2
@@ -148,7 +149,6 @@ let salesByBranchOffice = name => {
 const sucursal = "Caballito"
 console.log(`(punto 11) Las ventas históricas de ${sucursal} ascienden a ARS ${salesByBranchOffice(sucursal)}`)
 
-
 //12. sucursalDelMes(mes, anio) 
 let branchOfTheMonth = (year, month) => {
   const monthlySales = data.sales.filter(({saleDate})=>saleDate.getFullYear()===year && saleDate.getMonth()===month-1)
@@ -158,7 +158,7 @@ let branchOfTheMonth = (year, month) => {
   const bestSale = Math.max(...sPMonthlySales.map(({sales})=>sales).flat())
   const bestOfficeList = sPMonthlySales.filter(({sales})=> sales>= bestSale).map(({office})=>office).flat()
   return bestOfficeList
-  }
+}
 
 //esta parte es para probar
 const anioCris=2019
