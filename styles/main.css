@@ -5,7 +5,7 @@ body header {
   background-size: cover;
   text-align: center;
 }
-body header h1 {
+body header a h1 {
   font-family: "Lobster", cursive;
   font-size: 130px;
   margin: 0 auto;
@@ -13,6 +13,9 @@ body header h1 {
   color: white;
   text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
   letter-spacing: 4px;
+}
+body header a:hover {
+  text-decoration: none;
 }
 
 .container {
