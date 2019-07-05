@@ -1,0 +1,38 @@
+#reports{
+    margin: 100px auto;
+    font-family: $backFont;
+    width: 95%;
+    margin-bottom: 150px;
+    h3 {
+        @include title
+    }
+    .collapse-group {
+        padding: 50px 40px;
+        border: 1px purple dotted;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        .panel {
+            padding: 20px 40px;
+            color: purple;
+            div{
+                .panel-title {
+                    font-family: $backFont;
+                    font-size: 30px;
+                    margin: 30px 0;
+                    a{
+                        color: purple;
+                        text-decoration: none;
+                        text-justify: right;
+                    }
+                }
+            }
+            div{
+                .panel-body{
+                    font-family: $backFont;
+                    font-size: 18px;
+                }
+            }
+                    
+        }
+    }
+}

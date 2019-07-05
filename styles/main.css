@@ -5,7 +5,7 @@ body header {
   background-size: cover;
   text-align: center;
 }
-body header h1 {
+body header a h1 {
   font-family: "Lobster", cursive;
   font-size: 130px;
   margin: 0 auto;
@@ -17,23 +17,14 @@ body header h1 {
 body header a:hover {
   text-decoration: none;
 }
-
-.container {
+body .container {
   width: 100%;
   min-width: 1212px;
 }
-
-.firstSection .menu {
-  margin-top: 20px;
-  margin-left: 270px;
-}
-.firstSection .menu .btn {
-  background-color: white;
-}
-.firstSection .turn {
+body .container .firstSection .turn {
   margin: 40px auto;
 }
-.firstSection .turn .carousel-inner {
+body .container .firstSection .turn .carousel-inner {
   background-image: url(../image/productos.jpg);
   background-size: cover;
   background-position: center;
@@ -44,35 +35,46 @@ body header a:hover {
   background-color: pink;
   border-radius: 30px;
 }
-.firstSection .turn .carousel-inner .carousel-item {
+body .container .firstSection .turn .carousel-inner .carousel-item {
   margin-top: 150px;
 }
-.firstSection .turn a {
+body .container .firstSection .turn a {
   text-decoration: none;
 }
-.firstSection .turn a span {
+body .container .firstSection .turn a span {
   color: white;
   background-color: purple;
   border-radius: 20px;
   padding: 15px;
 }
-.firstSection .footy {
+body .container .firstSection .footy {
   background-image: url(../image/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 100px;
 }
-
-.secondSection #sales {
+@media only screen and (max-width: 768px) {
+  body .container .firstSection .footy {
+    width: 760px;
+  }
+}
+body .container .secondSection #sales {
   margin: 100px auto;
 }
-.secondSection #sales h3 {
+body .container .secondSection #sales h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
-.secondSection #sales .table-border {
+@media only screen and (max-width: 768px) {
+  body .container .secondSection #sales h3 {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 40px;
+  }
+}
+body .container .secondSection #sales .table-border {
   width: 95%;
   margin: auto;
   border: 1px purple dotted;
@@ -80,11 +82,12 @@ body header a:hover {
   overflow: hidden;
   border-radius: 25px;
 }
-.secondSection #sales .table-border .table {
+body .container .secondSection #sales .table-border .table {
   display: flex;
   justify-content: center;
+  min-width: 80%;
 }
-.secondSection #sales .table-border .table ul {
+body .container .secondSection #sales .table-border .table ul {
   font-size: 18px;
   font-family: "Varela Round", sans-serif;
   text-align: center;
@@ -94,7 +97,7 @@ body header a:hover {
   margin: 0px;
   padding: 30px;
 }
-.secondSection #sales .table-border .table ul .table-header {
+body .container .secondSection #sales .table-border .table ul .table-header {
   font-family: "Varela Round", sans-serif;
   font-size: 20px;
   text-align: center;
@@ -103,7 +106,7 @@ body header a:hover {
   margin-bottom: 10px;
   border-bottom: 1px solid pink;
 }
-.secondSection #sales .newSale {
+body .container .secondSection #sales .newSale {
   float: right;
   margin: 40px 150px;
   font-family: "Varela Round", sans-serif;
@@ -116,7 +119,18 @@ body header a:hover {
   border-radius: 10px;
   padding: 10px 5px;
 }
-.secondSection .create-sale-btn, .secondSection .cancel-btn {
+body .container .secondSection .footy {
+  background-image: url(../image/fondoC.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 50px;
+}
+@media only screen and (max-width: 768px) {
+  body .container .secondSection .footy {
+    width: 760px;
+  }
+}
+body .container .secondSection .create-sale-btn, body .container .secondSection .cancel-btn {
   font-family: "Varela Round", sans-serif;
   border: 1px solid pink;
   text-decoration: none;
@@ -127,44 +141,55 @@ body header a:hover {
   border-radius: 10px;
   padding: 10px 5px;
 }
-.secondSection .modal-body .first-selectors {
+body .container .secondSection .modal-body .first-selectors {
   display: flex;
   justify-content: space-around;
   margin-bottom: 30px;
 }
-.secondSection .modal-body .first-selectors p {
+body .container .secondSection .modal-body .first-selectors p {
   margin: 20px 0;
 }
-.secondSection .modal-body .product-selector {
+body .container .secondSection .modal-body .product-selector {
   margin: 20px 43px;
   display: flex;
   flex-direction: column;
 }
-.secondSection .modal-body .product-selector #selectItemSold {
+body .container .secondSection .modal-body .product-selector #selectItemSold {
   display: flex;
   flex-direction: column;
 }
-.secondSection .modal-body .product-selector #selectItemSold input, .secondSection .modal-body .product-selector #selectItemSold label {
+body .container .secondSection .modal-body .product-selector #selectItemSold input, body .container .secondSection .modal-body .product-selector #selectItemSold label {
   display: inline-block;
 }
-.secondSection .footy {
+body .container .secondSection .footy {
   background-image: url(../image/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 50px;
 }
-.secondSection #statistics {
+@media only screen and (max-width: 768px) {
+  body .container .secondSection .footy {
+    width: 760px;
+  }
+}
+body .container .secondSection #statistics {
   margin: 100px auto;
   font-family: "Varela Round", sans-serif;
-  width: 95%;
 }
-.secondSection #statistics h3 {
+body .container .secondSection #statistics h3 {
   font-family: "Varela Round", sans-serif;
   font-size: 55px;
   text-align: center;
   margin: 30px 0;
 }
-.secondSection #statistics .salesStats {
+@media only screen and (max-width: 768px) {
+  body .container .secondSection #statistics h3 {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 40px;
+  }
+}
+body .container .secondSection #statistics .salesStats {
   border: 1px purple dotted;
   padding: 40px 40px;
   overflow: hidden;
@@ -172,7 +197,7 @@ body header a:hover {
   display: flex;
   justify-content: space-around;
 }
-.secondSection #statistics .salesStats form {
+body .container .secondSection #statistics .salesStats form {
   background-color: #FFF87F;
   width: 25%;
   float: left;
@@ -180,16 +205,18 @@ body header a:hover {
   font-size: 18px;
   border-radius: 10px;
 }
-.secondSection #statistics .salesStats form select {
+body .container .secondSection #statistics .salesStats form .dateInput {
   font-family: "Varela Round", sans-serif;
-  font-size: 12px;
+  font-size: 15px;
+  border-radius: 20px;
+  margin: 10px 10px;
 }
-.secondSection #statistics .salesStats .stats {
+body .container .secondSection #statistics .salesStats .stats {
   float: left;
-  width: 50%;
+  width: 40%;
   margin-left: 50px;
 }
-.secondSection #statistics .salesStats .stats .btn {
+body .container .secondSection #statistics .salesStats .stats .btn {
   font-size: 13px;
   text-align: center;
   margin: 13px;
@@ -199,7 +226,7 @@ body header a:hover {
   padding: 0 10px;
   font-weight: bold;
 }
-.secondSection #statistics .salesStats .result {
+body .container .secondSection #statistics .salesStats .result {
   float: left;
   font-family: "Varela Round", sans-serif;
   font-size: 20px;
@@ -208,77 +235,40 @@ body header a:hover {
   height: 320px;
   border-radius: 10px;
 }
-.secondSection #statistics .salesStats .result p {
+body .container .secondSection #statistics .salesStats .result p {
   margin-left: 10px;
   margin-top: 10px;
 }
-.secondSection #reports {
-  margin: 100px auto;
-  font-family: "Varela Round", sans-serif;
-  width: 95%;
-  margin-bottom: 150px;
-}
-.secondSection #reports h3 {
-  font-family: "Varela Round", sans-serif;
-  font-size: 55px;
-  text-align: center;
-  margin: 30px 0;
-}
-.secondSection #reports .collapse-group {
-  padding: 50px 40px;
-  border: 1px purple dotted;
-  border-radius: 25px;
-  margin-bottom: 10px;
-}
-.secondSection #reports .collapse-group .panel {
-  padding: 20px 40px;
-  color: purple;
-}
-.secondSection #reports .collapse-group .panel div .panel-title {
-  font-family: "Varela Round", sans-serif;
-  font-size: 30px;
-  margin: 30px 0;
-}
-.secondSection #reports .collapse-group .panel div .panel-title a {
-  color: purple;
-  text-decoration: none;
-  text-justify: right;
-}
-.secondSection #reports .collapse-group .panel div .panel-body {
-  font-family: "Varela Round", sans-serif;
-  font-size: 18px;
-}
-
-footer {
+body .container footer {
   font-family: "Varela Round", sans-serif;
 }
-footer h5 {
-  font-size: 20px;
-  color: purple;
-}
-footer .footer-container {
+body .container footer .footer-container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   width: 90%;
 }
-footer .footer-container .footer-block {
+body .container footer .footer-container .footer-block {
   display: inline-block;
   text-decoration: none;
 }
-footer .footer-container .footer-block ul {
+body .container footer .footer-container .footer-block h5 {
+  font-size: 20px;
+  color: purple;
+}
+body .container footer .footer-container .footer-block ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-footer .footer-container .footer-block ul a {
+body .container footer .footer-container .footer-block ul a {
   text-decoration: none;
   color: black;
 }
-footer .footer-newsletter {
+body .container footer .footer-container .footer-newsletter {
   display: inline-block;
 }
-footer .footer-newsletter .subscribe-bttn {
+body .container footer .footer-container .footer-newsletter .subscribe-bttn {
   font-family: "Varela Round", sans-serif;
   border: 1px solid pink;
   text-decoration: none;
@@ -290,8 +280,7 @@ footer .footer-newsletter .subscribe-bttn {
   padding: 10px 5px;
   font-size: 15px;
 }
-
-.copyrightandlinks {
+body .container footer .copyrightandlinks {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -299,18 +288,18 @@ footer .footer-newsletter .subscribe-bttn {
   margin-top: 80px;
   margin-bottom: 80px;
 }
-.copyrightandlinks .footer-links ul {
+body .container footer .copyrightandlinks .footer-links ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
 }
-.copyrightandlinks .footer-links ul li {
+body .container footer .copyrightandlinks .footer-links ul li {
   width: 50px;
 }
-.copyrightandlinks .footer-links ul li a {
+body .container footer .copyrightandlinks .footer-links ul li a {
   color: black;
 }
-.copyrightandlinks .footer-links ul li a :hover {
+body .container footer .copyrightandlinks .footer-links ul li a :hover {
   color: purple;
   transition: all 0.5s ease-in;
 }

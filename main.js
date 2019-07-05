@@ -24,6 +24,7 @@ let data = {
     { saleDate: new Date(2019, 0, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio", "Llavero pompón"], branchOffice : "Centro"}
   ],
 
+  
   prices: [
     { id:"0001",type:"Beauty", item: "Esmalte unicornio", price: 200 },
     { id:"0002",type:"Props", item: "Vincha rígida unicornio", price: 120 },

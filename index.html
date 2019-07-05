@@ -26,11 +26,11 @@
 </head>
 
 <body onload="initialize()">
-    <header>
+    <header> 
         <a href="#">
             <h1>Unicorn Store</h1>
         </a>
-    </header>
+    </header> 
     <div class="container">
         <section class="firstSection">
             <div id="carouselExampleControls" class="carousel slide turn" data-ride="carousel">
@@ -75,7 +75,7 @@
                         <ul id="nameList">
 
                         </ul>
-                        <ul id="itemList">
+                        <ul id="itemList" class="itemList">
 
                         </ul>
                         <ul id="branchList">
@@ -138,7 +138,7 @@
                         <select id="branchOffice"></select>
                         <input type="text" name="year" id="year" placeholder="mm/dd/aaaa para estadísticas">
                     </form>
-                    <nav class="stats">
+                    <div class="stats">
                         <button type="button" class="btn btn-outline-primary" onclick="btnPrecioVenta()">Precio
                             Compra</button>
                         <button type="button" class="btn btn-outline-secondary" onclick="btnVtasArticulo()">Ventas por
@@ -157,7 +157,7 @@
                             Sucursal</button>
                         <button type="button" class="btn btn-outline-primary" onclick="btnSucMes()">Sucursal del
                             Mes</button>
-                    </nav>
+                        </div>
                     <div class="result" id="result">
                         <p>Resultados</p>
                     </div>
@@ -249,7 +249,7 @@
                 <div class="footer-newsletter">
                     <h5>Newsletter</h5>
                     <p>Suscribite para recibir nuestras novedades.</p>
-                    <input type="email" id="sub-email" placeholder="Dirección de correo electrónico">
+                    <input type="email" id="sub-email" placeholder="Correo electrónico">
                     <a href="#" class="subscribe-bttn">Suscribirme</a>
                 </div>
             </div>
@@ -264,8 +264,8 @@
                     </ul>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
-</body>
+</body> 
 
 </html>
