@@ -1,23 +1,23 @@
 //1. Función para compconstar la tabla de ventas
+const cleanAndCreateTitle = (title,where)=> {
+  const list = document.getElementById(where)
+  list.innerHTML=""
+  const listTitle = document.createElement('li')
+    listTitle.innerText = title
+    listTitle.className ="table-header"
+    list.appendChild(listTitle)
+}
+
 const fillTable = () => {
     data.sales.sort(function(a, b) {
         return b.saleDate - a.saleDate
       })
     
-    const dateList = document.getElementById('dateList')
-    dateList.innerHTML=""
-    
-    const nameList = document.getElementById('nameList')
-    nameList.innerHTML=""
-
-    const itemList = document.getElementById('itemList')
-    itemList.innerHTML=""
-    
-    const branchList = document.getElementById('branchList')
-    branchList.innerHTML=""
-
-    const priceList = document.getElementById('priceList')
-    branchList.innerHTML=""
+    cleanAndCreateTitle("Fecha","dateList")
+    cleanAndCreateTitle("Sucursal","branchList")
+    cleanAndCreateTitle("Vendedora","nameList")
+    cleanAndCreateTitle("Producto","itemList")
+    cleanAndCreateTitle("Monto","priceList")
     
     data.sales.forEach(item => {
       const date = document.createElement('li')
@@ -44,7 +44,7 @@ const fillTable = () => {
     })
   }
 
-  //2. Función para compconstar las opciones del modal nueva venta
+  //2. Función para completar las opciones del modal nueva venta
   const fillOptions = () => {
     data.employees.forEach(name => {
       const option = document.createElement('option')
@@ -96,9 +96,9 @@ const createSale = () => {
   const itemSoldField = document.getElementById('selectItemSold')
   const branchOfficeField = document.getElementById('selectBranchOffice')
   const newSale = {saleDate:new Date (saleDateField.value), employeeName:employeeNameField.value, itemSold:["Esmalte unicornio glitter"], branchOffice:branchOfficeField.value}
+  //FALTA QUE TOME EL VALOR DE VENTA. OJO QUE PARA HACERLO ANDAR CLAVÉ ACÁ ARRIBITA UN ITEMSOLD COMO CAMPEONA  
   data.sales.unshift(newSale) 
   console.log(newSale)
-//FALTA QUE TOME EL VALOR DE VENTA. OJO QUE PARA HACERLO ANDAR CLAVÉ UN ITEMSOLD COMO CAMPEONA  
   fillTable()
 }
 
