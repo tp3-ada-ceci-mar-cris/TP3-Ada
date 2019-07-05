@@ -39,6 +39,14 @@ const fillTable = () => {
     branchList.appendChild(li)
     li.innerText = item.branchOffice
   })
+
+  const priceList = document.getElementById('priceList')
+  priceList.innerHTML=""
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    priceList.appendChild(li)
+    li.innerText = salePrice(item.itemSold)
+  })
 }
 
 // Para completar las opciones del modal

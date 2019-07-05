@@ -83,16 +83,13 @@ body .container .secondSection #sales .table-border {
   border-radius: 25px;
 }
 body .container .secondSection #sales .table-border .table {
-  display: flex;
-  justify-content: center;
-  min-width: 80%;
+  border: 1px solid pink;
 }
 body .container .secondSection #sales .table-border .table ul {
   font-size: 18px;
   font-family: "Varela Round", sans-serif;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid pink;
   list-style: none;
   margin: 0px;
   padding: 30px;
@@ -105,6 +102,40 @@ body .container .secondSection #sales .table-border .table ul .table-header {
   font-weight: bold;
   margin-bottom: 10px;
   border-bottom: 1px solid pink;
+}
+body .container .secondSection #sales .table-border .table .table-header-container {
+  width: 870px;
+  margin: 0 auto;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 30px;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-1, body .container .secondSection #sales .table-border .table .table-header-container ul #header-2, body .container .secondSection #sales .table-border .table .table-header-container ul #header-3, body .container .secondSection #sales .table-border .table .table-header-container ul #header-4, body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
+  position: absolute;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-1 {
+  left: 0%;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-2 {
+  left: 14%;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-3 {
+  left: 48%;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-4 {
+  right: 9%;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
+  right: -3%;
+}
+body .container .secondSection #sales .table-border .table .table-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 body .container .secondSection #sales .newSale {
   float: right;
