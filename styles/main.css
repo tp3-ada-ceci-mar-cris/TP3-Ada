@@ -5,6 +5,11 @@ body header {
   background-size: cover;
   text-align: center;
 }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body header {
+    width: 100%;
+  }
+}
 body header a h1 {
   font-family: "Lobster", cursive;
   font-size: 130px;
@@ -14,12 +19,24 @@ body header a h1 {
   text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
   letter-spacing: 4px;
 }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body header a h1 {
+    font-size: 60px;
+  }
+}
 body header a:hover {
   text-decoration: none;
 }
 body .container {
   width: 100%;
   min-width: 1212px;
+  overflow: hidden;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container {
+    min-width: 320px;
+    overflow: scroll;
+  }
 }
 body .container .firstSection .turn {
   margin: 40px auto;
@@ -35,8 +52,21 @@ body .container .firstSection .turn .carousel-inner {
   background-color: pink;
   border-radius: 30px;
 }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .firstSection .turn .carousel-inner {
+    background-image: none;
+    height: 120px;
+    width: 300px;
+    font-size: 30px;
+  }
+}
 body .container .firstSection .turn .carousel-inner .carousel-item {
   margin-top: 150px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .firstSection .turn .carousel-inner .carousel-item {
+    margin-top: 40px;
+  }
 }
 body .container .firstSection .turn a {
   text-decoration: none;
@@ -53,11 +83,6 @@ body .container .firstSection .footy {
   width: 100%;
   height: 100px;
 }
-@media only screen and (max-width: 768px) {
-  body .container .firstSection .footy {
-    width: 760px;
-  }
-}
 body .container .secondSection #sales {
   margin: 100px auto;
 }
@@ -67,11 +92,9 @@ body .container .secondSection #sales h3 {
   text-align: center;
   margin: 30px 0;
 }
-@media only screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   body .container .secondSection #sales h3 {
-    font-size: 50px;
-    text-align: center;
-    margin-left: 40px;
+    font-size: 40px;
   }
 }
 body .container .secondSection #sales .table-border {
@@ -83,16 +106,13 @@ body .container .secondSection #sales .table-border {
   border-radius: 25px;
 }
 body .container .secondSection #sales .table-border .table {
-  display: flex;
-  justify-content: center;
-  min-width: 80%;
+  border: 1px solid pink;
 }
 body .container .secondSection #sales .table-border .table ul {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Varela Round", sans-serif;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid pink;
   list-style: none;
   margin: 0px;
   padding: 30px;
@@ -105,6 +125,40 @@ body .container .secondSection #sales .table-border .table ul .table-header {
   font-weight: bold;
   margin-bottom: 10px;
   border-bottom: 1px solid pink;
+}
+body .container .secondSection #sales .table-border .table .table-header-container {
+  width: 870px;
+  margin: 0 auto;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 30px;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-1, body .container .secondSection #sales .table-border .table .table-header-container ul #header-2, body .container .secondSection #sales .table-border .table .table-header-container ul #header-3, body .container .secondSection #sales .table-border .table .table-header-container ul #header-4, body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
+  position: absolute;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-1 {
+  left: 0%;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-2 {
+  left: 14%;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-3 {
+  left: 48%;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-4 {
+  right: 9%;
+}
+body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
+  right: -3%;
+}
+body .container .secondSection #sales .table-border .table .table-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 body .container .secondSection #sales .newSale {
   float: right;
@@ -124,11 +178,6 @@ body .container .secondSection .footy {
   background-size: cover;
   width: 100%;
   height: 50px;
-}
-@media only screen and (max-width: 768px) {
-  body .container .secondSection .footy {
-    width: 760px;
-  }
 }
 body .container .secondSection .create-sale-btn, body .container .secondSection .cancel-btn {
   font-family: "Varela Round", sans-serif;
@@ -167,14 +216,14 @@ body .container .secondSection .footy {
   width: 100%;
   height: 50px;
 }
-@media only screen and (max-width: 768px) {
-  body .container .secondSection .footy {
-    width: 760px;
-  }
-}
 body .container .secondSection #statistics {
   margin: 100px auto;
   font-family: "Varela Round", sans-serif;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #statistics {
+    margin: 40px auto;
+  }
 }
 body .container .secondSection #statistics h3 {
   font-family: "Varela Round", sans-serif;
@@ -182,20 +231,24 @@ body .container .secondSection #statistics h3 {
   text-align: center;
   margin: 30px 0;
 }
-@media only screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   body .container .secondSection #statistics h3 {
-    font-size: 50px;
-    text-align: center;
-    margin-left: 40px;
+    font-size: 40px;
   }
 }
 body .container .secondSection #statistics .salesStats {
   border: 1px purple dotted;
-  padding: 40px 40px;
+  padding: 40px;
   overflow: hidden;
   border-radius: 25px;
   display: flex;
   justify-content: space-around;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #statistics .salesStats {
+    display: block;
+    padding: 20px 10px;
+  }
 }
 body .container .secondSection #statistics .salesStats form {
   background-color: #FFF87F;
@@ -204,6 +257,12 @@ body .container .secondSection #statistics .salesStats form {
   font-family: "Varela Round", sans-serif;
   font-size: 18px;
   border-radius: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #statistics .salesStats form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 body .container .secondSection #statistics .salesStats form .dateInput {
   font-family: "Varela Round", sans-serif;
@@ -215,6 +274,13 @@ body .container .secondSection #statistics .salesStats .stats {
   float: left;
   width: 40%;
   margin-left: 50px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #statistics .salesStats .stats {
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+  }
 }
 body .container .secondSection #statistics .salesStats .stats .btn {
   font-size: 13px;
@@ -235,6 +301,13 @@ body .container .secondSection #statistics .salesStats .result {
   height: 320px;
   border-radius: 10px;
 }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #statistics .salesStats .result {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+  }
+}
 body .container .secondSection #statistics .salesStats .result p {
   margin-left: 10px;
   margin-top: 10px;
@@ -248,9 +321,19 @@ body .container footer .footer-container {
   margin: 0 auto;
   width: 90%;
 }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container footer .footer-container {
+    display: block;
+  }
+}
 body .container footer .footer-container .footer-block {
   display: inline-block;
   text-decoration: none;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container footer .footer-container .footer-block {
+    padding-bottom: 30px;
+  }
 }
 body .container footer .footer-container .footer-block h5 {
   font-size: 20px;
@@ -267,6 +350,14 @@ body .container footer .footer-container .footer-block ul a {
 }
 body .container footer .footer-container .footer-newsletter {
   display: inline-block;
+}
+body .container footer .footer-container .footer-newsletter h5 {
+  color: purple;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container footer .footer-container .footer-newsletter .email {
+    margin-bottom: 25px;
+  }
 }
 body .container footer .footer-container .footer-newsletter .subscribe-bttn {
   font-family: "Varela Round", sans-serif;
@@ -285,8 +376,13 @@ body .container footer .copyrightandlinks {
   justify-content: space-between;
   margin: 0 auto;
   width: 90%;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin: 80px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container footer .copyrightandlinks {
+    display: block;
+    margin: 70px 0;
+  }
 }
 body .container footer .copyrightandlinks .footer-links ul {
   list-style: none;

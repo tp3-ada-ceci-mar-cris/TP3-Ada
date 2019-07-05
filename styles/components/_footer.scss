@@ -6,13 +6,19 @@ footer{
         justify-content: space-between;
         margin: 0 auto;
         width: 90%;
-        
+        @media screen  and (min-width: 320px) and (max-width: 768px){
+            display: block; 
+            //padding-bottom: 25px;
+        }
         .footer-block {
             display: inline-block;
             text-decoration: none;
+            @media screen  and (min-width: 320px) and (max-width: 768px){
+                padding-bottom: 30px; 
+            }
             h5 {
                 font-size: 20px;
-                color: purple;
+                color: $generalColor;
             }
             ul {
                 list-style: none;
@@ -26,9 +32,18 @@ footer{
         }
         .footer-newsletter {
             display: inline-block;
+            h5{
+                color: $generalColor;
+            }
+            .email{
+                @media screen  and (min-width: 320px) and (max-width: 768px){
+                    margin-bottom: 25px; 
+                }
+            }
             .subscribe-bttn {
                 @include sale-buttons;
                 font-size: 15px;
+                
             }
         }
     }
@@ -37,8 +52,12 @@ footer{
         justify-content: space-between;
         margin: 0 auto;
         width: 90%;
-        margin-top: 80px;
-        margin-bottom: 80px;
+        margin: 80px 0;
+        
+        @media screen  and (min-width: 320px) and (max-width: 768px){
+            display: block; 
+            margin: 70px 0;
+        }
         .footer-links {
             ul {
                 list-style: none;
@@ -49,7 +68,7 @@ footer{
                     a {
                         color: black;
                         :hover {
-                            color: purple;
+                            color: $generalColor;
                             transition: all 0.5s ease-in;
                         }
                     }

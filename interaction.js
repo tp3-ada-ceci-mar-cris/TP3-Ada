@@ -1,92 +1,109 @@
-//1. Función para compconstar la tabla de ventas
-const cleanAndCreateTitle = (title,where)=> {
-  const list = document.getElementById(where)
-  //list.innerHTML=""
-  const listTitle = document.createElement('li')
-    listTitle.innerText = title
-    listTitle.className ="table-header"
-    list.appendChild(listTitle)
+//1. Para completar la tabla de ventas
+const fillTable = () => {
+  data.sales.sort(function(a, b) {
+      return b.saleDate - a.saleDate
+  })
+  
+  const dateList = document.getElementById('dateList')
+  dateList.innerHTML=""
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    dateList.appendChild(li)
+    li.innerText = item.saleDate.toLocaleDateString()
+  })
+
+  const nameList = document.getElementById('nameList')
+  nameList.innerHTML=""
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    nameList.appendChild(li)
+    li.innerText = item.employeeName
+  })
+
+  const itemList = document.getElementById('itemList')
+  itemList.innerHTML=""
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    itemList.appendChild(li)
+    if (item.length>1){
+      li.innerText = item.itemSold.join(`, `)
+    }else {
+      li.innerText = item.itemSold
+    }
+  })
+
+  const branchList = document.getElementById('branchList')
+  branchList.innerHTML=""
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    branchList.appendChild(li)
+    li.innerText = item.branchOffice
+  })
 }
 
-const fillTable = () => {
-    data.sales.sort(function(a, b) {
-        return b.saleDate - a.saleDate
-      })
-    
-    cleanAndCreateTitle("Fecha","dateList")
-    cleanAndCreateTitle("Sucursal","branchList")
-    cleanAndCreateTitle("Vendedora","nameList")
-    cleanAndCreateTitle("Producto","itemList")
-    cleanAndCreateTitle("Monto","priceList")
-    
-    data.sales.forEach(item => {
-      const date = document.createElement('li')
-      date.innerText = item.saleDate.toLocaleDateString()
-      dateList.appendChild(date)
-      
-      const employee = document.createElement('li')
-      employee.innerText = item.employeeName
-      nameList.appendChild(employee)
-      
-      const products = document.createElement('li')
-      item.length>1
-        ?products.innerText = item.itemSold.join(`, `)
-        :products.innerText = item.itemSold
-      itemList.appendChild(products)
-            
-      const salePoint = document.createElement('li')
-      salePoint.innerText = item.branchOffice
-      branchList.appendChild(salePoint)
+// Para completar las opciones del modal
+const fillOptions = () => {
+  data.employees.forEach(name => {
+    let option = document.createElement('option')
+    option.innerText = name
+    option.value = name
+    let nameSelector = document.getElementById('selectEmployeeName')
+    nameSelector.appendChild(option)
+    return option
+  })
 
-      const totalPrice = document.createElement('li')
-      totalPrice.innerText = salePrice(item.itemSold)
-      priceList.appendChild(totalPrice)
-    })
-  }
+  const itemList = data.prices.map(({item}) => item)
+  const idList = data.prices.map(({id}) => id)
+ 
+  for(i = 0; i < itemList.length; i++) {
+    productSelector = document.getElementById('selectItemSold')
+    const newLabel = document.createElement('label')
+    newLabel.setAttribute('for', itemList[i])
 
-  //2. Función para completar las opciones del modal nueva venta
-  const fillOptions = () => {
-    data.employees.forEach(name => {
-      const option = document.createElement('option')
-      option.innerText = name
-      option.value = name
-      const nameSelector = document.getElementById('selectEmployeeName')
-      nameSelector.appendChild(option)
-      return option
-    })
-  
-    const itemList = data.prices.map(({item}) => item)
-    // const idList = data.prices.map(({id}) => id)
-   
-    for(i = 0; i < itemList.length; i++) {
-      productSelector = document.getElementById('selectItemSold')
-      const newLabel = document.createElement('label')
-      newLabel.setAttribute('for', itemList[i])
-      // newLabel.setAttribute('class', 'material-label')
-  
-      const newLabelTextNode = document.createTextNode(itemList[i])
-      newLabel.appendChild(newLabelTextNode)
-  
-      const newInput = document.createElement('input')
-      // newInput.className = 'shoe-materials'
-      // newInput.setAttribute('class', 'shoe-materials')
-      // newInput.setAttribute('id', idList[i])
-      newInput.setAttribute('name', "materials[]")
-      newInput.setAttribute('type', 'checkbox')
-      newInput.setAttribute('value', itemList[i])
-      
-      productSelector.appendChild(newLabel)    
-      $(newLabel).after(newInput)        
+    const newLabelTextNode = document.createTextNode(itemList[i])
+    newLabel.appendChild(newLabelTextNode)
+
+    const newInput = document.createElement('input')
+    newInput.setAttribute('id', idList[i])
+    newInput.setAttribute('type', 'checkbox')
+    newInput.setAttribute('value', itemList[i])
+    newInput.setAttribute('name', 'productCheckbox')
+
+    productSelector.appendChild(newLabel)    
+    $(newLabel).after(newInput)        
+}
+
+  data.branchOffice.forEach(branch => {
+    let option = document.createElement('option')
+    option.innerText = branch
+    option.value = branch
+    let branchSelector = document.getElementById('selectBranchOffice')
+    branchSelector.appendChild(option)
+    return option
+  })
+}
+
+  //2. Para crear nuevas ventas  
+const createSale = () => {
+  let saleDateField = document.getElementById('enterSaleDate')
+  let employeeNameField = document.getElementById('selectEmployeeName')
+  let productCheckbox = document.getElementsByName('productCheckbox')
+  let selectedItems = " "
+  for (let i=0; i<productCheckbox.length; i++){
+    if(productCheckbox[i].type=='checkbox' && productCheckbox[i].checked==true)
+    selectedItems+=productCheckbox[i].value
   }
   
-    data.branchOffice.forEach(branch => {
-      const option = document.createElement('option')
-      option.innerText = branch
-      option.value = branch
-      const branchSelector = document.getElementById('selectBranchOffice')
-      branchSelector.appendChild(option)
-      return option
-    })
+  let branchOfficeField = document.getElementById('selectBranchOffice')
+  let newSale = {
+    saleDate: new Date (saleDateField.value), 
+    employeeName: employeeNameField.value, 
+    itemSold: selectedItems,
+    branchOffice: branchOfficeField.value
+  }
+  data.sales.unshift(newSale) 
+  console.log(newSale)
+  fillTable()// FALTA HACER QUE SE CIERRE EL MODAL
   }
 
 //3. Función para crear nuevas ventas

@@ -10,10 +10,7 @@ $screen-lg-min: 768px;
     background-size: cover;
     width: 100%;
     height: $height;
-    @media only screen and (max-width: 768px){
-        width: 760px;
-        
-    }
+    
 }
 
 @mixin title {
@@ -21,10 +18,8 @@ $screen-lg-min: 768px;
     font-size: 55px;
     text-align: center;
     margin: 30px 0;
-    @media only screen and (max-width: 768px){
-        font-size: 50px;
-        text-align: center;
-        margin-left: 40px;
+    @media screen  and (min-width: 320px) and (max-width: 768px){
+        font-size: 40px; 
     }
 }
 
@@ -41,13 +36,15 @@ $screen-lg-min: 768px;
 }
 
 body {
-    
     @import "components/header";
-    
     .container {
         width: 100%;
         min-width: 1212px;
-        
+        overflow: hidden;
+        @media screen  and (min-width: 320px) and (max-width: 768px){
+            min-width: 320px;
+            overflow: scroll; 
+        }
         .firstSection {
             @import "components/carrusel";
         }

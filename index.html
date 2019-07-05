@@ -63,21 +63,27 @@
                 <h3>VENTAS</h3>
                 <div class="table-border">
                     <div class="table">
-                        <ul id="dateList">
-
-                        </ul>
-                        <ul id="branchList">
-
-                        </ul>
-                        <ul id="nameList">
-
-                        </ul>
-                        <ul id="itemList" class="itemList">
-
-                        </ul>
-                        <ul id="priceList">
-
-                        </ul>
+                        <div class="table-header-container">
+                            <ul>
+                                <li class="table-header" id="header-1">Fecha</li> 
+                                <li class="table-header" id="header-2">Vendedora</li>
+                                <li class="table-header" id="header-3">Producto</li>
+                                <li class="table-header" id="header-4">Sucursal</li>
+                                <li class="table-header" id="header-5">Monto</li>
+                            </ul>
+                        </div>
+                        <div class="table-body">
+                            <ul id="dateList">
+                            </ul>
+                            <ul id="nameList">
+                            </ul>
+                            <ul id="itemList" class="itemList">
+                            </ul>
+                            <ul id="branchList">
+                            </ul>
+                            <ul id="priceList">
+                            </ul>
+                        </div>
                     </div>
                     <a href="#" class="newSale" data-toggle="modal" data-target="#myModal">Nueva venta</a>
                 </div>
@@ -250,7 +256,7 @@
                 <div class="footer-newsletter">
                     <h5>Newsletter</h5>
                     <p>Suscribite para recibir nuestras novedades.</p>
-                    <input type="email" id="sub-email" placeholder="Correo electrónico">
+                    <input type="email" id="sub-email" placeholder="Correo electrónico" class="email">
                     <a href="#" class="subscribe-bttn">Suscribirme</a>
                 </div>
             </div>
