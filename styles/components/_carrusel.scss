@@ -1,0 +1,31 @@
+.turn {
+    margin: 40px auto;
+    
+    .carousel-inner {
+        background-image: url(../image/productos.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 420px;
+        font-family: $backFont;
+        font-size: 70px;
+        text-align: center;
+        background-color: pink;
+        border-radius: 30px;
+        
+        .carousel-item {
+            margin-top: 150px;
+        }
+    }
+    a {
+        text-decoration: none;
+        span {
+            color: white;
+            background-color: purple;
+            border-radius: 20px;
+            padding: 15px;
+        }
+    }
+}
+.footy {
+    @include footy(100px)
+}

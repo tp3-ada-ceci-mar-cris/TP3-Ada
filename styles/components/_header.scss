@@ -1,0 +1,23 @@
+header {
+    background-image: url(../image/fondoC.jpg);
+    width: 100vw;
+    height: 180px;
+    background-size: cover;
+    text-align: center;
+    
+    a{  
+        h1 {
+            font-family: $titleFont;
+            font-size: 130px;
+            margin: 0 auto;
+            padding-top: 20px;
+            color: white;
+            text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
+            letter-spacing: 4px;
+            
+        }
+        &:hover{
+            text-decoration: none;
+        }
+    }        
+} 

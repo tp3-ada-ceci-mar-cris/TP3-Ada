@@ -1,0 +1,50 @@
+#sales {
+    margin: 100px auto;
+    
+    h3 {
+        @include title
+    }
+    .table-border {
+        width: 95%;
+        margin: auto;
+        border: 1px purple dotted;
+        padding: 50px 40px 0 40px;
+        overflow: hidden;
+        border-radius: 25px;
+        
+        .table {
+            display: flex;
+            justify-content: center;
+            min-width: 80%;
+            
+            ul {
+                font-size: 18px;
+                font-family: $backFont;
+                text-align: center;
+                margin: 0 auto;
+                border: 1px solid pink;
+                list-style: none;
+                margin: 0px;
+                padding: 30px;
+                
+                .table-header {
+                    font-family: $backFont;
+                    font-size: 20px;
+                    text-align: center;
+                    color: purple;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid pink;
+                }
+            }
+        }
+    }
+    .newSale {
+        float: right;
+        margin: 40px 150px;
+        @include sale-buttons
+    }
+}
+.footy {
+    @include footy(50px)
+}
