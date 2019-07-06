@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -26,11 +26,11 @@
 </head>
 
 <body onload="initialize()">
-    <header> 
+    <header>
         <a href="#">
             <h1>Unicorn Store</h1>
         </a>
-    </header> 
+    </header>
     <div class="container">
         <section class="firstSection">
             <div id="carouselExampleControls" class="carousel slide turn" data-ride="carousel">
@@ -65,14 +65,14 @@
                     <div class="table">
                         <div class="table-header-container">
                             <ul>
-                                <li class="table-header" id="header-1">Fecha</li> 
+                                <li class="table-header" id="header-1">Fecha</li>
                                 <li class="table-header" id="header-2">Vendedora</li>
                                 <li class="table-header" id="header-3">Producto</li>
                                 <li class="table-header" id="header-4">Sucursal</li>
                                 <li class="table-header" id="header-5">Monto</li>
                             </ul>
                         </div>
-                        <div class="table-body">
+                        <div id="table-body">
                             <ul id="dateList">
                             </ul>
                             <ul id="nameList">
@@ -105,26 +105,23 @@
                                     <div class="employee-selector">
                                         <p>Seleccione la empleada:</p>
                                         <select id="selectEmployeeName" value="">
-
                                         </select>
                                     </div>
                                     <div class="branch-selector">
                                         <p>Seleccione la sucursal:</p>
                                         <select id="selectBranchOffice" value="">
-
                                         </select>
                                     </div>
                                 </div>
                                 <div class="product-selector">
                                     <p>Seleccione los productos vendidos:</p>
                                     <form id="selectItemSold">
-
                                     </form>
                                 </div>
                             </div>
                             <div class="modal-footer">
                                 <a href="#" class="create-sale-btn" onclick="createSale()">Crear</a>
-                                <button type="button" class="cancel-btn" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="cancel-btn" data-dismiss="modal">Cancelar</button>
                             </div>
                         </div>
                     </div>
@@ -160,13 +157,13 @@
                             Sucursal</button>
                         <button type="button" class="btn btn-outline-primary" onclick="btnVentMes()">Ventas del
                             Mes</button>
-                        </div>
+                    </div>
                     <div class="result" id="result">
                         <p>Resultados</p>
                     </div>
                 </div>
             </div>
-<!--        <div class="footy"></div>
+            <!--        <div class="footy"></div>
             <div id="reports">
                 <h3>REPORTES</h3>
                  //PRUEBA DE COLLAPSE 
@@ -271,8 +268,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
     </div>
-</body> 
+    </div>
+</body>
 
 </html>

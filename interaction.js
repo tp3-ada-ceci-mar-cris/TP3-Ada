@@ -39,6 +39,14 @@ const fillTable = () => {
     branchList.appendChild(li)
     li.innerText = item.branchOffice
   })
+
+  const priceList = document.getElementById('priceList')
+  priceList.innerHTML=""
+  data.sales.forEach(item => {
+    const li = document.createElement('li')
+    priceList.appendChild(li)
+    li.innerText = salePrice(item.itemSold)
+  })
 }
 
 // Para completar las opciones del modal
@@ -83,7 +91,7 @@ const fillOptions = () => {
   })
 }
 
-  //2. Para crear nuevas ventas  
+//2. Para crear nuevas ventas  
 const createSale = () => {
   let saleDateField = document.getElementById('enterSaleDate')
   let employeeNameField = document.getElementById('selectEmployeeName')
@@ -104,20 +112,6 @@ const createSale = () => {
   data.sales.unshift(newSale) 
   console.log(newSale)
   fillTable()// FALTA HACER QUE SE CIERRE EL MODAL
-  }
-
-//3. Función para crear nuevas ventas
-const createSale = () => {
-  event.preventDefault();
-  const saleDateField = document.getElementById('enterSaleDate')
-  const employeeNameField = document.getElementById('selectEmployeeName')
-  const itemSoldField = document.getElementById('selectItemSold')
-  const branchOfficeField = document.getElementById('selectBranchOffice')
-  const newSale = {saleDate:new Date (saleDateField.value), employeeName:employeeNameField.value, itemSold:["Esmalte unicornio glitter"], branchOffice:branchOfficeField.value}
-  //FALTA QUE TOME EL VALOR DE VENTA. OJO QUE PARA HACERLO ANDAR CLAVÉ ACÁ ARRIBITA UN ITEMSOLD COMO CAMPEONA  
-  data.sales.unshift(newSale) 
-  console.log(newSale)
-  fillTable()
 }
 
 //4. Para armar selects y opciones en las estadísticas

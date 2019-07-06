@@ -155,7 +155,7 @@ body .container .secondSection #sales .table-border .table .table-header-contain
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
   right: -3%;
 }
-body .container .secondSection #sales .table-border .table .table-body {
+body .container .secondSection #sales .table-border .table #table-body {
   display: flex;
   flex-direction: row;
   justify-content: center;
