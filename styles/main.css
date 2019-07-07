@@ -160,11 +160,6 @@ body .container .secondSection #sales .table-border .table #table-body {
   flex-direction: row;
   justify-content: center;
 }
-body .container .secondSection #sales .table-border .table .table-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 body .container .secondSection #sales .newSale {
   float: right;
   margin: 40px 150px;
@@ -405,6 +400,4 @@ body .container footer .copyrightandlinks .footer-links ul li a :hover {
   transition: all 0.5s ease-in;
 }
 
-
 /*# sourceMappingURL=main.css.map */
- 
