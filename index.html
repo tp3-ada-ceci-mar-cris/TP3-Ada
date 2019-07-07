@@ -128,8 +128,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <a href="#" class="create-sale-btn" onclick="createSale()">Crear</a>
-                                <button type="button" class="cancel-btn" data-dismiss="modal">Cancelar</button>
+                                <button class="create-sale-btn" onclick="createSale()">Crear</button>
+                                <button type="button" class="cancel-btn" data-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -138,92 +138,40 @@
             <!--Modal-->
             <div class="footy"></div>
             <div id="statistics">
-                <h3>ESTADISTICAS</h3>
-                <div class="salesStats">
-                    <form id="insertData">
-                        <div id="itemsData"></div>
-                        <select id="employees"></select>
-                        <select id="branchOffice"></select>
-                        <input type="text" name="year" id="year" placeholder="mm/dd/aaaa para estadísticas">
-                    </form>
-                    <div class="stats">
-                        <button type="button" class="btn btn-outline-primary" onclick="btnPrecioVenta()">Precio
-                            Compra</button>
-                        <button type="button" class="btn btn-outline-secondary" onclick="btnVtasArticulo()">Ventas por
-                            Articulo</button>
-                        <button type="button" class="btn btn-outline-success" onclick="btnVendMes()">Vendedora del
-                            Mes</button>
-                        <button type="button" class="btn btn-outline-danger" onclick="btnVentasVend()">Ventas por
-                            Vendedora</button>
-                        <button type="button" class="btn btn-outline-warning" onclick="btnVentMes()">Ventas del
-                            Mes</button>
-                        <button type="button" class="btn btn-outline-danger" onclick="btnArtVend()">Articulo mas
-                            Vendido</button>
-                        <button type="button" class="btn btn-outline-success" onclick="btnHuboVent()">Hubo
-                            Ventas</button>
-                        <button type="button" class="btn btn-outline-secondary" onclick="btnVentSuc()">Ventas por
-                            Sucursal</button>
-                        <button type="button" class="btn btn-outline-primary" onclick="btnSucMes()">Sucursal del
-                            Mes</button>
-                        </div>
-                    <div class="result" id="result">
-                        <p>Resultados</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footy"></div>
-            <div id="reports">
-                <h3>REPORTES</h3>
-                <!-- PRUEBA DE COLLAPSE -->
-                <div class="collapse-group">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                            <h4 class="panel-title">
-                                <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseOne" class="trigger collapsed">
-                                    Reporte por mes
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
-                            aria-labelledby="headingOne">
-                            <div class="panel-body" id="panel-body-one">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae dolorum,
-                                soluta temporibus vero perferendis quo odit eaque cum fugiat nihil earum error vitae
-                                libero nostrum sed ipsam, beatae ea.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingTwo">
-                            <h4 class="panel-title">
-                                <a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true"
-                                    aria-controls="collapseTwo" class="trigger collapsed">
-                                    Reporte por sucursal
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-                            aria-labelledby="headingTwo">
-                            <div class="panel-body" id="panel-body-two"></div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <h4 class="panel-title">
-                                <a role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true"
-                                    aria-controls="collapseThree" class="trigger collapsed">
-                                    Otros records
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-                            aria-labelledby="headingThree">
-                            <div class="panel-body" id="panel-body-three"></div>
+                <div id="statistics">
+                    <h3>ESTADÍSTICAS</h3>
+                    <div class="salesStats">
+                        <form id="insertData">
+                            <select id="itemsData" class="dateInput"></select>
+                            <select id="employees" class="dateInput"></select>
+                            <select id="branchOffice" class="dateInput"></select>
+                            <input type="date" name="year" id="year" placeholder="mm/dd/aaaa" class="dateInput">
+                        </form>
+                        <nav class="stats">
+                            <button type="button" class="btn btn-outline-primary" onclick="btnPrecioVenta()">Precio
+                                Artículo</button>
+                            <button type="button" class="btn btn-outline-secondary" onclick="btnVtasArticulo()">Ventas por
+                                Artículo</button>
+                            <button type="button" class="btn btn-outline-danger" onclick="btnArtVend()">Artículo mas
+                                Vendido</button>
+                            <button type="button" class="btn btn-outline-warning" onclick="btnVendMes()">Vendedora del
+                                Mes</button>
+                            <button type="button" class="btn btn-outline-success" onclick="btnVentasVend()">Ventas por
+                                Vendedora</button>
+                            <button type="button" class="btn btn-outline-warning" onclick="btnMejVend()">Mejor
+                                Vendedora</button>
+                            <button type="button" class="btn btn-outline-danger" onclick="btnSucMes()">Sucursal del
+                                Mes</button>
+                            <button type="button" class="btn btn-outline-secondary" onclick="btnVentSuc()">Ventas por
+                                Sucursal</button>
+                            <button type="button" class="btn btn-outline-primary" onclick="btnVentMes()">Ventas del
+                                Mes</button>
+                        </nav>
+                        <div class="result" id="result">
+                            <p>En esta ventana se mostrarán los resultados de la opción que elija para los datos ingresados a la izquierda. Las opciones "Mejor vendedora" y "Artículo más vendido" no requieren datos de ingreso.</p>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <footer>
             <div class="footer-container">

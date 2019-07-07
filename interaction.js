@@ -3,7 +3,7 @@ const fillTable = () => {
   data.sales.sort(function(a, b) {
       return b.saleDate - a.saleDate
   })
-  
+
   const dateList = document.getElementById('dateList')
   dateList.innerHTML=""
   data.sales.forEach(item => {
@@ -25,11 +25,7 @@ const fillTable = () => {
   data.sales.forEach(item => {
     const li = document.createElement('li')
     itemList.appendChild(li)
-    if (item.length>1){
-      li.innerText = item.itemSold.join(`, `)
-    }else {
-      li.innerText = item.itemSold
-    }
+    li.innerText = item.itemSold.join(`, `)
   })
 
   const branchList = document.getElementById('branchList')
@@ -49,7 +45,7 @@ const fillTable = () => {
   })
 }
 
-// Para completar las opciones del modal
+//2. Para completar las opciones del modal
 const fillOptions = () => {
   data.employees.forEach(name => {
     let option = document.createElement('option')
@@ -91,185 +87,135 @@ const fillOptions = () => {
   })
 }
 
-//2. Para crear nuevas ventas  
+//3. Para crear nuevas ventas  
 const createSale = () => {
-let saleDateField = document.getElementById('enterSaleDate')
-let employeeNameField = document.getElementById('selectEmployeeName')
-let productCheckbox = document.getElementsByName('productCheckbox')
-let selectedItems = " "
-for (let i=0; i<productCheckbox.length; i++){
-  if(productCheckbox[i].type=='checkbox' && productCheckbox[i].checked==true)
-  selectedItems+=productCheckbox[i].value
+  let saleDateField = document.getElementById('enterSaleDate')
+  let employeeNameField = document.getElementById('selectEmployeeName')
+  let productCheckbox = document.getElementsByName('productCheckbox')
+  let selectedItems =[]
+  for (let i=0; i<productCheckbox.length; i++){
+    if(productCheckbox[i].type=='checkbox' && productCheckbox[i].checked==true)
+    selectedItems.push(productCheckbox[i].value)
+  }
+  let branchOfficeField = document.getElementById('selectBranchOffice')
+  let newSale = {
+    saleDate: new Date (saleDateField.value), 
+    employeeName: employeeNameField.value, 
+    itemSold: selectedItems,
+    branchOffice: branchOfficeField.value
+  }
+  data.sales.unshift(newSale) 
+  fillTable()
 }
 
-let branchOfficeField = document.getElementById('selectBranchOffice')
-let newSale = {
-  saleDate: new Date (saleDateField.value), 
-  employeeName: employeeNameField.value, 
-  itemSold: selectedItems,
-  branchOffice: branchOfficeField.value
-}
-data.sales.unshift(newSale) 
-console.log(newSale)
-fillTable()// FALTA HACER QUE SE CIERRE EL MODAL
+//4. Para armar selects y opciones en las estadísticas
+//4.a funcion de crear una opción
+const createOption=comp=> {
+  typeof comp === "object"?e=comp.item:e=comp
+    const option=document.createElement("option")
+    option.innerText=e
+    option.value=e
+    return option
 }
 
-//3. Para armar selects y opciones
-//3.a identificar tipos de componentes
-//3.a.i extraigo tipos de componentes
-const allTypes = data.prices.map(({type}) =>type)
-//3.a.ii filtro para que no se repitan
-const compTypes =allTypes.filter((e,i)=> allTypes.indexOf(e) === i)
-
-//3.b genero selecs por cada tipo de componente
-const createSelects =(list, container) => {
-  list.forEach(e=> {
-      let select = document.createElement("select")
-      select.id=e 
-      container.appendChild(select)
-  })
-  
+//4.b una función para poblar los selects
+const fillSelects =(list,type) => {
+  const select = document.getElementById(type) 
+    list.forEach(e=> {
+        if (!select.childElementCount) {
+            const placeholder = {item: `Seleccione opción` , id:""}
+            select.appendChild(createOption(placeholder))
+        }
+        select.appendChild(createOption(e))
+    })
 }
 
-//3.c funcion de crear una opción
-const createOption = comp => {
-let option=document.createElement ("option")
-option.innerText=comp.item
-option.value =comp.id
-return option
+//5. Función que agarra el input y me da un conjunto de datos que pueda usar en la botonera
+const newInput = ()=> {
+    const input = {product:undefined, employee:undefined, branchOffice: undefined, year:undefined, month:undefined}
+    input.product = document.getElementById("itemsData").value
+    input.employee  = document.getElementById("employees").value
+    input.branchOffice=document.getElementById("branchOffice").value
+    const auxDate = new Date (document.getElementById("year").value)
+    input.year= auxDate.getFullYear()
+    input.month=auxDate.getMonth()+1
+    return input    
 }
 
-const createOption2=e=> {
-  let option=document.createElement("option")
-  option.innerText=e
-  option.value=e
-  return option
-}
-
-//3.d una función para poblar los selects
-const fillSelects =list => {
-  list.forEach(e=> {
-      let select = document.getElementById (e.type) 
-      if (!select.childElementCount) {
-          let placeholder = {item: `Seleccione ${e.type}` , id:""}
-          select.appendChild(createOption(placeholder))
-      }
-      select.appendChild(createOption(e))
-  })
-}
-
-const fillSelects2=(list, type)=> {
-  let select = document.getElementById(type)
-  list.forEach (e=>{
-      if (!select.childElementCount) {
-          let placeholder = {item: `Seleccione opcion` , id:""}
-          select.appendChild(createOption(placeholder))
-      }
-      select.appendChild(createOption2(e))
-  })
-}
-
-//4. Función que agarra el input y me da un conjunto de datos.
-const newInput = e=> {
-  let input = {products:[], employee:undefined, branchOffice: undefined, year:undefined, month:undefined}
-  compTypes.forEach(e => {
-      let select = document.getElementById(e)
-      let product = data.prices.find(e=>e.id===select.value)
-      input.products.push(product.item)
-  })
-  
-  input.employee  = document.getElementById("employees").value
-  input.branchOffice=document.getElementById("branchOffice").value
-  let auxDate = new Date (document.getElementById("year").value)
-  input.year= auxDate.getFullYear()
-  input.month=auxDate.getMonth()
-  return input
-}
-
-//5. Función que imprime al costado el resultado
+//6. Función que imprime al costado el resultado
 const printResult =(what,where)=>{
-let container = document.getElementById(where)
-container.innerHTML=""
-let result =document.createElement("p")
-result.innerText=what
-container.appendChild(result)
+  const container = document.getElementById(where)
+  container.innerHTML=""
+  const result =document.createElement("p")
+  result.innerText=what
+  container.appendChild(result)
+ }
+
+//7. Funciones para la botonera
+const btnPrecioVenta = e=> {
+  const price = e=> data.prices.find(({item}) => newInput(e).product === item).price
+  printResult (`El precio de venta de ${newInput(e).product} es ARS ${price(e)}`, "result")
 }
 
-//6. Funciones para los botones
-let btnPrecioVenta = e=> {
-printResult (`El precio de venta de ${newInput(e).products} es ARS ${salePrice(newInput(e).products)}`, "result")
+const btnVtasArticulo = e => {
+  printResult(` El ítem "${newInput(e).product}" fue vendido históricamente ${timesSold(newInput(e).product)} veces`, "result")
 }
 
-let btnVtasArticulo = e => {
-printResult(` El ítem "${newInput(e).products[0]}" fue vendido históricamente ${timesSold(newInput(e).products[0])} veces`, "result")
+const btnVendMes = e=> {
+  const aux = employeeOfTheMonth(newInput(e).year,newInput(e).month)
+  if (anySales(newInput(e).year, newInput(e).month)) {
+    if (aux.length < 2) { 
+      printResult(`La mejor vendedora del mes es ${aux}`, "result")
+    } else {
+      printResult(`¡Hay empate! Las mejores vendedoras del mes son ${aux.join(`, `)}`, "result")
+    }
+  } else {printResult(`No hubo ventas en el mes indicado`, "result")}
 }
 
-let btnVendMes = e=> {
-let aux = employeeOfTheMonth(newInput(e).year,newInput(e).month+1)
-if (aux.length < 2) { 
-  printResult(`La mejor vendedora del mes es ${aux}`, "result")
-} else {
-  printResult(`¡Hay empate! Las mejores vendedoras del mes son ${aux}`, "result")
-}
+const btnVentasVend = e => {
+  printResult (`Las ventas históricas de ${newInput(e).employee} son ARS ${salesByEmployee(newInput(e).employee)}`, "result")
 }
 
-let btnVentasVend = e => {
-printResult (`Las ventas históricas de ${newInput(e).employee} son ARS ${salesByEmployee(newInput(e).employee)}`, "result")
+const btnVentMes = e => {
+  printResult (`Las ventas del mes son ${monthlySales(newInput(e).year,newInput(e).month)}`, "result")
 }
 
-let btnVentMes = e => {
-printResult (`Las ventas del mes son ${monthlySales(newInput(e).year,newInput(e).month)}`, "result")
+const btnArtVend = () => {
+  printResult (`El artículo más vendido de la historia es ${bestSeller(data.prices)}`,"result")
 }
 
-let btnArtVend = e => {
-printResult (`El artículo más vendido de la historia es`,"result")
+const btnMejVend = () => {
+  const aux = bestEmployee()
+  if (aux.length<1){  
+    printResult(`La mejor vendedora de la historia es ${aux}`, "result")
+  } else {
+    printResult(`Las mejores vendedoras de la historia son ${aux.join(`, `)}`, "result")
+  }
 }
 
-let btnHuboVent = e => {
-const anySales= data.sales.find(({saleDate})=>newInput(e).month===saleDate.getMonth()&&newInput(e).year===saleDate.getFullYear())
-if (anySales) {
-  printResult(`Hubo ventas en el mes`, "result")
-} else {
-  printResult(`No hubo ventas en el mes`, "result")
-}
+const btnVentSuc = e => {  
+  printResult (`La sucursal ${newInput(e).branchOffice} vendió ARS ${salesByBranchOffice(newInput(e).branchOffice)} desde que comenzó sus operaciones`,"result")}
+
+const btnSucMes = e => {
+  const aux = branchOfTheMonth(newInput(e).year,newInput(e).month)
+  if (anySales(newInput(e).year, newInput(e).month)) {
+    if (aux.length < 2) { 
+      printResult (`La sucursal que más vendió este mes fue ${aux}`,"result")
+    } else {
+      printResult(`¡Hay empate! Las sucursales que más vendieron este mes son ${aux}`, "result")
+    }
+  } else {printResult(`No hubo ventas en el mes indicado`, "result")}
 }
 
-let btnVentSuc = e => {  
-printResult (`La sucursal ${newInput(e).branchOffice} vendió ARS ${salesByBranchOffice(newInput(e).branchOffice)} desde que comenzó sus operaciones`,"result")}
 
-let btnSucMes = e => {
-printResult (`La sucursal que más vendió este mes fue ${branchOfTheMonth(newInput(e).year,newInput(e).month)}`,"result")
-}
 
-//6. Funciones para los reportes
-let renderByMonth = e => {
-printResult(`Las ventas por mes para el año ${e} son:`, "panel-body-one")
-// ver cómo imprimo tabla
-}
 
-let renderBySP = () => {
-printResult(`Las ventas históricas por sucursal son:`, "panel-body-two")
-// ver cómo imprimo tabla
-}
-
-let otherRecords = () => {
-printResult(`El producto más vendido de la vida es "${bestSeller(data.prices)}"
-y la mejor empleada del universo es ${bestEmployee()}`, "panel-body-three")
-}
 
 //inicialización del programa
 const initialize = () => {
-  fillTable()
-  fillOptions()
-  let compDiv = document.getElementById("itemsData")
-  let compDiv2 =document.gete
-  createSelects (compTypes, compDiv)
-  //createSelects (compTypes,)
-  fillSelects(data.prices)
-  fillSelects2(data.employees, "employees")
-  fillSelects2(data.branchOffice, "branchOffice")
-  fillSelects (data.prices)
-  renderByMonth(2019)
-  renderBySP()
-  otherRecords()
+    fillTable()
+    fillOptions()
+    fillSelects(data.prices,"itemsData")
+    fillSelects(data.employees, "employees")
+    fillSelects(data.branchOffice, "branchOffice")
 }
