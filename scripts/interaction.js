@@ -183,7 +183,7 @@ const btnArtVend = () => {
 
 const btnMejVend = () => {
   const aux = bestEmployee()
-  if (aux.length<1){  
+  if (aux.length<2){  
     printResult(`La mejor vendedora de la historia es ${aux}`, "result")
   } else {
     printResult(`Las mejores vendedoras de la historia son ${aux.join(`, `)}`, "result")

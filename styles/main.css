@@ -284,12 +284,13 @@ body .container .secondSection #statistics .salesStats {
   }
 }
 body .container .secondSection #statistics .salesStats form {
-  background-color: #FFF87F;
+  background-color: #fcffc8;
   width: 25%;
   float: left;
   font-family: "Varela Round", sans-serif;
   font-size: 18px;
   border-radius: 10px;
+  padding: 1em;
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
   body .container .secondSection #statistics .salesStats form {
@@ -328,11 +329,12 @@ body .container .secondSection #statistics .salesStats .stats .btn {
 body .container .secondSection #statistics .salesStats .result {
   float: left;
   font-family: "Varela Round", sans-serif;
-  font-size: 20px;
-  background-color: #FFF87F;
+  font-size: 1em;
+  background-color: #fcffc8;
   width: 25%;
   height: 320px;
   border-radius: 10px;
+  padding: 1em;
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
   body .container .secondSection #statistics .salesStats .result {
