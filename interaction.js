@@ -146,10 +146,8 @@ const newInput = ()=> {
 const printResult =(what,where)=>{
   const container = document.getElementById(where)
   container.innerHTML=""
-  const result =document.createElement("p")
-  result.innerText=what
-  container.appendChild(result)
- }
+  container.innerText=what
+}
 
 //7. Funciones para la botonera
 const btnPrecioVenta = e=> {
@@ -207,9 +205,37 @@ const btnSucMes = e => {
   } else {printResult(`No hubo ventas en el mes indicado`, "result")}
 }
 
+const report = () => {
+  
+  if (anySales(new Date().getFullYear,new Date().getMonth+1)) {
+    printResult (employeeOfTheMonth(new Date().getMonth+1).join(`, `),"bestEmployee")
+  } else {
+    printResult (`Aún no hay ventas este mes.`,"bestEmployee")
+  }
 
-
-
+  const monthlyContainer =document.getElementById("monthSales")
+  const salesByMonth = monthlyReport(2019)
+  const listContainer = document.createElement("ul")
+  monthlyContainer.appendChild(listContainer)
+  salesByMonth.forEach(e=>{
+    if (e.sales) {
+    const li = document.createElement("li")
+    li.innerText=`${e.month}: $${e.sales}`
+    listContainer.appendChild(li)
+    }})
+       
+  printResult (`${bestSeller(data.prices)}`,"bestProduct")
+  
+  const boContainer =document.getElementById("boSales")
+  const salesByBO=listSalesBySP(data.branchOffice)
+  const listContainer2 = document.createElement("ul")
+  boContainer.appendChild(listContainer2)
+  salesByBO.forEach(e=>{
+    const li = document.createElement("li")
+    li.innerText=`${e.branchOffice}: $${e.sales}`
+    listContainer2.appendChild(li)
+    })
+}
 
 //inicialización del programa
 const initialize = () => {
@@ -218,4 +244,5 @@ const initialize = () => {
     fillSelects(data.prices,"itemsData")
     fillSelects(data.employees, "employees")
     fillSelects(data.branchOffice, "branchOffice")
+    report ()
 }

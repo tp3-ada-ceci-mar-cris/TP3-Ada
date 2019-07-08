@@ -170,18 +170,18 @@ console.log (`(punto 12) La sucursal con mejores ventas del mes ${mesCris} de ${
 //13. Reporte con las ventas por sucursal y por mes:
 let monthlyReport = year=> {
   let saleByMonth =[
-      {month:"enero", sales:undefined},
-      {month:"febrero", sales:undefined},
-      {month:"marzo", sales:undefined},
-      {month:"abril", sales:undefined},
-      {month:"mayo", sales:undefined},
-      {month:"junio", sales:undefined},
-      {month:"julio", sales:undefined},
-      {month:"agosto", sales:undefined},
-      {month:"septiembre", sales:undefined},
-      {month:"octubre", sales:undefined},
-      {month:"noviembre", sales:undefined},
-      {month:"diciembre", sales:undefined},
+      {month:"Enero", sales:undefined},
+      {month:"Febrero", sales:undefined},
+      {month:"Marzo", sales:undefined},
+      {month:"Abril", sales:undefined},
+      {month:"Mayo", sales:undefined},
+      {month:"Junio", sales:undefined},
+      {month:"Julio", sales:undefined},
+      {month:"Agosto", sales:undefined},
+      {month:"Septiembre", sales:undefined},
+      {month:"Octubre", sales:undefined},
+      {month:"Noviembre", sales:undefined},
+      {month:"Diciembre", sales:undefined},
   ]
   saleByMonth.map((eachMonth,i)=>{
       eachMonth.sales = (monthlySales(year,i+1))

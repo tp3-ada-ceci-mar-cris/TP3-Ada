@@ -8,6 +8,7 @@
     <title>Unicorn Store</title>
     <script src='main.js' type='text/javascript'></script>
     <script src='interaction.js' type='text/javascript'></script>
+    <link rel="icon" type="png" href="image/unicorn.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css">
@@ -167,12 +168,32 @@
                             <button type="button" class="btn btn-outline-primary" onclick="btnVentMes()">Ventas del
                                 Mes</button>
                         </nav>
-                        <div class="result" id="result">
-                            <p>En esta ventana se mostrarán los resultados de la opción que elija para los datos ingresados a la izquierda. Las opciones "Mejor vendedora" y "Artículo más vendido" no requieren datos de ingreso.</p>
+                        <div class="result">
+                            <p  id="result">En esta ventana se mostrarán los resultados de la opción que elija para los datos ingresados a la izquierda. Las opciones "Mejor vendedora" y "Artículo más vendido" no requieren datos de ingreso.</p>
                         </div>
                     </div>
                 </div>
+            <div>
+                <h3>REPORTE DEL MES</h3>
+                <div>
+                    <h4>Vendedora del mes</h4>
+                    <p id="bestEmployee"></p>
+                </div>
+                <div>
+                    <h4>Ventas por mes</h4>
+                    <p id="monthSales"></p>
+                </div>
+                <div>
+                    <h4>Producto estrella</h4>
+                    <p id="bestProduct"></p>
+                </div>
+                <div>
+                    <h4>Ventas por sucursal</h4>
+                    <p id="boSales"></p>
+                </div>
+            </div>
         </section>
+              
         <footer>
             <div class="footer-container">
                 <div class="footer-block">
