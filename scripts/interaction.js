@@ -179,11 +179,19 @@ const btnPrecioVenta = e => {
   const price = e => data.prices.find(({
     item
   }) => newInput(e).product === item).price
-  printResult(`El precio de venta de ${newInput(e).product} es ARS ${price(e)}`, "result")
+  if (newInput(e).product !== `Seleccione opción`) {
+    printResult(`El precio de venta de ${newInput(e).product} es ARS ${price(e)}`, "result")
+  } else {
+    printResult(`No hay artículo seleccionado`, "result")
+  }
 }
 
 const btnVtasArticulo = e => {
-  printResult(` El ítem "${newInput(e).product}" fue vendido históricamente ${timesSold(newInput(e).product)} veces`, "result")
+  if (newInput(e).product !== `Seleccione opción`) {
+    printResult(`El ítem "${newInput(e).product}" fue vendido históricamente ${timesSold(newInput(e).product)} veces`, "result")
+  } else {
+    printResult(`No hay artículo seleccionado`, "result")
+  }
 }
 
 const btnVendMes = e => {
@@ -200,7 +208,11 @@ const btnVendMes = e => {
 }
 
 const btnVentasVend = e => {
-  printResult(`Las ventas históricas de ${newInput(e).employee} son ARS ${salesByEmployee(newInput(e).employee)}`, "result")
+  if (newInput(e).employee !== `Seleccione opción`) {
+    printResult(`Las ventas históricas de ${newInput(e).employee} son ARS ${salesByEmployee(newInput(e).employee)}`, "result")
+  } else {
+    printResult(`No hay vendedora seleccionada`, "result")
+  }
 }
 
 const btnVentMes = e => {
@@ -221,7 +233,11 @@ const btnMejVend = () => {
 }
 
 const btnVentSuc = e => {
-  printResult(`La sucursal ${newInput(e).branchOffice} vendió ARS ${salesByBranchOffice(newInput(e).branchOffice)} desde que comenzó sus operaciones`, "result")
+  if (newInput(e).branchOffice !== `Seleccione opción`) {
+    printResult(`La sucursal ${newInput(e).branchOffice} vendió ARS ${salesByBranchOffice(newInput(e).branchOffice)} desde que comenzó sus operaciones`, "result")
+  } else {
+    printResult(`No hay sucursal seleccionada`, "result")
+  }
 }
 
 const btnSucMes = e => {
