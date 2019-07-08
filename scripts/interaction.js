@@ -90,7 +90,17 @@ const fillOptions = () => {
     branchSelector.appendChild(option)
     return option
   })
-}
+
+  $('[data-dismiss=modal]').on('click', function (e) {
+    var $t = $(this),
+      target = $t[0].href || $t.data("target") || $t.parents('.modal') || [];
+
+    $(target)
+      .find("input[type=checkbox], input[type=radio]")
+      .prop("checked", "")
+      .end();
+  })
+  }
 
 //3. Para crear nuevas ventas  
 const createSale = () => {
