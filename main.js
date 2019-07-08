@@ -2,6 +2,7 @@ let data = {
   employees: ["Cristina", "Marina", "Cecilia", "Rosalia"],
 
   sales: [
+    { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Cartuchera unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio", "Brocha unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 24), employeeName: "Cristina", itemSold: ["Bata unicornio rosa", "Vincha rígida unicornio"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 01), employeeName: "Rosalia", itemSold: ["Llavero unicornio", "Cartuchera unicornio"], branchOffice : "Centro"},
@@ -111,21 +112,20 @@ bestSeller(data.prices).length < 2 ?
   console.log (`(punto 6) El componente históricamente más vendido es ${bestSeller(data.prices)}`) 
   : console.log (`(punto 6) Los componentes históricamente más vendidos son ${bestSeller(data.prices)}`)
 
-//7. huboVentas(mes, anio): 
-let anySales = (year,realMonth)=> {
-  const month=realMonth-1
-  const checkMonth= data.sales.find(({saleDate})=>month===saleDate.getMonth()&&year===saleDate.getFullYear())? true: false
-  return checkMonth
-}
-
-//esta parte es para probar
-const anio4=2019
-const mes4 =4
-anySales(anio4,mes4)
-  ?console.log(`(punto 7) Hubo ventas en el mes ${mes4} de ${anio4}`)
-  :console.log(`(punto 7) No hubo ventas en el mes ${mes4} de ${anio4}`)
-
-   
+  let anySales = (year,realMonth)=> {
+    const month=realMonth-1
+    const checkMonth= data.sales.find(({saleDate})=>month===saleDate.getMonth()&&year===saleDate.getFullYear())? true: false
+    return checkMonth
+  }
+  
+  //esta parte es para probar
+  const anio4=2019
+  const mes4 =4
+  anySales(anio4,mes4)
+    ?console.log(`(punto 7) Hubo ventas en el mes ${mes4} de ${anio4}`)
+    :console.log(`(punto 7) No hubo ventas en el mes ${mes4} de ${anio4}`)
+  
+     
 //PUNTO 2
 //8. En las ventas ya existentes, agregar la propiedad sucursal con el valor Centro 
 //Se hace a mano  
@@ -149,6 +149,7 @@ let salesByBranchOffice = name => {
 const sucursal = "Caballito"
 console.log(`(punto 11) Las ventas históricas de ${sucursal} ascienden a ARS ${salesByBranchOffice(sucursal)}`)
 
+
 //12. sucursalDelMes(mes, anio) 
 let branchOfTheMonth = (year, month) => {
   const monthlySales = data.sales.filter(({saleDate})=>saleDate.getFullYear()===year && saleDate.getMonth()===month-1)
@@ -158,7 +159,7 @@ let branchOfTheMonth = (year, month) => {
   const bestSale = Math.max(...sPMonthlySales.map(({sales})=>sales).flat())
   const bestOfficeList = sPMonthlySales.filter(({sales})=> sales>= bestSale).map(({office})=>office).flat()
   return bestOfficeList
-}
+  }
 
 //esta parte es para probar
 const anioCris=2019

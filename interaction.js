@@ -3,7 +3,6 @@ const fillTable = () => {
   data.sales.sort(function(a, b) {
       return b.saleDate - a.saleDate
   })
-  
   const dateList = document.getElementById('dateList')
   dateList.innerHTML=""
   data.sales.forEach(item => {
@@ -25,11 +24,7 @@ const fillTable = () => {
   data.sales.forEach(item => {
     const li = document.createElement('li')
     itemList.appendChild(li)
-    if (item.length>1){
-      li.innerText = item.itemSold.join(`, `)
-    }else {
-      li.innerText = item.itemSold
-    }
+    li.innerText = item.itemSold.join(`, `)
   })
 
   const branchList = document.getElementById('branchList')
@@ -49,7 +44,7 @@ const fillTable = () => {
   })
 }
 
-// Para completar las opciones del modal
+//2. Para completar las opciones del modal
 const fillOptions = () => {
   data.employees.forEach(name => {
     let option = document.createElement('option')
@@ -91,17 +86,16 @@ const fillOptions = () => {
   })
 }
 
-//2. Para crear nuevas ventas  
+//3. Para crear nuevas ventas  
 const createSale = () => {
   let saleDateField = document.getElementById('enterSaleDate')
   let employeeNameField = document.getElementById('selectEmployeeName')
   let productCheckbox = document.getElementsByName('productCheckbox')
-  let selectedItems = " "
+  let selectedItems =[]
   for (let i=0; i<productCheckbox.length; i++){
     if(productCheckbox[i].type=='checkbox' && productCheckbox[i].checked==true)
-    selectedItems+=productCheckbox[i].value
+    selectedItems.push(productCheckbox[i].value)
   }
-  
   let branchOfficeField = document.getElementById('selectBranchOffice')
   let newSale = {
     saleDate: new Date (saleDateField.value), 
@@ -110,8 +104,7 @@ const createSale = () => {
     branchOffice: branchOfficeField.value
   }
   data.sales.unshift(newSale) 
-  console.log(newSale)
-  fillTable()// FALTA HACER QUE SE CIERRE EL MODAL
+  fillTable()
 }
 
 //4. Para armar selects y opciones en las estadísticas
@@ -137,7 +130,7 @@ const fillSelects =(list,type) => {
 }
 
 //5. Función que agarra el input y me da un conjunto de datos que pueda usar en la botonera
-const newInput = e=> {
+const newInput = ()=> {
     const input = {product:undefined, employee:undefined, branchOffice: undefined, year:undefined, month:undefined}
     input.product = document.getElementById("itemsData").value
     input.employee  = document.getElementById("employees").value
@@ -145,7 +138,7 @@ const newInput = e=> {
     const auxDate = new Date (document.getElementById("year").value)
     input.year= auxDate.getFullYear()
     input.month=auxDate.getMonth()+1
-    return input
+    return input    
 }
 
 //6. Función que imprime al costado el resultado
@@ -173,7 +166,7 @@ const btnVendMes = e=> {
     if (aux.length < 2) { 
       printResult(`La mejor vendedora del mes es ${aux}`, "result")
     } else {
-      printResult(`¡Hay empate! Las mejores vendedoras del mes son ${aux}`, "result")
+      printResult(`¡Hay empate! Las mejores vendedoras del mes son ${aux.join(`, `)}`, "result")
     }
   } else {printResult(`No hubo ventas en el mes indicado`, "result")}
 }
@@ -186,12 +179,17 @@ const btnVentMes = e => {
   printResult (`Las ventas del mes son ${monthlySales(newInput(e).year,newInput(e).month)}`, "result")
 }
 
-const btnArtVend = e => {
+const btnArtVend = () => {
   printResult (`El artículo más vendido de la historia es ${bestSeller(data.prices)}`,"result")
 }
 
-const btnMejVend = e => {
-  printResult(`La mejor vendedora de la historia es ${bestEmployee()}`, "result")
+const btnMejVend = () => {
+  const aux = bestEmployee()
+  if (aux.length<1){  
+    printResult(`La mejor vendedora de la historia es ${aux}`, "result")
+  } else {
+    printResult(`Las mejores vendedoras de la historia son ${aux.join(`, `)}`, "result")
+  }
 }
 
 const btnVentSuc = e => {  
@@ -207,6 +205,10 @@ const btnSucMes = e => {
     }
   } else {printResult(`No hubo ventas en el mes indicado`, "result")}
 }
+
+
+
+
 
 //inicialización del programa
 const initialize = () => {
