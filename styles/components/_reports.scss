@@ -1,33 +1,39 @@
-#reports{
+#reports {
     margin: 100px auto;
     font-family: $backFont;
     width: 95%;
     margin-bottom: 150px;
+
     h3 {
         @include title
     }
+
     .report-container {
-        display:flex;
-        justify-content:space-between;
+        display: flex;
+        justify-content: space-between;
         margin: 0 auto;
         width: 95%;
         border: 1px purple dotted;
         padding: 50px 40px;
         overflow: hidden;
         border-radius: 25px;
-        @media screen  and (min-width: 320px) and (max-width: 768px){
-            display: block; 
+
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+            display: block;
         }
+
         h4 {
-            color:$generalColor;
+            color: $generalColor;
         }
+
         ul {
             list-style-type: none;
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
+
             li {
-                margin:0;
-                padding:0;
+                margin: 0;
+                padding: 0;
             }
         }
 

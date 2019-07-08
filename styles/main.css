@@ -207,7 +207,8 @@ body .container .secondSection .footy {
   width: 100%;
   height: 50px;
 }
-body .container .secondSection .create-sale-btn, body .container .secondSection .cancel-btn {
+body .container .secondSection .create-sale-btn,
+body .container .secondSection .cancel-btn {
   font-family: "Varela Round", sans-serif;
   border: 1px solid pink;
   text-decoration: none;
@@ -240,7 +241,8 @@ body .container .secondSection .modal-body .product-selector #selectItemSold {
   display: flex;
   flex-direction: column;
 }
-body .container .secondSection .modal-body .product-selector #selectItemSold input, body .container .secondSection .modal-body .product-selector #selectItemSold label {
+body .container .secondSection .modal-body .product-selector #selectItemSold input,
+body .container .secondSection .modal-body .product-selector #selectItemSold label {
   display: inline-block;
 }
 body .container .secondSection .footy {

@@ -4,10 +4,12 @@ header {
     height: 180px;
     background-size: cover;
     text-align: center;
-    @media screen  and (min-width: 320px) and (max-width: 768px){
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
         width: 100%;
     }
-    a{  
+
+    a {
         h1 {
             font-family: $titleFont;
             font-size: 130px;
@@ -16,12 +18,14 @@ header {
             color: white;
             text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
             letter-spacing: 4px;
-            @media screen  and (min-width: 320px) and (max-width: 768px){
+
+            @media screen and (min-width: 320px) and (max-width: 768px) {
                 font-size: 60px;
             }
         }
-        &:hover{
+
+        &:hover {
             text-decoration: none;
         }
-    }        
-} 
+    }
+}

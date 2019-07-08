@@ -1,6 +1,6 @@
 .turn {
     margin: 40px auto;
-    
+
     .carousel-inner {
         background-image: url(../images/productos.jpg);
         background-size: cover;
@@ -11,21 +11,26 @@
         text-align: center;
         background-color: pink;
         border-radius: 30px;
-        @media screen  and (min-width: 320px) and (max-width: 768px){
+
+        @media screen and (min-width: 320px) and (max-width: 768px) {
             background-image: none;
             height: 120px;
             width: 300px;
             font-size: 30px;
         }
+
         .carousel-item {
             margin-top: 150px;
-            @media screen  and (min-width: 320px) and (max-width: 768px){
-                margin-top: 40px; 
+
+            @media screen and (min-width: 320px) and (max-width: 768px) {
+                margin-top: 40px;
             }
         }
     }
+
     a {
         text-decoration: none;
+
         span {
             color: white;
             background-color: purple;
@@ -34,6 +39,7 @@
         }
     }
 }
+
 .footy {
     @include footy(100px)
 }
