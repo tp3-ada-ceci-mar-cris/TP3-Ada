@@ -1,6 +1,7 @@
 .footy {
     @include footy(50px)
 }
+
 #statistics {
     margin: 100px auto;
     font-family: $backFont;
@@ -10,15 +11,17 @@
     @media screen  and (min-width: 320px) and (max-width: 767px){
         margin: 40px auto;
     }
+
     h3 {
         @include title;
-        
+
     }
-    .salesStats{
+
+    .salesStats {
         border: 1px purple dotted;
         padding: 40px;
         overflow: hidden;
-        border-radius: 25px; 
+        border-radius: 25px;
         display: flex;
         justify-content: space-around;
         @media screen  and (min-width: 768px) and (max-width: 1211px){
@@ -30,8 +33,9 @@
             display: block; 
             padding: 20px 10px;
         }
-        form{
-            background-color: #FFF87F;
+
+        form {
+            background-color: #fcffc8;
             width: 25%;
             float: left;
             font-family: $backFont;
@@ -45,16 +49,18 @@
                 width: 100%; 
                 margin-bottom: 20px;
             }
-            .dateInput{
+
+            .dateInput {
                 font-family: $backFont;
                 font-size: 15px;
                 border-radius: 20px;
                 margin: 10px 10px;
-                    
+
             }
-            
+
         }
-        .stats{
+
+        .stats {
             float: left;
             width: 40%;
             margin-left: 50px;
@@ -77,14 +83,15 @@
                 height: 80px;
                 padding: 0 10px;
                 font-weight: bold;
-                
+
             }
         }
-        .result{
+
+        .result {
             float: left;
             font-family: $backFont;
-            font-size: 20px;
-            background-color: #FFF87F;
+            font-size: 1em;
+            background-color: #fcffc8;
             width: 25%;
             height: 320px;
             border-radius: 10px;
@@ -98,7 +105,8 @@
                 height: 200px;
                 margin-top: 20px;
             }
-            p{
+
+            p {
                 margin-left: 10px;
                 margin-top: 10px;
                 @media screen  and (min-width: 320px) and (max-width: 767px){

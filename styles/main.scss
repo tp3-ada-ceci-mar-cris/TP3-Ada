@@ -6,7 +6,7 @@ $screen-lg-min: 768px;
 
 //MIXINS
 @mixin footy($height) {
-    background-image: url(../image/fondoC.jpg);
+    background-image: url(../images/fondoC.jpg);
     background-size: cover;
     width: 100%;
     height: $height;
@@ -40,7 +40,7 @@ $screen-lg-min: 768px;
     font-size: 20px;
     font-weight: bold;
     color: black;
-    background-image: url(../image/fondoC.jpg);
+    background-image: url(../images/fondoC.jpg);
     border-radius: 10px;
     padding: 10px 5px;
 }
@@ -67,7 +67,8 @@ body {
         .secondSection {
             @import "components/sale";
             @import "components/modal";
-            @import "components/stadistics";
+            @import "components/statistics";
+            @import "components/reports";
         }
         @import "components/footer"; 
     } 

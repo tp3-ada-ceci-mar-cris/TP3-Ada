@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang='sp'>
-
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>Unicorn Store</title>
-    <script src='main.js' type='text/javascript'></script>
-    <script src='interaction.js' type='text/javascript'></script>
+    <script src='scripts/main.js' type='text/javascript'></script>
+    <script src='scripts/interaction.js' type='text/javascript'></script>
+    <link rel="icon" type="png" href="images/unicorn.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css">
@@ -24,7 +24,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 </head>
-
 <body onload="initialize()">
     <header>
         <a href="#">
@@ -39,10 +38,10 @@
                         <a href="#sales"><span>Ventas</span></a>
                     </div>
                     <div class="carousel-item">
-                        <a href="#statistics"><span>Estadisticas</span></a>
+                        <a href="#statistics"><span>Estadísticas</span></a>
                     </div>
                     <div class="carousel-item">
-                        <a href="#footer"><span>+ Info</span></a>
+                        <a href="#reports"><span>+ Info</span></a>
                     </div>
                     <a class="carousel-control-prev arrow" href="#carouselExampleControls" role="button"
                         data-slide="prev">
@@ -64,30 +63,30 @@
                 <div class="table-border">
                     <div class="table">
                         <div class="table-header-container">
-                        <ul>
-                            <li class="table-header" id="header-1">Fecha</li> 
-                            <li class="table-header" id="header-2">Vendedora</li>
-                            <li class="table-header" id="header-3">Producto</li>
-                            <li class="table-header" id="header-4">Sucursal</li>
-                            <li class="table-header" id="header-5">Monto</li>
-                        </ul>
+                            <ul>
+                                <li class="table-header" id="header-1">Fecha</li>
+                                <li class="table-header" id="header-2">Vendedora</li>
+                                <li class="table-header" id="header-3">Producto</li>
+                                <li class="table-header" id="header-4">Sucursal</li>
+                                <li class="table-header" id="header-5">Monto</li>
+                            </ul>
                         </div>
                         <div class="table-body">
-                        <ul id="dateList">
+                            <ul id="dateList">
 
-                        </ul>
-                        <ul id="nameList">
+                            </ul>
+                            <ul id="nameList">
 
-                        </ul>
-                        <ul id="itemList" class="itemList">
+                            </ul>
+                            <ul id="itemList" class="itemList">
 
-                        </ul>
-                        <ul id="branchList">
+                            </ul>
+                            <ul id="branchList">
 
-                        </ul>
-                        <ul id="priceList">
+                            </ul>
+                            <ul id="priceList">
 
-                        </ul>
+                            </ul>
                         </div>
                     </div>
                     <a href="#" class="newSale" data-toggle="modal" data-target="#myModal">Nueva venta</a>
@@ -125,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="create-sale-btn" onclick="createSale()">Crear</button>
+                                <button class="create-sale-btn" onclick="createSale()" data-dismiss="modal">Crear</button>
                                 <button type="button" class="cancel-btn" data-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
@@ -147,9 +146,10 @@
                         <nav class="stats">
                             <button type="button" class="btn btn-outline-primary" onclick="btnPrecioVenta()">Precio
                                 Artículo</button>
-                            <button type="button" class="btn btn-outline-secondary" onclick="btnVtasArticulo()">Ventas por
+                            <button type="button" class="btn btn-outline-secondary" onclick="btnVtasArticulo()">Ventas
+                                por
                                 Artículo</button>
-                            <button type="button" class="btn btn-outline-danger" onclick="btnArtVend()">Artículo mas
+                            <button type="button" class="btn btn-outline-danger" onclick="btnArtVend()">Artículo más
                                 Vendido</button>
                             <button type="button" class="btn btn-outline-warning" onclick="btnVendMes()">Vendedora del
                                 Mes</button>
@@ -165,7 +165,31 @@
                                 Mes</button>
                         </nav>
                         <div class="result" id="result">
-                            <p>En esta ventana se mostrarán los resultados de la opción que elija para los datos ingresados. Las opciones "Mejor vendedora" y "Artículo más vendido" no requieren datos de ingreso.</p>
+                            <p>En esta ventana se mostrarán los resultados de la opción que elija para los datos
+                                ingresados. Las opciones "Mejor vendedora" y "Artículo más vendido" no requieren datos
+                                de ingreso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footy"></div>
+                <div id="reports">
+                    <h3>REPORTE DEL MES</h3>
+                    <div class="report-container">
+                        <div>
+                            <h4>Vendedora del mes</h4>
+                            <p id="bestEmployee"></p>
+                        </div>
+                        <div>
+                            <h4>Ventas por mes</h4>
+                            <p id="monthSales"></p>
+                        </div>
+                        <div>
+                            <h4>Producto estrella</h4>
+                            <p id="bestProduct"></p>
+                        </div>
+                        <div>
+                            <h4>Ventas por sucursal</h4>
+                            <p id="boSales"></p>
                         </div>
                     </div>
                 </div>
@@ -220,5 +244,4 @@
         </footer>
     </div>
 </body>
-
 </html>

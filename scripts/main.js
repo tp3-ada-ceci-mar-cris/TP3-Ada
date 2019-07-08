@@ -91,7 +91,8 @@ console.log(`(punto 4) Las ventas históricas de ${nombre} ascienden a ARS ${sal
 
 //5. ventasMes(mes, anio)
 let monthlySales = (year, month) => 
-  salePrice(data.sales.filter(({saleDate})=>saleDate.getFullYear()===year && saleDate.getMonth()===month-1).map(({itemSold})=>itemSold).flat())
+  salePrice(data.sales.filter(({saleDate})=>saleDate.getFullYear()===year && saleDate.getMonth()===month-1).map(
+    ({itemSold})=>itemSold).flat())
 
 //esta parte es para probar
 const mes= 2
@@ -108,15 +109,11 @@ let bestSeller = salesList => {
 }
 
 // esta parte es para probar
-bestSeller(data.prices).length < 2 ? 
-  console.log (`(punto 6) El componente históricamente más vendido es ${bestSeller(data.prices)}`) 
-  : console.log (`(punto 6) Los componentes históricamente más vendidos son ${bestSeller(data.prices)}`)
-
-  let anySales = (year,realMonth)=> {
-    const month=realMonth-1
-    const checkMonth= data.sales.find(({saleDate})=>month===saleDate.getMonth()&&year===saleDate.getFullYear())? true: false
-    return checkMonth
-  }
+let anySales = (year,realMonth)=> {
+  const month=realMonth-1
+  const checkMonth= data.sales.find(({saleDate})=>month===saleDate.getMonth()&&year===saleDate.getFullYear())? true: false
+  return checkMonth
+}
   
   //esta parte es para probar
   const anio4=2019
@@ -170,18 +167,18 @@ console.log (`(punto 12) La sucursal con mejores ventas del mes ${mesCris} de ${
 //13. Reporte con las ventas por sucursal y por mes:
 let monthlyReport = year=> {
   let saleByMonth =[
-      {month:"enero", sales:undefined},
-      {month:"febrero", sales:undefined},
-      {month:"marzo", sales:undefined},
-      {month:"abril", sales:undefined},
-      {month:"mayo", sales:undefined},
-      {month:"junio", sales:undefined},
-      {month:"julio", sales:undefined},
-      {month:"agosto", sales:undefined},
-      {month:"septiembre", sales:undefined},
-      {month:"octubre", sales:undefined},
-      {month:"noviembre", sales:undefined},
-      {month:"diciembre", sales:undefined},
+      {month:"Enero", sales:undefined},
+      {month:"Febrero", sales:undefined},
+      {month:"Marzo", sales:undefined},
+      {month:"Abril", sales:undefined},
+      {month:"Mayo", sales:undefined},
+      {month:"Junio", sales:undefined},
+      {month:"Julio", sales:undefined},
+      {month:"Agosto", sales:undefined},
+      {month:"Septiembre", sales:undefined},
+      {month:"Octubre", sales:undefined},
+      {month:"Noviembre", sales:undefined},
+      {month:"Diciembre", sales:undefined},
   ]
   saleByMonth.map((eachMonth,i)=>{
       eachMonth.sales = (monthlySales(year,i+1))

@@ -6,7 +6,7 @@
         margin-left: -2px;
     }
     .carousel-inner {
-        background-image: url(../image/productos.jpg);
+        background-image: url(../images/productos.jpg);
         background-size: cover;
         background-position: center;
         height: 420px;
@@ -38,8 +38,10 @@
             }
         }
     }
+
     a {
         text-decoration: none;
+
         span {
             color: white;
             background-color: purple;
@@ -48,6 +50,7 @@
         }
     }
 }
+
 .footy {
     @include footy(100px)
 }

@@ -1,5 +1,5 @@
 body header {
-  background-image: url(../image/fondoC.jpg);
+  background-image: url(../images/fondoC.jpg);
   width: 100vw;
   height: 180px;
   background-size: cover;
@@ -69,7 +69,7 @@ body .container .firstSection .turn {
   }
 }
 body .container .firstSection .turn .carousel-inner {
-  background-image: url(../image/productos.jpg);
+  background-image: url(../images/productos.jpg);
   background-size: cover;
   background-position: center;
   height: 420px;
@@ -117,7 +117,7 @@ body .container .firstSection .turn a span {
   padding: 15px;
 }
 body .container .firstSection .footy {
-  background-image: url(../image/fondoC.jpg);
+  background-image: url(../images/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 100px;
@@ -302,7 +302,7 @@ body .container .secondSection #sales .newSale {
   font-size: 20px;
   font-weight: bold;
   color: black;
-  background-image: url(../image/fondoC.jpg);
+  background-image: url(../images/fondoC.jpg);
   border-radius: 10px;
   padding: 10px 5px;
 }
@@ -312,11 +312,12 @@ body .container .secondSection #sales .newSale {
   }
 }
 body .container .secondSection .footy {
-  background-image: url(../image/fondoC.jpg);
+  background-image: url(../images/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 50px;
 }
+<<<<<<< HEAD
 @media screen and (min-width: 768px) and (max-width: 1211px) {
   body .container .secondSection .footy {
     width: 550px;
@@ -328,13 +329,17 @@ body .container .secondSection .footy {
   }
 }
 body .container .secondSection .create-sale-btn, body .container .secondSection .cancel-btn {
+=======
+body .container .secondSection .create-sale-btn,
+body .container .secondSection .cancel-btn {
+>>>>>>> bcc6239a1c1b52ce72dcfa97bcc73f65069c3df3
   font-family: "Varela Round", sans-serif;
   border: 1px solid pink;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
   color: black;
-  background-image: url(../image/fondoC.jpg);
+  background-image: url(../images/fondoC.jpg);
   border-radius: 10px;
   padding: 10px 5px;
 }
@@ -360,11 +365,12 @@ body .container .secondSection .modal-body .product-selector #selectItemSold {
   display: flex;
   flex-direction: column;
 }
-body .container .secondSection .modal-body .product-selector #selectItemSold input, body .container .secondSection .modal-body .product-selector #selectItemSold label {
+body .container .secondSection .modal-body .product-selector #selectItemSold input,
+body .container .secondSection .modal-body .product-selector #selectItemSold label {
   display: inline-block;
 }
 body .container .secondSection .footy {
-  background-image: url(../image/fondoC.jpg);
+  background-image: url(../images/fondoC.jpg);
   background-size: cover;
   width: 100%;
   height: 50px;
@@ -432,12 +438,13 @@ body .container .secondSection #statistics .salesStats {
   }
 }
 body .container .secondSection #statistics .salesStats form {
-  background-color: #FFF87F;
+  background-color: #fcffc8;
   width: 25%;
   float: left;
   font-family: "Varela Round", sans-serif;
   font-size: 18px;
   border-radius: 10px;
+  padding: 1em;
 }
 @media screen and (min-width: 768px) and (max-width: 1211px) {
   body .container .secondSection #statistics .salesStats form {
@@ -488,11 +495,12 @@ body .container .secondSection #statistics .salesStats .stats .btn {
 body .container .secondSection #statistics .salesStats .result {
   float: left;
   font-family: "Varela Round", sans-serif;
-  font-size: 20px;
-  background-color: #FFF87F;
+  font-size: 1em;
+  background-color: #fcffc8;
   width: 25%;
   height: 320px;
   border-radius: 10px;
+  padding: 1em;
 }
 @media screen and (min-width: 768px) and (max-width: 1211px) {
   body .container .secondSection #statistics .salesStats .result {
@@ -516,6 +524,50 @@ body .container .secondSection #statistics .salesStats .result p {
   body .container .secondSection #statistics .salesStats .result p {
     font-size: 16px;
   }
+}
+body .container .secondSection #reports {
+  margin: 100px auto;
+  font-family: "Varela Round", sans-serif;
+  width: 95%;
+  margin-bottom: 150px;
+}
+body .container .secondSection #reports h3 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 55px;
+  text-align: center;
+  margin: 30px 0;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #reports h3 {
+    font-size: 40px;
+  }
+}
+body .container .secondSection #reports .report-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 95%;
+  border: 1px purple dotted;
+  padding: 50px 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #reports .report-container {
+    display: block;
+  }
+}
+body .container .secondSection #reports .report-container h4 {
+  color: purple;
+}
+body .container .secondSection #reports .report-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body .container .secondSection #reports .report-container ul li {
+  margin: 0;
+  padding: 0;
 }
 body .container footer {
   font-family: "Varela Round", sans-serif;
@@ -601,7 +653,7 @@ body .container footer .footer-container .footer-newsletter .subscribe-bttn {
   font-size: 20px;
   font-weight: bold;
   color: black;
-  background-image: url(../image/fondoC.jpg);
+  background-image: url(../images/fondoC.jpg);
   border-radius: 10px;
   padding: 10px 5px;
   font-size: 15px;
@@ -614,8 +666,12 @@ body .container footer .footer-container .footer-newsletter .subscribe-bttn {
 body .container footer .copyrightandlinks {
   display: flex;
   justify-content: space-between;
+<<<<<<< HEAD
   margin: 0 auto;
   width: 100%;
+=======
+  width: 90%;
+>>>>>>> bcc6239a1c1b52ce72dcfa97bcc73f65069c3df3
   margin: 80px 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1211px) {

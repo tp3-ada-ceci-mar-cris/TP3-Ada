@@ -1,38 +1,41 @@
-#reports{
+#reports {
     margin: 100px auto;
     font-family: $backFont;
     width: 95%;
     margin-bottom: 150px;
+
     h3 {
         @include title
     }
-    .collapse-group {
-        padding: 50px 40px;
+
+    .report-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 95%;
         border: 1px purple dotted;
+        padding: 50px 40px;
+        overflow: hidden;
         border-radius: 25px;
-        margin-bottom: 10px;
-        .panel {
-            padding: 20px 40px;
-            color: purple;
-            div{
-                .panel-title {
-                    font-family: $backFont;
-                    font-size: 30px;
-                    margin: 30px 0;
-                    a{
-                        color: purple;
-                        text-decoration: none;
-                        text-justify: right;
-                    }
-                }
-            }
-            div{
-                .panel-body{
-                    font-family: $backFont;
-                    font-size: 18px;
-                }
-            }
-                    
+
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+            display: block;
         }
+
+        h4 {
+            color: $generalColor;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
     }
 }
