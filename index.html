@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -27,11 +27,11 @@
 </head>
 
 <body onload="initialize()">
-    <header> 
+    <header>
         <a href="#">
             <h1>Unicorn Store</h1>
         </a>
-    </header> 
+    </header>
     <div class="container">
         <section class="firstSection">
             <div id="carouselExampleControls" class="carousel slide turn" data-ride="carousel">
@@ -43,7 +43,7 @@
                         <a href="#statistics"><span>Estadisticas</span></a>
                     </div>
                     <div class="carousel-item">
-                        <a href="#reports"><span>Reportes</span></a>
+                        <a href="#footer"><span>+ Info</span></a>
                     </div>
                     <a class="carousel-control-prev arrow" href="#carouselExampleControls" role="button"
                         data-slide="prev">
@@ -111,20 +111,17 @@
                                     <div class="employee-selector">
                                         <p>Seleccione la empleada:</p>
                                         <select id="selectEmployeeName" value="">
-
                                         </select>
                                     </div>
                                     <div class="branch-selector">
                                         <p>Seleccione la sucursal:</p>
                                         <select id="selectBranchOffice" value="">
-
                                         </select>
                                     </div>
                                 </div>
                                 <div class="product-selector">
                                     <p>Seleccione los productos vendidos:</p>
                                     <form id="selectItemSold">
-
                                     </form>
                                 </div>
                             </div>
@@ -168,8 +165,8 @@
                             <button type="button" class="btn btn-outline-primary" onclick="btnVentMes()">Ventas del
                                 Mes</button>
                         </nav>
-                        <div class="result">
-                            <p  id="result">En esta ventana se mostrarán los resultados de la opción que elija para los datos ingresados a la izquierda. Las opciones "Mejor vendedora" y "Artículo más vendido" no requieren datos de ingreso.</p>
+                        <div class="result" id="result">
+                            <p>En esta ventana se mostrarán los resultados de la opción que elija para los datos ingresados. Las opciones "Mejor vendedora" y "Artículo más vendido" no requieren datos de ingreso.</p>
                         </div>
                     </div>
                 </div>
@@ -193,8 +190,7 @@
                 </div>
             </div>
         </section>
-              
-        <footer>
+        <footer id="footer">
             <div class="footer-container">
                 <div class="footer-block">
                     <h5>Tienda en línea</h5>
@@ -226,7 +222,7 @@
                 <div class="footer-newsletter">
                     <h5>Newsletter</h5>
                     <p>Suscribite para recibir nuestras novedades.</p>
-                    <input type="email" id="sub-email" placeholder="Correo electrónico">
+                    <input type="email" id="sub-email" placeholder="Correo electrónico" class="email">
                     <a href="#" class="subscribe-bttn">Suscribirme</a>
                 </div>
             </div>
@@ -241,8 +237,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
-</body> 
+</body>
 
 </html>

@@ -2,16 +2,16 @@ let data = {
   employees: ["Cristina", "Marina", "Cecilia", "Rosalia"],
 
   sales: [
-    { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Cartuchera llama unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Cartuchera unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 12), employeeName: "Cecilia", itemSold: ["Esmalte unicornio", "Brocha unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 24), employeeName: "Cristina", itemSold: ["Bata unicornio rosa", "Vincha rígida unicornio"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 01), employeeName: "Rosalia", itemSold: ["Llavero unicornio", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 01), employeeName: "Rosalia", itemSold: ["Llavero unicornio", "Cartuchera unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 11), employeeName: "Cecilia", itemSold: ["Portacosméticos cute", "Bata unicornio azul"], branchOffice : "Caballito"},
-    { saleDate: new Date(2019, 2, 15), employeeName: "Rosalia", itemSold: ["Llavero pompón", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 15), employeeName: "Rosalia", itemSold: ["Llavero pompón", "Cartuchera unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 12), employeeName: "Marina", itemSold: ["Vincha rígida unicornio", "Brocha unicornio"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 21), employeeName: "Cecilia", itemSold: ["Llavero unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 08), employeeName: "Cristina", itemSold: ["Portacosméticos cute", "Bata unicornio rosa"], branchOffice : "Centro"},
-    { saleDate: new Date(2019, 2, 16), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Cartuchera llama unicornio"], branchOffice : "Centro"},
+    { saleDate: new Date(2019, 2, 16), employeeName: "Cristina", itemSold: ["Esmalte unicornio", "Cartuchera unicornio"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 27), employeeName: "Marina", itemSold: ["Llavero pompón", "Brocha unicornio"], branchOffice : "Caballito"},
     { saleDate: new Date(2019, 2, 22), employeeName: "Cecilia", itemSold: ["Portacosméticos cute", "Bata unicornio rosa"], branchOffice : "Centro"},
     { saleDate: new Date(2019, 2, 05), employeeName: "Rosalia", itemSold: ["Vincha rígida unicornio", "Bata unicornio azul"], branchOffice : "Centro"},
@@ -35,7 +35,7 @@ let data = {
     { id:"0006",type:"Beauty", item: "Brocha unicornio", price: 90 },
     { id:"0007",type:"Clothing", item: "Bata unicornio rosa", price: 75 },
     { id:"0008",type:"Clothing", item: "Bata unicornio azul", price: 110 },
-    { id:"0009",type:"Props", item: "Cartuchera llama unicornio", price: 230 }
+    { id:"0009",type:"Props", item: "Cartuchera unicornio", price: 230 }
   ]
 }
 
@@ -44,7 +44,7 @@ let data = {
 let salePrice = sale => sale.length>0?sale.map(e => data.prices.find(({item}) => e === item).price).reduce((a,b)=>a+b):0
 
 //esta parte es para probar
-const maquina = ["Llavero pompón", "Vincha rígida unicornio", "Brocha unicornio", "Cartuchera llama unicornio"]
+const maquina = ["Llavero pompón", "Vincha rígida unicornio", "Brocha unicornio", "Cartuchera unicornio"]
 console.log(`(punto 1) La venta de ${maquina} tiene un valor total de ARS ${salePrice(maquina)}`)
 
 //2. cantidadVentasComponente(componente): 

@@ -3,7 +3,6 @@ const fillTable = () => {
   data.sales.sort(function(a, b) {
       return b.saleDate - a.saleDate
   })
-
   const dateList = document.getElementById('dateList')
   dateList.innerHTML=""
   data.sales.forEach(item => {
