@@ -218,7 +218,7 @@ const report = () => {
   const listContainer = document.createElement("ul")
   monthlyContainer.appendChild(listContainer)
   salesByMonth.forEach(e=>{
-    if (e.sales) {
+    if(e.sales) {
     const li = document.createElement("li")
     li.innerText=`${e.month}: $${e.sales}`
     listContainer.appendChild(li)

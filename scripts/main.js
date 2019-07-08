@@ -91,7 +91,8 @@ console.log(`(punto 4) Las ventas históricas de ${nombre} ascienden a ARS ${sal
 
 //5. ventasMes(mes, anio)
 let monthlySales = (year, month) => 
-  salePrice(data.sales.filter(({saleDate})=>saleDate.getFullYear()===year && saleDate.getMonth()===month-1).map(({itemSold})=>itemSold).flat())
+  salePrice(data.sales.filter(({saleDate})=>saleDate.getFullYear()===year && saleDate.getMonth()===month-1).map(
+    ({itemSold})=>itemSold).flat())
 
 //esta parte es para probar
 const mes= 2
@@ -108,15 +109,11 @@ let bestSeller = salesList => {
 }
 
 // esta parte es para probar
-bestSeller(data.prices).length < 2 ? 
-  console.log (`(punto 6) El componente históricamente más vendido es ${bestSeller(data.prices)}`) 
-  : console.log (`(punto 6) Los componentes históricamente más vendidos son ${bestSeller(data.prices)}`)
-
-  let anySales = (year,realMonth)=> {
-    const month=realMonth-1
-    const checkMonth= data.sales.find(({saleDate})=>month===saleDate.getMonth()&&year===saleDate.getFullYear())? true: false
-    return checkMonth
-  }
+let anySales = (year,realMonth)=> {
+  const month=realMonth-1
+  const checkMonth= data.sales.find(({saleDate})=>month===saleDate.getMonth()&&year===saleDate.getFullYear())? true: false
+  return checkMonth
+}
   
   //esta parte es para probar
   const anio4=2019
