@@ -387,6 +387,12 @@ body .container .secondSection #reports .report-container h4 {
 }
 body .container .secondSection #reports .report-container ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body .container .secondSection #reports .report-container ul li {
+  margin: 0;
+  padding: 0;
 }
 body .container footer {
   font-family: "Varela Round", sans-serif;
@@ -450,7 +456,6 @@ body .container footer .footer-container .footer-newsletter .subscribe-bttn {
 body .container footer .copyrightandlinks {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
   width: 90%;
   margin: 80px 0;
 }
