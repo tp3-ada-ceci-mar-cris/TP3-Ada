@@ -105,6 +105,12 @@ body .container .secondSection #sales .table-border {
   overflow: hidden;
   border-radius: 25px;
 }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #sales .table-border {
+    width: 100%;
+    padding: 20px;
+  }
+}
 body .container .secondSection #sales .table-border .table {
   border: 1px solid pink;
 }
@@ -130,6 +136,12 @@ body .container .secondSection #sales .table-border .table .table-header-contain
   width: 870px;
   margin: 0 auto;
 }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #sales .table-border .table .table-header-container {
+    width: 100%;
+    font-size: 13px;
+  }
+}
 body .container .secondSection #sales .table-border .table .table-header-container ul {
   display: flex;
   flex-direction: row;
@@ -140,11 +152,17 @@ body .container .secondSection #sales .table-border .table .table-header-contain
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-1, body .container .secondSection #sales .table-border .table .table-header-container ul #header-2, body .container .secondSection #sales .table-border .table .table-header-container ul #header-3, body .container .secondSection #sales .table-border .table .table-header-container ul #header-4, body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
   position: absolute;
 }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #sales .table-border .table .table-header-container ul #header-1, body .container .secondSection #sales .table-border .table .table-header-container ul #header-2, body .container .secondSection #sales .table-border .table .table-header-container ul #header-3, body .container .secondSection #sales .table-border .table .table-header-container ul #header-4, body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
+    font-size: 13px;
+    margin-left: 15px;
+  }
+}
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-1 {
   left: 0%;
 }
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-2 {
-  left: 14%;
+  left: 13%;
 }
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-3 {
   left: 48%;
@@ -153,12 +171,17 @@ body .container .secondSection #sales .table-border .table .table-header-contain
   right: 9%;
 }
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
-  right: -3%;
+  right: -6%;
 }
 body .container .secondSection #sales .table-border .table .table-body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #sales .table-border .table .table-body {
+    display: none;
+  }
 }
 body .container .secondSection #sales .newSale {
   float: right;
@@ -172,6 +195,11 @@ body .container .secondSection #sales .newSale {
   background-image: url(../image/fondoC.jpg);
   border-radius: 10px;
   padding: 10px 5px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #sales .newSale {
+    margin-right: 20px;
+  }
 }
 body .container .secondSection .footy {
   background-image: url(../image/fondoC.jpg);
@@ -189,6 +217,11 @@ body .container .secondSection .create-sale-btn, body .container .secondSection 
   background-image: url(../image/fondoC.jpg);
   border-radius: 10px;
   padding: 10px 5px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection .modal-body {
+    font-size: 13px;
+  }
 }
 body .container .secondSection .modal-body .first-selectors {
   display: flex;
@@ -311,6 +344,11 @@ body .container .secondSection #statistics .salesStats .result {
 body .container .secondSection #statistics .salesStats .result p {
   margin-left: 10px;
   margin-top: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #statistics .salesStats .result p {
+    font-size: 16px;
+  }
 }
 body .container footer {
   font-family: "Varela Round", sans-serif;

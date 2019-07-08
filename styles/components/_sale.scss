@@ -11,7 +11,10 @@
         padding: 50px 40px 0 40px;
         overflow: hidden;
         border-radius: 25px;
-        
+        @media screen  and (min-width: 320px) and (max-width: 768px){
+            width: 100%; 
+            padding: 20px;
+        }
         .table {
             border: 1px solid pink;
             ul {
@@ -36,6 +39,10 @@
             .table-header-container {
                 width: 870px;
                 margin: 0 auto;
+                @media screen  and (min-width: 320px) and (max-width: 768px){
+                    width: 100%; 
+                    font-size: 13px;
+                }
                 ul {
                     display: flex;
                     flex-direction: row;
@@ -44,12 +51,17 @@
                     padding-bottom: 30px;
                     #header-1, #header-2, #header-3, #header-4, #header-5 {
                         position: absolute;
+                        @media screen  and (min-width: 320px) and (max-width: 768px){
+                           font-size: 13px;
+                           margin-left: 15px;
+                           
+                        }
                     }
                     #header-1 {
                         left: 0%;
                     }
                     #header-2 {
-                        left: 14%;
+                        left: 13%;
                     }
                     #header-3 {
                         left: 48%;
@@ -58,21 +70,27 @@
                         right: 9%;
                     }
                     #header-5 {
-                        right: -3%;
+                        right: -6%;
                     }
                 }
             }
-            #table-body {
+            .table-body {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+                @media screen  and (min-width: 320px) and (max-width: 768px){
+                    display: none;
+                }
             }
         }
     }
     .newSale {
         float: right;
         margin: 40px 150px;
-        @include sale-buttons
+        @include sale-buttons;
+        @media screen  and (min-width: 320px) and (max-width: 768px){
+            margin-right: 20px;
+        }
     }
 }
 .footy {
