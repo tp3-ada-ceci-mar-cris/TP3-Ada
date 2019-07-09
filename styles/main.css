@@ -5,7 +5,13 @@ body header {
   background-size: cover;
   text-align: center;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body header {
+    width: 100%;
+    height: 150px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body header {
     width: 100%;
   }
@@ -19,7 +25,14 @@ body header a h1 {
   text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
   letter-spacing: 4px;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body header a h1 {
+    font-size: 80px;
+    max-width: 600px;
+    margin: 50px 0 0 0;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body header a h1 {
     font-size: 60px;
   }
@@ -31,15 +44,29 @@ body .container {
   width: 100%;
   min-width: 1212px;
   overflow: hidden;
+  padding: 0 10px;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
   body .container {
-    min-width: 320px;
+    min-width: 100%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body .container {
+    min-width: 200px;
     overflow: scroll;
   }
 }
 body .container .firstSection .turn {
   margin: 40px auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .firstSection .turn {
+    width: 550px;
+    margin: 40px auto;
+    margin-left: -2px;
+  }
 }
 body .container .firstSection .turn .carousel-inner {
   background-image: url(../images/productos.jpg);
@@ -52,7 +79,14 @@ body .container .firstSection .turn .carousel-inner {
   background-color: pink;
   border-radius: 30px;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .firstSection .turn .carousel-inner {
+    height: 300px;
+    min-width: 500px;
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .firstSection .turn .carousel-inner {
     background-image: none;
     height: 120px;
@@ -63,7 +97,12 @@ body .container .firstSection .turn .carousel-inner {
 body .container .firstSection .turn .carousel-inner .carousel-item {
   margin-top: 150px;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .firstSection .turn .carousel-inner .carousel-item {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .firstSection .turn .carousel-inner .carousel-item {
     margin-top: 40px;
   }
@@ -83,6 +122,16 @@ body .container .firstSection .footy {
   width: 100%;
   height: 100px;
 }
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .firstSection .footy {
+    width: 550px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body .container .firstSection .footy {
+    width: 100%;
+  }
+}
 body .container .secondSection #sales {
   margin: 100px auto;
 }
@@ -92,7 +141,13 @@ body .container .secondSection #sales h3 {
   text-align: center;
   margin: 30px 0;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales h3 {
+    font-size: 50px;
+    width: 550px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #sales h3 {
     font-size: 40px;
   }
@@ -104,8 +159,15 @@ body .container .secondSection #sales .table-border {
   padding: 50px 40px 0 40px;
   overflow: hidden;
   border-radius: 25px;
+  margin-left: -2px;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border {
+    width: 550px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #sales .table-border {
     width: 100%;
     padding: 20px;
@@ -163,7 +225,13 @@ body .container .secondSection #sales .table-border .table .table-header-contain
   width: 870px;
   margin: 0 auto;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border .table .table-header-container {
+    width: 100%;
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #sales .table-border .table .table-header-container {
     width: 100%;
     font-size: 13px;
@@ -179,7 +247,12 @@ body .container .secondSection #sales .table-border .table .table-header-contain
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-1, body .container .secondSection #sales .table-border .table .table-header-container ul #header-2, body .container .secondSection #sales .table-border .table .table-header-container ul #header-3, body .container .secondSection #sales .table-border .table .table-header-container ul #header-4, body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
   position: absolute;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border .table .table-header-container ul #header-1, body .container .secondSection #sales .table-border .table .table-header-container ul #header-2, body .container .secondSection #sales .table-border .table .table-header-container ul #header-3, body .container .secondSection #sales .table-border .table .table-header-container ul #header-4, body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #sales .table-border .table .table-header-container ul #header-1, body .container .secondSection #sales .table-border .table .table-header-container ul #header-2, body .container .secondSection #sales .table-border .table .table-header-container ul #header-3, body .container .secondSection #sales .table-border .table .table-header-container ul #header-4, body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
     font-size: 13px;
     margin-left: 15px;
@@ -188,24 +261,61 @@ body .container .secondSection #sales .table-border .table .table-header-contain
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-1 {
   left: 0%;
 }
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border .table .table-header-container ul #header-1 {
+    left: 5%;
+  }
+}
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-2 {
   left: 13%;
+}
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border .table .table-header-container ul #header-2 {
+    left: 20%;
+  }
 }
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-3 {
   left: 48%;
 }
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border .table .table-header-container ul #header-3 {
+    left: 44%;
+  }
+}
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-4 {
   right: 9%;
 }
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border .table .table-header-container ul #header-4 {
+    left: 53%;
+  }
+}
 body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
   right: -6%;
+}
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border .table .table-header-container ul #header-5 {
+    left: 75%;
+  }
 }
 body .container .secondSection #sales .table-border .table .table-body {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border .table .table-body ul {
+    width: 550px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #sales .table-border .table .table-body .classList {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #sales .table-border .table .table-body {
     display: none;
   }
@@ -223,7 +333,7 @@ body .container .secondSection #sales .newSale {
   border-radius: 10px;
   padding: 10px 5px;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #sales .newSale {
     margin-right: 20px;
   }
@@ -233,6 +343,16 @@ body .container .secondSection .footy {
   background-size: cover;
   width: 100%;
   height: 50px;
+}
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection .footy {
+    width: 550px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body .container .secondSection .footy {
+    width: 100%;
+  }
 }
 body .container .secondSection .create-sale-btn,
 body .container .secondSection .cancel-btn {
@@ -246,7 +366,7 @@ body .container .secondSection .cancel-btn {
   border-radius: 10px;
   padding: 10px 5px;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection .modal-body {
     font-size: 13px;
   }
@@ -268,8 +388,7 @@ body .container .secondSection .modal-body .product-selector #selectItemSold {
   display: flex;
   flex-direction: column;
 }
-body .container .secondSection .modal-body .product-selector #selectItemSold input,
-body .container .secondSection .modal-body .product-selector #selectItemSold label {
+body .container .secondSection .modal-body .product-selector #selectItemSold input, body .container .secondSection .modal-body .product-selector #selectItemSold label {
   display: inline-block;
 }
 body .container .secondSection .footy {
@@ -278,11 +397,26 @@ body .container .secondSection .footy {
   width: 100%;
   height: 50px;
 }
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection .footy {
+    width: 550px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body .container .secondSection .footy {
+    width: 100%;
+  }
+}
 body .container .secondSection #statistics {
   margin: 100px auto;
   font-family: "Varela Round", sans-serif;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #statistics {
+    margin: 40px auto;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #statistics {
     margin: 40px auto;
   }
@@ -293,7 +427,13 @@ body .container .secondSection #statistics h3 {
   text-align: center;
   margin: 30px 0;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #statistics h3 {
+    font-size: 50px;
+    width: 550px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #statistics h3 {
     font-size: 40px;
   }
@@ -306,7 +446,14 @@ body .container .secondSection #statistics .salesStats {
   display: flex;
   justify-content: space-around;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #statistics .salesStats {
+    max-width: 550px;
+    display: block;
+    padding: 20px 10px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #statistics .salesStats {
     display: block;
     padding: 20px 10px;
@@ -319,9 +466,14 @@ body .container .secondSection #statistics .salesStats form {
   font-family: "Varela Round", sans-serif;
   font-size: 18px;
   border-radius: 10px;
-  padding: 1em;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #statistics .salesStats form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #statistics .salesStats form {
     width: 100%;
     margin-bottom: 20px;
@@ -338,11 +490,17 @@ body .container .secondSection #statistics .salesStats .stats {
   width: 40%;
   margin-left: 50px;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #statistics .salesStats .stats {
     margin: 0 auto;
     width: 100%;
     align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #statistics .salesStats .stats {
+    width: 100%;
+    padding: 20px 10px;
   }
 }
 body .container .secondSection #statistics .salesStats .stats .btn {
@@ -363,9 +521,15 @@ body .container .secondSection #statistics .salesStats .result {
   width: 25%;
   height: 320px;
   border-radius: 10px;
-  padding: 1em;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #statistics .salesStats .result {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #statistics .salesStats .result {
     width: 100%;
     height: 200px;
@@ -376,7 +540,7 @@ body .container .secondSection #statistics .salesStats .result p {
   margin-left: 10px;
   margin-top: 10px;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #statistics .salesStats .result p {
     font-size: 16px;
   }
@@ -393,7 +557,13 @@ body .container .secondSection #reports h3 {
   text-align: center;
   margin: 30px 0;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container .secondSection #reports h3 {
+    font-size: 50px;
+    width: 550px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container .secondSection #reports h3 {
     font-size: 40px;
   }
@@ -428,13 +598,18 @@ body .container .secondSection #reports .report-container ul li {
 body .container footer {
   font-family: "Varela Round", sans-serif;
 }
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container footer {
+    width: 550px;
+  }
+}
 body .container footer .footer-container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container footer .footer-container {
     display: block;
   }
@@ -443,7 +618,7 @@ body .container footer .footer-container .footer-block {
   display: inline-block;
   text-decoration: none;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container footer .footer-container .footer-block {
     padding-bottom: 30px;
   }
@@ -452,10 +627,20 @@ body .container footer .footer-container .footer-block h5 {
   font-size: 20px;
   color: purple;
 }
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container footer .footer-container .footer-block h5 {
+    font-size: 14px;
+  }
+}
 body .container footer .footer-container .footer-block ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container footer .footer-container .footer-block ul {
+    font-size: 11px;
+  }
 }
 body .container footer .footer-container .footer-block ul a {
   text-decoration: none;
@@ -467,7 +652,22 @@ body .container footer .footer-container .footer-newsletter {
 body .container footer .footer-container .footer-newsletter h5 {
   color: purple;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container footer .footer-container .footer-newsletter h5 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container footer .footer-container .footer-newsletter p {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container footer .footer-container .footer-newsletter .email {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container footer .footer-container .footer-newsletter .email {
     margin-bottom: 25px;
   }
@@ -484,13 +684,24 @@ body .container footer .footer-container .footer-newsletter .subscribe-bttn {
   padding: 10px 5px;
   font-size: 15px;
 }
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container footer .footer-container .footer-newsletter .subscribe-bttn {
+    font-size: 11px;
+  }
+}
 body .container footer .copyrightandlinks {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  margin: 0 auto;
+  width: 100%;
   margin: 80px 0;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1211px) {
+  body .container footer .copyrightandlinks {
+    margin: 60px 0;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
   body .container footer .copyrightandlinks {
     display: block;
     margin: 70px 0;
