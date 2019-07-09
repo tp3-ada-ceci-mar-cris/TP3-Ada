@@ -45,6 +45,34 @@ const fillTable = () => {
   })
 }
 
+const fillSale = (item) => {
+  const container = document.getElementById("smallTable")
+  container.innerHTML=""
+  const list = document.createElement("ul")
+  list.innerText=`Venta realizada:`
+  container.appendChild(list)
+
+  const date = document.createElement("li")
+  date.innerText = `Fecha: ${item.saleDate.toLocaleDateString()}`
+  list.appendChild(date)
+
+  const branchOffice = document.createElement("li")
+  branchOffice.innerText= `Sucursal: ${item.branchOffice}`
+  list.appendChild(branchOffice)
+
+  const employee = document.createElement("li")
+  employee.innerText = `Vendedora: ${item.employeeName}`
+  list.appendChild(employee)
+
+  const itemSold = document.createElement("li")
+  itemSold.innerText= `Productos vendidos: ${item.itemSold.join(`, `)}`
+  list.appendChild(itemSold)
+
+  const price = document.createElement("li")
+  price.innerText= `Precio: ${salePrice(item.itemSold)}`
+  list.appendChild(price)
+}
+
 //2. Para completar las opciones del modal
 const fillOptions = () => {
   data.employees.forEach(name => {
@@ -121,6 +149,7 @@ const createSale = () => {
   }
   data.sales.unshift(newSale)
   fillTable()
+  fillSale(newSale)
 }
 
 //4. Para armar selects y opciones en las estadísticas
