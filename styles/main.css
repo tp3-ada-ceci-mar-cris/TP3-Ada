@@ -173,8 +173,35 @@ body .container .secondSection #sales .table-border {
     padding: 20px;
   }
 }
+body .container .secondSection #sales .table-border #smallTable {
+  display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #sales .table-border #smallTable {
+    display: block;
+    font-size: 1em;
+    margin: 1em;
+    padding: 1em;
+  }
+  body .container .secondSection #sales .table-border #smallTable ul {
+    border: 1px solid pink;
+    list-style: none;
+    font-family: "Varela Round", sans-serif;
+    margin: 0;
+    padding: 1em;
+    font-weight: bold;
+  }
+  body .container .secondSection #sales .table-border #smallTable ul li {
+    font-weight: normal;
+  }
+}
 body .container .secondSection #sales .table-border .table {
   border: 1px solid pink;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  body .container .secondSection #sales .table-border .table {
+    display: none;
+  }
 }
 body .container .secondSection #sales .table-border .table ul {
   font-size: 20px;
