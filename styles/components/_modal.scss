@@ -1,0 +1,35 @@
+.create-sale-btn,
+.cancel-btn {
+    @include sale-buttons
+}
+
+.modal-body {
+    @media screen  and (min-width: 320px) and (max-width: 767px){
+        font-size: 13px;
+    }
+
+    .first-selectors {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+
+        p {
+            margin: 20px 0;
+        }
+    }
+
+    .product-selector {
+        margin: 20px 43px;
+        display: flex;
+        flex-direction: column;
+
+        #selectItemSold {
+            display: flex;
+            flex-direction: column;
+
+            input, label {
+                display: inline-block;
+            }
+        }
+    }
+}

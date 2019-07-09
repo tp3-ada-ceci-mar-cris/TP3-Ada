@@ -1,0 +1,77 @@
+//VARIABLES
+$titleFont: 'Lobster', cursive;
+$backFont: 'Varela Round', sans-serif;
+$generalColor: purple;
+$screen-lg-min: 768px;
+
+//MIXINS
+@mixin footy($height) {
+    background-image: url(../images/fondoC.jpg);
+    background-size: cover;
+    width: 100%;
+    height: $height;
+    @media screen  and (min-width: 768px) and (max-width: 1211px){
+        width: 550px; 
+    }
+    @media screen  and (min-width: 320px) and (max-width: 767px){
+        width: 100%; 
+    }
+}
+
+@mixin title {
+    font-family: $backFont;
+    font-size: 55px;
+    text-align: center;
+    margin: 30px 0;
+    @media screen  and (min-width: 768px) and (max-width: 1211px){
+        font-size: 50px;
+        width: 550px; 
+    }
+    @media screen  and (min-width: 320px) and (max-width: 767px){
+        font-size: 40px; 
+    }
+    
+}
+
+@mixin sale-buttons {
+    font-family: $backFont;
+    border: 1px solid pink;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-image: url(../images/fondoC.jpg);
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
+body {
+    @import "components/header";
+    .container {
+        width: 100%;
+        min-width: 1212px;
+        overflow: hidden;
+        padding: 0 10px;
+        @media screen  and (min-width: 768px) and (max-width: 1211px){
+            min-width: 100%; 
+            margin: 0;
+        }
+        @media screen  and (min-width: 320px) and (max-width: 767px){
+            min-width: 200px;
+            overflow: scroll; 
+        }
+        
+        .firstSection {
+            @import "components/carrusel";
+        }
+        .secondSection {
+            @import "components/sale";
+            @import "components/modal";
+            @import "components/statistics";
+            @import "components/reports";
+        }
+        @import "components/footer"; 
+    } 
+    
+}
+
