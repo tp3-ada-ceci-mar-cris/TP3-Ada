@@ -13,7 +13,7 @@ botonera nos ayuda a llevar registro de ventas, conocer el producto más vendido
 la vendedora del mes entre otros datos. 
 Por ultimo, en la seccion Reportes englobamos datos que nos brindan las funciones
 finales de la consigna. 
-Agregamos dos breakpoints para responsive aunque consideramos desktop nuestra 
+Agregamos un breakpoint para responsive aunque consideramos desktop nuestra 
 mejor version.
 That's all!  ;)
 

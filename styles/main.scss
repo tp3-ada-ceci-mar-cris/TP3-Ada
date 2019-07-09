@@ -10,9 +10,6 @@ $screen-lg-min: 768px;
     background-size: cover;
     width: 100%;
     height: $height;
-    @media screen  and (min-width: 768px) and (max-width: 1211px){
-        width: 550px; 
-    }
     @media screen  and (min-width: 320px) and (max-width: 767px){
         width: 100%; 
     }
@@ -23,10 +20,6 @@ $screen-lg-min: 768px;
     font-size: 55px;
     text-align: center;
     margin: 30px 0;
-    @media screen  and (min-width: 768px) and (max-width: 1211px){
-        font-size: 50px;
-        width: 550px; 
-    }
     @media screen  and (min-width: 320px) and (max-width: 767px){
         font-size: 40px; 
     }
@@ -52,10 +45,6 @@ body {
         min-width: 1212px;
         overflow: hidden;
         padding: 0 10px;
-        @media screen  and (min-width: 768px) and (max-width: 1211px){
-            min-width: 100%; 
-            margin: 0;
-        }
         @media screen  and (min-width: 320px) and (max-width: 767px){
             min-width: 200px;
             overflow: scroll; 
