@@ -133,6 +133,8 @@ const fillOptions = () => {
 //3. Para crear nuevas ventas  
 const createSale = () => {
   let saleDateField = document.getElementById('enterSaleDate')
+  let d = new Date(saleDateField.value)
+  let finalDate = d.setMinutes(d.getMinutes() + d.getTimezoneOffset())
   let employeeNameField = document.getElementById('selectEmployeeName')
   let productCheckbox = document.getElementsByName('productCheckbox')
   let selectedItems = []
@@ -142,7 +144,7 @@ const createSale = () => {
   }
   let branchOfficeField = document.getElementById('selectBranchOffice')
   let newSale = {
-    saleDate: new Date(saleDateField.value),
+    saleDate: new Date(finalDate),
     employeeName: employeeNameField.value,
     itemSold: selectedItems,
     branchOffice: branchOfficeField.value
