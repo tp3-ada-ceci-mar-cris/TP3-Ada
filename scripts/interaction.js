@@ -180,8 +180,8 @@ const fillSelects = (list, type) => {
 }
 
 //5. Función que agarra el input y me da un conjunto de datos que pueda usar en la botonera
-const newInput = () => {
-  const input = {
+const newInput = () => { //ojo con repetir nombres en variables y funciones.
+  const input = { //se podría haber asigando el valor de cada propiedad en el momento que se crea el objeto.
     product: undefined,
     employee: undefined,
     branchOffice: undefined,
@@ -325,3 +325,7 @@ const initialize = () => {
   fillSelects(data.branchOffice, "branchOffice")
   report()
 }
+
+/*
+Se repiten varios bloques de código muchas veces (principalmente en la primeras dos funciones), se podrían haber creado nuevas funciones con parametros para evitarlo.
+*/

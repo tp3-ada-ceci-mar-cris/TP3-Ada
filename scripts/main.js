@@ -211,3 +211,30 @@ let render = () =>{
   console.table(listSalesBySP(data.branchOffice))
 }
 render()
+
+/*
+NOTAS:
+Se podría evitar la repetición de algunas líneas creando funciones independientes con ellas.
+
+//data.sales.filter(({saleDate})=>saleDate.getFullYear()===year && saleDate.getMonth()===month-1) 
+
+Esta línea, por ejemplo, se repite tres veces.
+
+También se podría aprovechar, ya que lo implementaron, el uso de string templates y así evitar tener que crear tantas variables solo para ver el resultado de la función.
+Ejemplo con vendedora del mes:
+
+// const anio2=2019
+// const mes2=2
+// console.log (`(punto 3) La mejor vendedora del mes ${mes2} de ${anio2} es ${employeeOfTheMonth(anio2,mes2)}`)
+
+Se podría modificar el return de la función haciendo que devuelva el contendido de ese mismo console.log de la siguiente manera:
+
+//return `(punto 3) La mejor vendedora del mes ${month} de ${year} es ${bestEmployeeList}`
+
+Y después invocar a la función con los datos de las variables que se crearon como parametros:
+
+//console.log(employeeOfTheMonth(2019, 2))
+
+Salvo ese pequeño detalle, el manejo de datos está bien.
+Excelente uso de métodos y destructuración.
+*/
